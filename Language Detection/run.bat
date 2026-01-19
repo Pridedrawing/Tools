@@ -1,0 +1,2 @@
+@python language.py
+pause

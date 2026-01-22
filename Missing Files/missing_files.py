@@ -4,6 +4,7 @@ import os
 import re
 import subprocess
 import sys
+from typing import Iterable
 
 # Function to check if a package is installed
 def check_and_install(package):
@@ -48,6 +49,63 @@ parser.add_argument(
     help="Audio file extension to check (default: .mp3)",
 )
 args = parser.parse_args()
+
+
+def _read_dialogue_tab_robust(path: str) -> pd.DataFrame:
+    """Read a Ren'Py dialogue.tab export robustly.
+
+    Ren'Py exports are tab-separated but may contain malformed quoting.
+    This parser never drops rows due to quoting issues and tries to keep
+    the expected 6-column layout stable:
+      Identifier, Character, Dialogue, Filename, Line Number, Ren'Py Script
+    """
+
+    with open(path, "r", encoding="utf-8", errors="replace", newline="") as f:
+        header_line = f.readline()
+        if not header_line:
+            raise ValueError(f"Empty dialogue file: {path}")
+
+        header_line = header_line.lstrip("\ufeff").rstrip("\n\r")
+        headers = header_line.split("\t")
+        expected_cols = len(headers)
+        if expected_cols < 3:
+            raise ValueError(f"Unexpected header in {path}: {headers}")
+
+        rows: list[list[str]] = []
+        for raw_line in f:
+            line = raw_line.rstrip("\n\r")
+            if not line:
+                continue
+            parts = line.split("\t")
+
+            # If there are embedded tabs inside Dialogue, merge them back.
+            if len(parts) > expected_cols and expected_cols >= 6:
+                # Keep: Identifier, Character, (Dialogue...), Filename, Line Number, Ren'Py Script
+                head = parts[:2]
+                tail = parts[-3:]
+                middle = parts[2:-3]
+                parts = head + ["\t".join(middle)] + tail
+
+            if len(parts) < expected_cols:
+                parts = parts + [""] * (expected_cols - len(parts))
+            elif len(parts) > expected_cols:
+                # As a fallback, merge all extras into the last column.
+                parts = parts[: expected_cols - 1] + ["\t".join(parts[expected_cols - 1 :])]
+
+            # Repair common corruption: narration text ends up in Character.
+            # If Character isn't a short code and looks like a sentence, shift it into Dialogue.
+            if expected_cols >= 3:
+                character = parts[1]
+                dialogue = parts[2]
+                if character and (len(character) > 4 or " " in character) and character not in {"centered"}:
+                    # Only do this when Dialogue looks like it was split off.
+                    if dialogue and len(dialogue) < 10:
+                        parts[2] = (character + " " + dialogue).strip()
+                        parts[1] = ""
+
+            rows.append(parts)
+
+    return pd.DataFrame(rows, columns=headers)
 
 
 def _prompt_if_missing(value: str | None, prompt: str) -> str:
@@ -139,8 +197,8 @@ if not os.path.exists(dialogue_path):
     print(f"The file '{dialogue_path}' does not exist. Please check the path and try again.")
     exit()
 
-# Read the text file with tab separator
-spreadsheet = pd.read_csv(dialogue_path, sep="\t")
+# Read the text file with tab separator (robust against malformed quoting)
+spreadsheet = _read_dialogue_tab_robust(dialogue_path)
 
 # Column name in the spreadsheet that contains the audio file names
 file_name_column = "Identifier"
@@ -238,8 +296,16 @@ missing_files_df = spreadsheet[
     spreadsheet[file_name_column].astype(str).map(_normalize_identifier).isin(missing_keys)
 ]
 
-# Save the filtered dataframe to a new tab-separated file
-missing_files_df.to_csv("dialogue_missing.tab", sep="\t", index=False)
+# Save the filtered dataframe to a new tab-separated file next to this script.
+# Quoting ensures any embedded tabs/newlines in fields won't corrupt column alignment.
+missing_tab_path = os.path.join(script_dir, "dialogue_missing.tab")
+missing_files_df.to_csv(
+    missing_tab_path,
+    sep="\t",
+    index=False,
+    quoting=csv.QUOTE_MINIMAL,
+    escapechar="\\",
+)
 
 # Display summary
 print("\nSummary:")
@@ -250,3 +316,4 @@ print(f"Extension: {ext}")
 print(f"Number of missing files: {len(missing_files)}")
 print(f"Number of files not listed in the spreadsheet: {len(extra_files)}")
 print(f"Extra files CSV: {extra_files_csv_path}")
+print(f"Missing files TAB: {missing_tab_path}")

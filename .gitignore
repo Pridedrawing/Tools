@@ -1,1 +1,4 @@
 main.dist/
+
+# Local secrets / env helpers (keep *.example committed, keep real files ignored)
+**/set_env.ps1

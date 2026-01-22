@@ -1,0 +1,8 @@
+# Copy this file to `set_env.ps1` (same folder) and fill in your real key.
+# DO NOT commit `set_env.ps1` (it is gitignored by Tools/.gitignore).
+#
+# Usage (PowerShell, from this folder):
+#   . .\set_env.ps1
+#   python .\language.py
+
+$Env:DEEPL_API_KEY = "PASTE_YOUR_DEEPL_KEY_HERE"

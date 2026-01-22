@@ -1,15 +1,23 @@
 import pandas as pd
 import requests
+import os
 
 # Load the data
 file_path = 'D:/Windows-Dateienordner/Dokumente/DAZ 3D/Novel/Test/Tools/Language Detection/dialogue.tab'
 df = pd.read_csv(file_path, sep='\t')
 
 # DeepL API key
-DEEPL_API_KEY = 'bcf9bc45-3353-4e6a-7394-8923c47ce64e'
+# Do NOT hardcode API keys in this repository.
+# PowerShell example:
+#   $Env:DEEPL_API_KEY = "..."
+DEEPL_API_KEY = os.getenv("DEEPL_API_KEY", "")
+
+DEBUG = False
 
 # Function to detect language using DeepL API
 def detect_language(text):
+    if not DEEPL_API_KEY:
+        raise RuntimeError("DEEPL_API_KEY is not set. Configure it as an environment variable and re-run.")
     url = "https://api.deepl.com/v2/translate"  # Correct endpoint
     params = {
         "auth_key": DEEPL_API_KEY,
@@ -19,7 +27,11 @@ def detect_language(text):
     response = requests.post(url, data=params)
     
     # Log the response for debugging
-    print(f"Response: {response.json()}")
+    if DEBUG:
+        try:
+            print(f"Response: {response.json()}")
+        except Exception:
+            print("Response: <non-json>")
     
     if response.status_code == 200:
         result = response.json()

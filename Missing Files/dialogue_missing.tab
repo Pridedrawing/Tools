@@ -1,11 +1,4 @@
 Identifier	Character	Dialogue	Filename	Line Number	Ren'Py Script
-b_alley_rescue_b0e8cfd6		...as long as they were home...	game/tl/English/chapter/beggar_alley_rescue.rpy	617	[what]
-b_alley_rescue_3e8bf16a		He felt safe.	game/tl/English/chapter/beggar_alley_rescue.rpy	623	[what]
-b_alley_rescue_f180df8f		CRASH!!!	game/tl/English/chapter/beggar_alley_rescue.rpy	307	[what] with vpunch
-beggar_frog_e7b03e22		... feast in its great halls...	game/tl/English/chapter/beggar_frog.rpy	191	[what]
-beggar_frog_8f4c6c8b		...and to survey the land from the tall tower.	game/tl/English/chapter/beggar_frog.rpy	197	[what]
-Motel_Start_affde734_1	b	Is everything all right with you?	game/tl/English/chapter/motel/motel_start.rpy	817	"b suspicious ""[what]"""
-h_classroom_db8ab9c8	b	It looks to me like he's coming to his senses!	game/tl/English/chapter/h_classroom.rpy	295	"b tough ""[what]"""
 h_class02_b46297a6	z	Grr agrbl brr akrr	game/tl/English/chapter/h_classroom.rpy	2846	"z neutral ""[what]"""
 h_class02_a7a191ed	z	Agawr greedr akrbrr!	game/tl/English/chapter/h_classroom.rpy	3134	"z neutral ""[what]"""
 after_spank_2_90c83197	z	Gahr!	game/tl/English/chapter/h_classroom.rpy	1558	"z neutral ""[what]"""
@@ -13,521 +6,81 @@ after_spank_4_b921bc53	z	Aghhrasht!	game/tl/English/chapter/h_classroom.rpy	2352
 after_spank_5_c6a988bc	z	Raahrg Graah!	game/tl/English/chapter/h_classroom.rpy	2010	"z angry ""[what]"""
 after_spank_5_7865d582	z	Zabrash trakrum!	game/tl/English/chapter/h_classroom.rpy	2028	"z angry ""[what]"""
 after_spank_5_af89481f	z	Urgh rrebry!	game/tl/English/chapter/h_classroom.rpy	2076	"z angry ""[what]"""
-chris_home_viagra_9a33012a	j	"I guess that can be helpful, depending on what kind of ""customers"" he has to serve."	game/tl/English/chapter/search/ch_viagra.rpy	121	"j suspicious ""[what]"""
 noah_gameover_a8202e4f	Noah's breaths become louder as he seems to imagine himself 	 Tim.	game/tl/English/chapter/wildwest/poker_minigame.rpy	357	"Noah's breaths become louder as he seems to imagine himself  interrogating ""[what]"""
-noah_gameover_c7dabcdd		You have [coin_balance] dollars left.	game/tl/English/chapter/wildwest/poker_minigame.rpy	360	[what]
-Saloon_01_6019542c		You feel the resistance of the air fade as you shoot through the saloon's swinging doors with a powerful flap of your wings.	game/tl/English/chapter/wildwest/saloon.rpy	692	[what]
-Saloon_01_e70f8d16		Inside, you see Tim standing behind the bar, leisurely wiping the counter with a cloth.	game/tl/English/chapter/wildwest/saloon.rpy	695	[what]
-Saloon_01_bb73fef2	t	What the...?	game/tl/English/chapter/wildwest/saloon.rpy	698	"t surprised ""[what]"""
-Saloon_01_33f7abdd		His eyebrows rise in surprise and his mouth opens slightly when he sees you.	game/tl/English/chapter/wildwest/saloon.rpy	701	[what]
-Saloon_01_81146de4		You can literally see how his brain works to reconcile what he sees with reality.	game/tl/English/chapter/wildwest/saloon.rpy	704	[what]
-Saloon_01_c3988173		A rabbit with wings?	game/tl/English/chapter/wildwest/saloon.rpy	707	[what]
-Saloon_01_f4e9d885		But you can also see a trace of curiosity in his warm hazel eyes.	game/tl/English/chapter/wildwest/saloon.rpy	710	[what]
-Saloon_01_9154f3ef		He is obviously prepared to engage in this unusual encounter.	game/tl/English/chapter/wildwest/saloon.rpy	713	[what]
-Saloon_01_4aa81f68		You were sitting more or less elegantly on the polished counter.	game/tl/English/chapter/wildwest/saloon.rpy	716	[what]
-Saloon_01_dd934ae4		You clear your throat and say in an emphatically dark voice (which still sounds far too light):	game/tl/English/chapter/wildwest/saloon.rpy	719	[what]
-Saloon_01_82e06427	b	A beer please.	game/tl/English/chapter/wildwest/saloon.rpy	722	"b neutral ""[what]"""
-Saloon_01_acca5dd7		Tim almost falls over backwards in surprise when you start talking.	game/tl/English/chapter/wildwest/saloon.rpy	725	[what]
-Saloon_01_32453548	t	What the hell?	game/tl/English/chapter/wildwest/saloon.rpy	728	"t surprised ""[what]"""
-Saloon_01_c63ea6cf	b	It's me, Ben!	game/tl/English/chapter/wildwest/saloon.rpy	731	"b laugh ""[what]"""
-Saloon_01_43e6be2b		Tim just looks at you open-mouthed for a long moment.	game/tl/English/chapter/wildwest/saloon.rpy	734	[what]
-Saloon_01_090ea7ff	t	What... what's going on here?	game/tl/English/chapter/wildwest/saloon.rpy	737	"t suspicious ""[what]"""
-Saloon_01_abcf85a9	b	Or do you also have carrot schnapps?	game/tl/English/chapter/wildwest/saloon.rpy	740	"b suspicious ""[what]"""
-Saloon_01_b5132482	t	I ... um ... I don't think so...	game/tl/English/chapter/wildwest/saloon.rpy	743	"t surprised ""[what]"""
-Saloon_01_f3e92e55		He shakes his head as if to shake off the confusion.	game/tl/English/chapter/wildwest/saloon.rpy	746	[what]
-Saloon_01_519599c6	t	Ben? You... you...	game/tl/English/chapter/wildwest/saloon.rpy	749	"t suspicious ""[what]"""
-Saloon_01_f372af74		You roll your eyes (as far as you can).	game/tl/English/chapter/wildwest/saloon.rpy	752	[what]
-Saloon_01_4d6b513e	b	I'm a winged rabbit now. Get over it!	game/tl/English/chapter/wildwest/saloon.rpy	755	"b neutral ""[what]"""
-Saloon_01_f9aea319	b	I bet you've dreamed crazier things!	game/tl/English/chapter/wildwest/saloon.rpy	758	"b evil ""[what]"""
-Saloon_01_430e7ced	b	Hello Tim.	game/tl/English/chapter/wildwest/saloon.rpy	761	"b happy ""[what]"""
-Saloon_01_1ad3ca8f		Tim's eyes widen even more when you start to speak.	game/tl/English/chapter/wildwest/saloon.rpy	764	[what]
-Saloon_01_7d560bd7	b	It's me, Ben!	game/tl/English/chapter/wildwest/saloon.rpy	767	"b flirt ""[what]"""
-Saloon_01_b70ba119		He squints his eyes.	game/tl/English/chapter/wildwest/saloon.rpy	770	[what]
-Saloon_01_812762df	t	Ben? The invisible Ben?	game/tl/English/chapter/wildwest/saloon.rpy	773	"t suspicious ""[what]"""
-Saloon_01_6e8e10ff	b	Not quite so invisible in the dream world.	game/tl/English/chapter/wildwest/saloon.rpy	776	"b friendly ""[what]"""
-Saloon_01_e316d9cf		The young man in front of you leans back, his palms flat on the cool wood of the bar.	game/tl/English/chapter/wildwest/saloon.rpy	779	[what]
-Saloon_01_69041ff4		His eyes try to connect the form in front of him with what his mind considers possible.	game/tl/English/chapter/wildwest/saloon.rpy	782	[what]
-Saloon_01_897b1963		He blinks several times as if to dispel the illusion, but you remain, unchanged and real within this surreal world.	game/tl/English/chapter/wildwest/saloon.rpy	785	[what]
-Saloon_01_3a7848b2	t	Whenever I think it can't get any crazier, you go one better!	game/tl/English/chapter/wildwest/saloon.rpy	788	"t angry ""[what]"""
-Saloon_01_2f790cdf		You flutter your wings briefly.	game/tl/English/chapter/wildwest/saloon.rpy	791	[what]
-Saloon_01_dd6f4e4e	b	I do my best!	game/tl/English/chapter/wildwest/saloon.rpy	794	"b happy ""[what]"""
-Saloon_01_1e222e57	t	Wait a minute. Does that mean this is a dream?	game/tl/English/chapter/wildwest/saloon.rpy	797	"t suspicious ""[what]"""
-Saloon_01_20f00e6c	t	I'm not a bartender in the wild west?	game/tl/English/chapter/wildwest/saloon.rpy	800	"t ""[what]"""
-Saloon_01_c82b00d5	b	I know that the dream world always seems real.	game/tl/English/chapter/wildwest/saloon.rpy	803	"b neutral ""[what]"""
-Saloon_01_b0a8335e	b	We were at the motel. Looking for Chris. Do you remember?	game/tl/English/chapter/wildwest/saloon.rpy	806	"b friendly ""[what]"""
-Saloon_01_f36dd0d6		Tim is thinking so hard that wrinkles form on his forehead.	game/tl/English/chapter/wildwest/saloon.rpy	809	[what]
-Saloon_01_2f5ade3a	t	Chris...	game/tl/English/chapter/wildwest/saloon.rpy	812	"t suspicious ""[what]"""
-Saloon_01_2f92a846		Then his eyes widen.	game/tl/English/chapter/wildwest/saloon.rpy	815	[what]
-Saloon_01_0499bdd1	t	Chris! The Indian who is to be executed today!	game/tl/English/chapter/wildwest/saloon.rpy	818	"t surprised ""[what]"""
-Saloon_01_ffaa8ad4	b	Oh no! We have to prevent that!	game/tl/English/chapter/wildwest/saloon.rpy	821	"b surprised ""[what]"""
-Saloon_01_4bb9f6d3	t	What happens when you die in a dream?	game/tl/English/chapter/wildwest/saloon.rpy	824	"t suspicious ""[what]"""
-Saloon_01_cbf95523	b	In a normal dream, you would probably just wake up...	game/tl/English/chapter/wildwest/saloon.rpy	827	"b suspicious ""[what]"""
-Saloon_01_aaaa5b2d	b	But this is no ordinary dream.	game/tl/English/chapter/wildwest/saloon.rpy	830	"b tough ""[what]"""
-Saloon_01_e671f0e6	t	Why not?	game/tl/English/chapter/wildwest/saloon.rpy	833	"t neutral ""[what]"""
-Saloon_01_617e52ac	b	Normally I have to actively enter a dream.	game/tl/English/chapter/wildwest/saloon.rpy	836	"b neutral ""[what]"""
-Saloon_01_b5efe432	b	But this time - I just woke up here.	game/tl/English/chapter/wildwest/saloon.rpy	839	"b suspicious ""[what]"""
-Saloon_01_f03ab7c8	t	Maybe it has something to do with the symbol in the motel?	game/tl/English/chapter/wildwest/saloon.rpy	842	"t suspicious ""[what]"""
-Saloon_01_cfd8050d	b	Maybe. I don't know.	game/tl/English/chapter/wildwest/saloon.rpy	845	"b sad ""[what]"""
-Saloon_01_20ab4561	b	Something is definitely wrong.	game/tl/English/chapter/wildwest/saloon.rpy	848	"b tough ""[what]"""
-Saloon_01_8101baa2	b	I found Jeff at the stables.	game/tl/English/chapter/wildwest/saloon.rpy	851	"b friendly ""[what]"""
-Saloon_01_b0da9453	b	Elijah is here too.	game/tl/English/chapter/wildwest/saloon.rpy	854	"b neutral ""[what]"""
-Saloon_01_453da239	b	He seems to be a slave to the gravedigger here.	game/tl/English/chapter/wildwest/saloon.rpy	857	"b angry ""[what]"""
-Saloon_01_5b1fe3c9	t	Because he is black?	game/tl/English/chapter/wildwest/saloon.rpy	860	"t suspicious ""[what]"""
-Saloon_01_14f1c8d7	t	How racist.	game/tl/English/chapter/wildwest/saloon.rpy	863	"t angry ""[what]"""
-Saloon_01_02351294	b	I also met the sheriff.	game/tl/English/chapter/wildwest/saloon.rpy	866	"b suspicious ""[what]"""
-Saloon_01_0248181a	t	And?	game/tl/English/chapter/wildwest/saloon.rpy	869	"t neutral ""[what]"""
-Saloon_01_adb5dfc8	b	And his companion, the German shepherd.	game/tl/English/chapter/wildwest/saloon.rpy	872	"b afraid ""[what]"""
-Saloon_01_46f7d62b	t	What about them?	game/tl/English/chapter/wildwest/saloon.rpy	875	"t suspicious ""[what]"""
-Saloon_01_c700ea09	b	You...	game/tl/English/chapter/wildwest/saloon.rpy	878	"b suspicious ""[what]"""
-Saloon_01_5b01d534		You think for a moment about how to put it into words.	game/tl/English/chapter/wildwest/saloon.rpy	881	[what]
-Saloon_01_f6c8ba98	b	They don't look like dream figures to me.	game/tl/English/chapter/wildwest/saloon.rpy	884	"b tough ""[what]"""
-Saloon_01_53d80317	t	What do you mean?	game/tl/English/chapter/wildwest/saloon.rpy	887	"t neutral ""[what]"""
-Saloon_01_106b2ca8	b	It's hard to put into words.	game/tl/English/chapter/wildwest/saloon.rpy	890	"b neutral ""[what]"""
-Saloon_01_e45128ff	b	But dream figures are ... thin.	game/tl/English/chapter/wildwest/saloon.rpy	893	"b neutral ""[what]"""
-Saloon_01_21b75fbf	t	Thin?	game/tl/English/chapter/wildwest/saloon.rpy	896	"t suspicious ""[what]"""
-Saloon_01_1c312f08	b	Without substance, one-dimensional products of our imagination.	game/tl/English/chapter/wildwest/saloon.rpy	899	"b suspicious ""[what]"""
-Saloon_01_b6e3e4a9	b	You can't describe this sheriff and his dog like that.	game/tl/English/chapter/wildwest/saloon.rpy	902	"b angry ""[what]"""
-Saloon_01_a5fabfc6	t	But even if I were to meet Jeff or Chris here - aren't they just products of my imagination?	game/tl/English/chapter/wildwest/saloon.rpy	905	"t suspicious ""[what]"""
-Saloon_01_754458f8		He looks at you skeptically.	game/tl/English/chapter/wildwest/saloon.rpy	908	[what]
-Saloon_01_efbe3d8e	t	Which would include you, by the way.	game/tl/English/chapter/wildwest/saloon.rpy	911	"t tough ""[what]"""
-Saloon_01_33a71d16	b	I am an angel. That's something else.	game/tl/English/chapter/wildwest/saloon.rpy	914	"b friendly ""[what]"""
-Saloon_01_ad0fd25d	b	I think we all dream the same dream.	game/tl/English/chapter/wildwest/saloon.rpy	917	"b tough ""[what]"""
-Saloon_01_44727dc9	t	Is that even possible?	game/tl/English/chapter/wildwest/saloon.rpy	920	"t suspicious ""[what]"""
-Saloon_01_acc879eb	t	And what distinguishes the dream from reality?	game/tl/English/chapter/wildwest/saloon.rpy	923	"t ""[what]"""
-Saloon_01_2ae54217	b	Exactly. That's kind of scary, isn't it?	game/tl/English/chapter/wildwest/saloon.rpy	926	"b sad ""[what]"""
-Saloon_01_d31be6f1	t	If we save Chris in here, will he be saved in the real world?	game/tl/English/chapter/wildwest/saloon.rpy	929	"t neutral ""[what]"""
-Saloon_01_4fecea72	b	Hard to say.	game/tl/English/chapter/wildwest/saloon.rpy	932	"b neutral ""[what]"""
-Saloon_01_0482117e	b	Dreams are not real, but they shape our reality.	game/tl/English/chapter/wildwest/saloon.rpy	935	"b neutral ""[what]"""
-Saloon_01_f93207a3	t	How is that possible?	game/tl/English/chapter/wildwest/saloon.rpy	938	"t suspicious ""[what]"""
-Saloon_01_73a9a20b	b	To be honest, I don't really understand it either.	game/tl/English/chapter/wildwest/saloon.rpy	941	"b sad ""[what]"""
-Saloon_01_389e1402	b	I just know that it is.	game/tl/English/chapter/wildwest/saloon.rpy	944	"b neutral ""[what]"""
-Saloon_01_95a802d6	t	That is very unsatisfactory.	game/tl/English/chapter/wildwest/saloon.rpy	947	"t sad ""[what]"""
-Saloon_01_bb5a4976	t	But if Chris is in here with us, maybe he can tell us where he's being held.	game/tl/English/chapter/wildwest/saloon.rpy	950	"t happy ""[what]"""
-Saloon_01_a3431984	b	I have already tried that.	game/tl/English/chapter/wildwest/saloon.rpy	953	"b neutral ""[what]"""
-Saloon_01_b307e5ab	b	Unfortunately, he doesn't know either.	game/tl/English/chapter/wildwest/saloon.rpy	956	"b sad ""[what]"""
-Saloon_01_72b5d3b8	b	Good idea!	game/tl/English/chapter/wildwest/saloon.rpy	959	"b happy ""[what]"""
-Saloon_01_da0ca734	b	If Chris dies in here, it will definitely have an impact on the real world.	game/tl/English/chapter/wildwest/saloon.rpy	962	"b tough ""[what]"""
-Saloon_01_1d28bc8e	t	How so?	game/tl/English/chapter/wildwest/saloon.rpy	965	"t suspicious ""[what]"""
-Saloon_01_0498693e	b	I'm sure Marvin could explain it to you better.	game/tl/English/chapter/wildwest/saloon.rpy	968	"b neutral ""[what]"""
-Saloon_01_1822d824	b	He has more experience with these things.	game/tl/English/chapter/wildwest/saloon.rpy	971	"b sad ""[what]"""
-Saloon_01_85fea7cc	t	Have you found it yet?	game/tl/English/chapter/wildwest/saloon.rpy	974	"t neutral ""[what]"""
-Saloon_01_367553b8	b	No, unfortunately not.	game/tl/English/chapter/wildwest/saloon.rpy	977	"b neutral ""[what]"""
-Saloon_01_d3183726	b	In any case, we should avoid Chris being executed.	game/tl/English/chapter/wildwest/saloon.rpy	980	"b neutral ""[what]"""
-Saloon_01_68568b60	b	If only to be on the safe side.	game/tl/English/chapter/wildwest/saloon.rpy	983	"b tough ""[what]"""
-Saloon_01_ce7b8dc1	t	Agreed.	game/tl/English/chapter/wildwest/saloon.rpy	986	"t tough ""[what]"""
-Saloon_01_2895c29e	t	So, where do we start?	game/tl/English/chapter/wildwest/saloon.rpy	989	"t neutral ""[what]"""
-Saloon_02_080852d9	t	We should take a look around the city.	game/tl/English/chapter/wildwest/saloon.rpy	992	"t neutral ""[what]"""
-Saloon_02_4601353e	t	Maybe we can find out something about Chris or Marvin.	game/tl/English/chapter/wildwest/saloon.rpy	995	"t friendly ""[what]"""
-Saloon_02_bc3917f0	t	There must be something we can do to help Chris!	game/tl/English/chapter/wildwest/saloon.rpy	998	"t sad ""[what]"""
 Saloon_02_a850790b	n	Of course!	game/tl/English/chapter/wildwest/saloon.rpy	1001	"n tough ""[what]"""
 Saloon_02_1abee310	n	All you have to do is tell me where Marvin is and Chris will be released immediately.	game/tl/English/chapter/wildwest/saloon.rpy	1004	"n happy ""[what]"""
-Saloon_02_b0b5e798	j	Even if I knew, I wouldn't tell you!	game/tl/English/chapter/wildwest/saloon.rpy	1007	"j angry ""[what]"""
 Saloon_02_0d2bdd26	dog	If anyone even tries to get near him, I'll eat them up.	game/tl/English/chapter/wildwest/saloon.rpy	1010	"dog angry ""[what]"""
 Saloon_02_cdcee44d	e	Hey, before you all go at each other's throats, how about a game of poker?	game/tl/English/chapter/wildwest/saloon.rpy	1013	"e neutral ""[what]"""
 Saloon_02_4811a31b	n	Then at least I would have an eye on all of you...	game/tl/English/chapter/wildwest/saloon.rpy	1016	"n suspicious ""[what]"""
-Saloon_02_d0b5138c	t	Okay, but whoever loses has to take something off!	game/tl/English/chapter/wildwest/saloon.rpy	1019	"t happy ""[what]"""
-Saloon_02_f22ec52f	j	Strip Poker?	game/tl/English/chapter/wildwest/saloon.rpy	1022	"j surprised ""[what]"""
-Sheriff_728be8ef		As you carefully enter the sheriff's office, the warm glow of an oil lamp flickers through the room and casts long shadows on the aged wooden walls.	game/tl/English/chapter/wildwest/sheriff.rpy	1335	[what]
-Sheriff_fe15b241		The air is heavy with the scent of whiskey, tobacco and old leather.	game/tl/English/chapter/wildwest/sheriff.rpy	1338	[what]
-Sheriff_1448ba28		In the center of the room is a large wooden desk, littered with a half-empty bottle of lager, a tin coffee mug and a single revolver resting within easy reach.	game/tl/English/chapter/wildwest/sheriff.rpy	1341	[what]
-Sheriff_cdcfa0e0		Behind him, the sheriff leans back in his chair, his boots casually propped up on the table, his hat pulled so low over his face that his eyes are barely visible.	game/tl/English/chapter/wildwest/sheriff.rpy	1344	[what]
-Sheriff_cab83d5d		The calm rise and fall of his chest suggests that he is dozing - or at least pretending to be.	game/tl/English/chapter/wildwest/sheriff.rpy	1347	[what]
-Sheriff_58f1f5d7		To your left, a gun rack displays a collection of well-used rifles, their barrels gleaming faintly in the dim light.	game/tl/English/chapter/wildwest/sheriff.rpy	1350	[what]
-Sheriff_0f3eebd4		"Above it hangs a faded sign reading ""SHERIFF"", directly beneath a mounted bull's skull whose empty eye sockets seem to follow your every move."	game/tl/English/chapter/wildwest/sheriff.rpy	1353	[what]
-Sheriff_3617e24c		At the back of the room, a German shepherd is lying next to a wooden barrel.	game/tl/English/chapter/wildwest/sheriff.rpy	1356	[what]
-Sheriff_0f30ab3b		His ears twitch as he scrutinizes you with watchful eyes.	game/tl/English/chapter/wildwest/sheriff.rpy	1359	[what]
-Sheriff_8a819dd5		The soft crackling of the oil lamp is the only sound that breaks the silence - apart from the occasional rustling of the sheriff's chair.	game/tl/English/chapter/wildwest/sheriff.rpy	1362	[what]
-Sheriff_407cda45		Everything about this room suggests that this is a man who has seen more than his fair share of trouble - and doesn't seem particularly worried about the next one.	game/tl/English/chapter/wildwest/sheriff.rpy	1365	[what]
-Sheriff_e16c8030		You flutter through the dusty room with your small, furry wings and land carefully on the creaky wooden floor.	game/tl/English/chapter/wildwest/sheriff.rpy	1368	[what]
-Sheriff_3fcfdce9		No sooner have you looked around than you hear a deep, menacing growl behind you.	game/tl/English/chapter/wildwest/sheriff.rpy	1371	[what]
-Sheriff_24e06a66		As you turn around, you see the huge sheepdog with bared teeth. Its eyes shine in the dim light of the oil lamp.	game/tl/English/chapter/wildwest/sheriff.rpy	1374	[what]
 Sheriff_63fcd9ef	dog	What have we got here? A fluffy little breakfast that went straight into my mouth!	game/tl/English/chapter/wildwest/sheriff.rpy	1377	"dog happy ""[what]"""
-Sheriff_712a56e5	b	W-Wait! I'm not here to be eaten! I'm looking for someone.	game/tl/English/chapter/wildwest/sheriff.rpy	1380	"b afraid ""[what]"""
 Sheriff_0c727349	dog	Then you're out of luck, because I'm looking for something to eat.	game/tl/English/chapter/wildwest/sheriff.rpy	1383	"dog happy ""[what]"""
-Sheriff_5efaa5dd		He takes a step closer, his claws clacking on the ground. Your heart is racing, but you have to pull yourself together.	game/tl/English/chapter/wildwest/sheriff.rpy	1386	[what]
-Sheriff_a9075f48	b	Listen, big, strong, extremely majestic watchdog.	game/tl/English/chapter/wildwest/sheriff.rpy	1389	"b friendly ""[what]"""
-Sheriff_3a686be3	b	I'm on an important mission! I have to see Chris!	game/tl/English/chapter/wildwest/sheriff.rpy	1392	"b ""[what]"""
 Sheriff_20e4d86e	dog	Chris? Oh, you mean the savage in the cell? The sorcerer?	game/tl/English/chapter/wildwest/sheriff.rpy	1395	"dog neutral ""[what]"""
 Sheriff_58cecfca	dog	Why should I let you see him when I can eat you instead?	game/tl/English/chapter/wildwest/sheriff.rpy	1398	"dog angry ""[what]"""
-Sheriff_34969628		He licks his lips. You swallow hard, flap your wings a little and try to keep calm.	game/tl/English/chapter/wildwest/sheriff.rpy	1401	[what]
-Sheriff_21122ca3		He jumps forward and grabs you!	game/tl/English/chapter/wildwest/sheriff.rpy	1404	[what]
-Sheriff_6ad53d6d		But at the last moment you flutter into the air with a startled squeak, out of reach of his teeth.	game/tl/English/chapter/wildwest/sheriff.rpy	1407	[what]
 Sheriff_31c8a1c1	dog	Figgy little fur ball!	game/tl/English/chapter/wildwest/sheriff.rpy	1410	"dog angry ""[what]"""
-Sheriff_bf75ea4c		The dog sits down, his tail beats impatiently against the ground.	game/tl/English/chapter/wildwest/sheriff.rpy	1413	[what]
-Sheriff_18b18326		Then suddenly his face brightens - as if he has an idea.	game/tl/English/chapter/wildwest/sheriff.rpy	1416	[what]
 Sheriff_6a6d5c01	dog	All right. I realize I can't catch you. But I can make you an offer.	game/tl/English/chapter/wildwest/sheriff.rpy	1419	"dog happy ""[what]"""
-Sheriff_d2b3d20a	b	What kind of offer?	game/tl/English/chapter/wildwest/sheriff.rpy	1422	"b suspicious ""[what]"""
 Sheriff_03d38914	dog	I'll let you talk to Chris. Quietly.	game/tl/English/chapter/wildwest/sheriff.rpy	1425	"dog happy ""[what]"""
 Sheriff_c19ab86d	dog	But after that...	game/tl/English/chapter/wildwest/sheriff.rpy	1428	"dog angry ""[what]"""
-Sheriff_91914d58		He takes a meaningful pause.	game/tl/English/chapter/wildwest/sheriff.rpy	1431	[what]
 Sheriff_a358fa73	dog	... you let me eat you.	game/tl/English/chapter/wildwest/sheriff.rpy	1434	"dog angry ""[what]"""
-Sheriff_2fd62166		Your blood freezes in your veins.	game/tl/English/chapter/wildwest/sheriff.rpy	1437	[what]
-Sheriff_e72fd4af		But this is just a dream, right?	game/tl/English/chapter/wildwest/sheriff.rpy	1440	[what]
-Sheriff_5e19328a		So what could possibly happen?	game/tl/English/chapter/wildwest/sheriff.rpy	1443	[what]
 Sheriff_cf04f796	dog	So, bunny ... how much do you want to meet Chris?	game/tl/English/chapter/wildwest/sheriff.rpy	1446	"dog happy ""[what]"""
-Sheriff_b3bda5be	b	Okay, I'll let you eat me if you let me talk to Chris.	game/tl/English/chapter/wildwest/sheriff.rpy	1449	"b tough ""[what]"""
-Sheriff_09067682	b	Forget it. I'm not breakfast.	game/tl/English/chapter/wildwest/sheriff.rpy	1452	"b angry ""[what]"""
 Sheriff_379a8c14	dog	What a pity. You look delicious!	game/tl/English/chapter/wildwest/sheriff.rpy	1455	"dog sad ""[what]"""
-Sheriff_a9f9009f		To be on the safe side, you fly further up towards the ceiling, where you sit down on a beam at a safe height.	game/tl/English/chapter/wildwest/sheriff.rpy	1458	[what]
-Sheriff_b747db94		Now you have everything in view without the dog being able to reach you.	game/tl/English/chapter/wildwest/sheriff.rpy	1461	[what]
-Sheriff_e36bf80d		Frustrated, the sheepdog barks loudly.	game/tl/English/chapter/wildwest/sheriff.rpy	1464	[what]
-TalkToChris_4c364f62		The dog leads you to the cells.	game/tl/English/chapter/wildwest/sheriff.rpy	1467	[what]
-TalkToChris_ec5cd8bc	c	With the great Manitou!	game/tl/English/chapter/wildwest/sheriff.rpy	1470	"c surprised ""[what]"""
-TalkToChris_8a11133b	c	A flying rabbit?	game/tl/English/chapter/wildwest/sheriff.rpy	1473	"c ""[what]"""
-TalkToChris_7a4ca4fd	b	Hello Chris. It's me, Ben.	game/tl/English/chapter/wildwest/sheriff.rpy	1476	"b happy ""[what]"""
-TalkToChris_382d276c	c	Ben? Who is Ben?	game/tl/English/chapter/wildwest/sheriff.rpy	1479	"c suspicious ""[what]"""
-TalkToChris_ceac708e	b	You know. Tim's angel?	game/tl/English/chapter/wildwest/sheriff.rpy	1482	"b tough ""[what]"""
-TalkToChris_5eb9dbf4		Chris looks confused.	game/tl/English/chapter/wildwest/sheriff.rpy	1485	[what]
-TalkToChris_63da9cf7	c	Tim? Who owns the saloon?	game/tl/English/chapter/wildwest/sheriff.rpy	1488	"c suspicious ""[what]"""
-TalkToChris_53fb1134	b	Tim, your classmate who you always teased.	game/tl/English/chapter/wildwest/sheriff.rpy	1491	"b neutral ""[what]"""
-TalkToChris_e5ba62ec		Chris looks at you, puzzled.	game/tl/English/chapter/wildwest/sheriff.rpy	1494	[what]
-TalkToChris_20bb4ed0	b	Listen to me. This...	game/tl/English/chapter/wildwest/sheriff.rpy	1497	"b neutral ""[what]"""
-TalkToChris_417f0d3c		You point to the whole room with your paws.	game/tl/English/chapter/wildwest/sheriff.rpy	1500	[what]
-TalkToChris_fc8b4cfb	b	This is all just a dream world.	game/tl/English/chapter/wildwest/sheriff.rpy	1503	"b neutral ""[what]"""
-TalkToChris_1ae1b896	c	A... Dream world?	game/tl/English/chapter/wildwest/sheriff.rpy	1506	"c suspicious ""[what]"""
-TalkToChris_4403ed46		You roll your eyes.	game/tl/English/chapter/wildwest/sheriff.rpy	1509	[what]
-TalkToChris_eab5b3da	b	Flying rabbit and all that!	game/tl/English/chapter/wildwest/sheriff.rpy	1512	"b tough ""[what]"""
-TalkToChris_578ad3fa		Chris thinks for a moment.	game/tl/English/chapter/wildwest/sheriff.rpy	1515	[what]
-TalkToChris_be82ee2a	c	Good point.	game/tl/English/chapter/wildwest/sheriff.rpy	1518	"c tough ""[what]"""
-TalkToChris_41a73f43		You breathe an audible sigh of relief when Chris adds:	game/tl/English/chapter/wildwest/sheriff.rpy	1521	[what]
-TalkToChris_8a3bc2f8	c	"In contrast to angels and demons in the ""real"" world..."	game/tl/English/chapter/wildwest/sheriff.rpy	1524	"c suspicious ""[what]"""
-TalkToChris_5d81275d		You flap your wings in frustration.	game/tl/English/chapter/wildwest/sheriff.rpy	1527	[what]
-TalkToChris_7b6ac240	b	We don't have time for this. You just have to believe me.	game/tl/English/chapter/wildwest/sheriff.rpy	1530	"b angry ""[what]"""
-TalkToChris_c6cd6f4d	c	Do I have to?	game/tl/English/chapter/wildwest/sheriff.rpy	1533	"c ""[what]"""
-TalkToChris_c991d977	b	You have been kidnapped. Tell me where you are.	game/tl/English/chapter/wildwest/sheriff.rpy	1536	"b tough ""[what]"""
-TalkToChris_4ab512fd	c	If this is all a dream, it won't help me either.	game/tl/English/chapter/wildwest/sheriff.rpy	1539	"c suspicious ""[what]"""
-TalkToChris_6aa3ab33	b	Then you can tell me too!	game/tl/English/chapter/wildwest/sheriff.rpy	1542	"b angry ""[what]"""
-TalkToChris_19dba9fc		Chris is still looking at you in disbelief.	game/tl/English/chapter/wildwest/sheriff.rpy	1545	[what]
-TalkToChris_4b238f4d	b	Come on! We have to find you!	game/tl/English/chapter/wildwest/sheriff.rpy	1548	"b sad ""[what]"""
-TalkToChris_8f04d6a2		Finally, he shrugs his shoulders.	game/tl/English/chapter/wildwest/sheriff.rpy	1551	[what]
-TalkToChris_37a1732c	c	Even if I wanted to, I can't tell you.	game/tl/English/chapter/wildwest/sheriff.rpy	1554	"c sad ""[what]"""
-TalkToChris_842f1c00	b	Why not?	game/tl/English/chapter/wildwest/sheriff.rpy	1557	"b surprised ""[what]"""
-TalkToChris_41fd7b3c	c	Because I don't know.	game/tl/English/chapter/wildwest/sheriff.rpy	1560	"c tough ""[what]"""
-TalkToChris_0ca718fe	c	They blindfolded me.	game/tl/English/chapter/wildwest/sheriff.rpy	1563	"c sad ""[what]"""
-TalkToChris_b2cd45d9	b	Damn!	game/tl/English/chapter/wildwest/sheriff.rpy	1566	"b angry ""[what]"""
-TalkToChris_87d06d5e	c	I'm sorry I couldn't help you further.	game/tl/English/chapter/wildwest/sheriff.rpy	1569	"c sad ""[what]"""
-TalkToChris_4714e000	b	Don't worry about it. We'll find you that way too!	game/tl/English/chapter/wildwest/sheriff.rpy	1572	"b sad ""[what]"""
 TalkToChris_cc621d11	dog	So, have you found what you were looking for?	game/tl/English/chapter/wildwest/sheriff.rpy	1575	"dog happy ""[what]"""
-TalkToChris_cb8e499a	b	Unfortunately not.	game/tl/English/chapter/wildwest/sheriff.rpy	1578	"b sad ""[what]"""
 TalkToChris_67142fba	dog	What a pity. Then you've probably forfeited your life for nothing...	game/tl/English/chapter/wildwest/sheriff.rpy	1581	"dog sad ""[what]"""
-Menu_Deal_e4079a96		The dog jumps forward.	game/tl/English/chapter/wildwest/sheriff.rpy	1584	[what]
-Menu_Deal_ba30afcb		Your flight reflexes will kick in, but it's too late.	game/tl/English/chapter/wildwest/sheriff.rpy	1587	[what]
-Menu_Deal_2d6fff1e		You feel a sharp pain before everything goes dark.	game/tl/English/chapter/wildwest/sheriff.rpy	1590	[what]
 Menu_Deal_cfcf58bb	dog	Stay here, you traitor!	game/tl/English/chapter/wildwest/sheriff.rpy	1593	"dog angry ""[what]"""
-Menu_Deal_7c5df5f7		With quick wing beats, you get to safety by flying up to the ceiling, where you perch on a beam at a safe height.	game/tl/English/chapter/wildwest/sheriff.rpy	1596	[what]
-Menu_Deal_b747db94		Now you have everything in view without the dog being able to reach you.	game/tl/English/chapter/wildwest/sheriff.rpy	1599	[what]
-Menu_Deal_e36bf80d		Frustrated, the sheepdog barks loudly.	game/tl/English/chapter/wildwest/sheriff.rpy	1602	[what]
-ww_Game_Over_72333457	b	Since when can you turn back time?	game/tl/English/chapter/wildwest/sheriff.rpy	1605	"b surprised ""[what]"""
-ww_Game_Over_fc3dc52b	l	Only in dreams and only when you have died.	game/tl/English/chapter/wildwest/sheriff.rpy	1608	"l neutral ""[what]"""
-ww_Game_Over_30e2fc71	b	That somehow makes no sense.	game/tl/English/chapter/wildwest/sheriff.rpy	1611	"b suspicious ""[what]"""
-ww_Game_Over_f81c1e4b	l	Do you want to go back or not?	game/tl/English/chapter/wildwest/sheriff.rpy	1614	"l disgusted ""[what]"""
 Sheriff_Chris_7d8b7584	n	Huh? What? I'm awake!	game/tl/English/chapter/wildwest/sheriff.rpy	1617	"n suspicious ""[what]"""
 Sheriff_Chris_7acf309a	dog	Get down here, you coward!	game/tl/English/chapter/wildwest/sheriff.rpy	1620	"dog angry ""[what]"""
 Sheriff_Chris_c08c70b9	n	Be quiet!	game/tl/English/chapter/wildwest/sheriff.rpy	1623	"n angry ""[what]"""
 Sheriff_Chris_64e3da08	dog	But ... the rabbit!	game/tl/English/chapter/wildwest/sheriff.rpy	1626	"dog sad ""[what]"""
 Sheriff_Chris_1e96bdf7	n	Enough now! Bad dog!	game/tl/English/chapter/wildwest/sheriff.rpy	1629	"n ""[what]"""
-Sheriff_Chris_2ea43f7f		The dog puts its ears back and whines slightly.	game/tl/English/chapter/wildwest/sheriff.rpy	1632	[what]
 Sheriff_Chris_91328b58	dog	Bad dog?!	game/tl/English/chapter/wildwest/sheriff.rpy	1635	"dog sad ""[what]"""
-Sheriff_Chris_3e3311e1		He tucks his tail and curls up in his corner, his back demonstratively turned towards Noah.	game/tl/English/chapter/wildwest/sheriff.rpy	1638	[what]
-Sheriff_Chris_264ceddf		Noah sighs theatrically.	game/tl/English/chapter/wildwest/sheriff.rpy	1641	[what]
 Sheriff_Chris_cd733693	n	Okay, okay. I take it back.	game/tl/English/chapter/wildwest/sheriff.rpy	1644	"n friendly ""[what]"""
 Sheriff_Chris_09d85b0a	n	You're not a bad dog, okay?	game/tl/English/chapter/wildwest/sheriff.rpy	1647	"n neutral ""[what]"""
-Sheriff_Chris_448f7a9b		He shrugs his shoulders.	game/tl/English/chapter/wildwest/sheriff.rpy	1650	[what]
 Sheriff_Chris_1ffd40ba	n	You woke me up. And we have more important things to do than chase rabbits.	game/tl/English/chapter/wildwest/sheriff.rpy	1653	"n ""[what]"""
-Sheriff_Chris_9e76dfdc		Noah gets up and walks over to the cells.	game/tl/English/chapter/wildwest/sheriff.rpy	1656	[what]
-Sheriff_Chris_b6c1f156		The sheepdog snorts indignantly once more, but then follows Noah.	game/tl/English/chapter/wildwest/sheriff.rpy	1659	[what]
-Sheriff_Chris_516ac12d		He orders Chris with a commanding tone:	game/tl/English/chapter/wildwest/sheriff.rpy	1662	[what]
 Sheriff_Chris_e38af5d3	n	Turn around!	game/tl/English/chapter/wildwest/sheriff.rpy	1665	"n angry ""[what]"""
-Sheriff_Chris_5a3907c0		He follows the instruction without saying a word and turns around.	game/tl/English/chapter/wildwest/sheriff.rpy	1668	[what]
-Sheriff_Chris_4852db4f		With practiced hands, Noah shackles Chris's wrists with a tight chain, then opens the cell door and leads Chris out.	game/tl/English/chapter/wildwest/sheriff.rpy	1671	[what]
-Sheriff_Chris_eb696c5a		He ties it to one of the wooden pillars with a coarse rope.	game/tl/English/chapter/wildwest/sheriff.rpy	1674	[what]
-Sheriff_Chris_f3f70a80		Sheriff Noah steps slowly around the pillar, his hands on his belt, and you hear him exhale softly, as if carefully weighing each step.	game/tl/English/chapter/wildwest/sheriff.rpy	1677	[what]
-Sheriff_Chris_72879645		His sheepdog growls briefly, gives you a snarling look and nudges Noah's boot, but the sheriff pays no attention to your hiding place far above him.	game/tl/English/chapter/wildwest/sheriff.rpy	1680	[what]
-Sheriff_Chris_12e48dd9		His focus is solely on Chris.	game/tl/English/chapter/wildwest/sheriff.rpy	1683	[what]
 Sheriff_Chris_49e1bf81	n	Chris... Believe me, I don't like doing this.	game/tl/English/chapter/wildwest/sheriff.rpy	1686	"n sad ""[what]"""
 Sheriff_Chris_206788c1	n	But I cannot allow a demonic influence to spread any further.	game/tl/English/chapter/wildwest/sheriff.rpy	1689	"n ""[what]"""
 Sheriff_Chris_c6ee26a6	n	If you're really in touch with Marvin, I need answers.	game/tl/English/chapter/wildwest/sheriff.rpy	1692	"n ""[what]"""
 Sheriff_Chris_32b142ae	n	And if you don't say anything...	game/tl/English/chapter/wildwest/sheriff.rpy	1695	"n angry ""[what]"""
-Sheriff_Chris_0846d938		He does not finish the sentence.	game/tl/English/chapter/wildwest/sheriff.rpy	1698	[what]
-Sheriff_Chris_fc2007e3		Instead, he lets his gaze slide over Chris' folded arms.	game/tl/English/chapter/wildwest/sheriff.rpy	1701	[what]
-Sheriff_Chris_0eb108b1		Every single breath Chris takes is short, shallow and driven by fear. You can see him trying to keep his composure.	game/tl/English/chapter/wildwest/sheriff.rpy	1704	[what]
-Sheriff_Chris_e1738a30		Noah raises a hand, his fingers clasping something long, swan-feather-like - a feather, white, finely curved.	game/tl/English/chapter/wildwest/sheriff.rpy	1707	[what]
-Sheriff_Chris_6595a380		His grip is as devout as if he were holding a weapon that could do more damage than a knife.	game/tl/English/chapter/wildwest/sheriff.rpy	1710	[what]
 Sheriff_Chris_b72fe598	n	I swear to you, I'll do what needs to be done.	game/tl/English/chapter/wildwest/sheriff.rpy	1713	"n tough ""[what]"""
 Sheriff_Chris_475ced01	n	And if I drive you to despair with this...	game/tl/English/chapter/wildwest/sheriff.rpy	1716	"n ""[what]"""
-Sheriff_Chris_448f7a9b_1		He shrugs his shoulders.	game/tl/English/chapter/wildwest/sheriff.rpy	1719	[what]
-Sheriff_Chris_568d2e65		Chris' eyes widen.	game/tl/English/chapter/wildwest/sheriff.rpy	1722	[what]
-Sheriff_Chris_ec467596	c	No... No, please don't... you... you can't make me talk like this because... because I really don't know where Marvin is!	game/tl/English/chapter/wildwest/sheriff.rpy	1725	"c fear ""[what]"""
-Sheriff_Chris_6cdcb23b		His words come thick and fast and he tries even more desperately to loosen his bonds.	game/tl/English/chapter/wildwest/sheriff.rpy	1728	[what]
-Sheriff_Chris_a2325c16		Noah lowers the feather and runs it in a slight arc over Chris's bare upper arm.	game/tl/English/chapter/wildwest/sheriff.rpy	1731	[what]
-Sheriff_Chris_0a66ef35		Chris flinches and a half-suppressed giggle gurgles in his throat.	game/tl/English/chapter/wildwest/sheriff.rpy	1734	[what]
-Sheriff_Chris_35d5b2ff		He grits his teeth, the muscles in his jaws protruding as if to stifle any hint of laughter.	game/tl/English/chapter/wildwest/sheriff.rpy	1737	[what]
 Sheriff_Chris_4db5b986	n	Some things you have to try out before you give up.	game/tl/English/chapter/wildwest/sheriff.rpy	1740	"n tough ""[what]"""
 Sheriff_Chris_5266a874	n	If you really don't know anything, I feel sorry for you.	game/tl/English/chapter/wildwest/sheriff.rpy	1743	"n ""[what]"""
 Sheriff_Chris_acc19fb0	n	But this...	game/tl/English/chapter/wildwest/sheriff.rpy	1746	"n ""[what]"""
-Sheriff_Chris_627ba2c0		He runs the spring gently under Chris' ribs.	game/tl/English/chapter/wildwest/sheriff.rpy	1749	[what]
-Sheriff_Chris_5130416d		Chris suddenly gasps for air before his body throws itself forward in jerky bursts of laughter.	game/tl/English/chapter/wildwest/sheriff.rpy	1752	[what]
-Sheriff_Chris_bc56fae3		A cry, half laughter, half pleading, fills the room.	game/tl/English/chapter/wildwest/sheriff.rpy	1755	[what]
-Sheriff_Chris_1a8d2c1e	c	H-Stop it! B-Please! I... can't... not... aah!	game/tl/English/chapter/wildwest/sheriff.rpy	1758	"c laugh ""[what]"""
-Sheriff_Chris_bbfa1df0		The dog jumps around the two of them, an ominous glint in his eyes as he gives your motionless figure on the beam above a quick approving glance.	game/tl/English/chapter/wildwest/sheriff.rpy	1761	[what]
-Sheriff_Chris_f3c22e6f		You can only watch impotently as Chris' cheeks turn red, his breathing becomes staccato as laughter robs him of his strength.	game/tl/English/chapter/wildwest/sheriff.rpy	1764	[what]
 Sheriff_Chris_e1675611	n	You just have to say it, Chris. Where's Marvin?	game/tl/English/chapter/wildwest/sheriff.rpy	1767	"n neutral ""[what]"""
 Sheriff_Chris_efe81a02	n	I don't have time for games.	game/tl/English/chapter/wildwest/sheriff.rpy	1770	"n angry ""[what]"""
-Sheriff_Chris_a0ca3ab8		This time the feather glides over Chris' stomach.	game/tl/English/chapter/wildwest/sheriff.rpy	1773	[what]
-Sheriff_Chris_c98bd9d5		He desperately tries to turn his hips away, but Noah's arm grips his waist tightly.	game/tl/English/chapter/wildwest/sheriff.rpy	1776	[what]
-Sheriff_Chris_92f998fc		Your heart contracts as his laughter becomes unnaturally shrill, almost a panicked sound.	game/tl/English/chapter/wildwest/sheriff.rpy	1779	[what]
-Sheriff_Chris_d128ca05	c	I-I don't know! B-Please, believe me...!	game/tl/English/chapter/wildwest/sheriff.rpy	1782	"c laugh ""[what]"""
-Sheriff_Chris_8bef3496		Noah lets up for a moment, looking at Chris, whose chest is still twitching and quivering.	game/tl/English/chapter/wildwest/sheriff.rpy	1785	[what]
-Sheriff_Chris_77b3a770		His gaze is cold, but you sense a trace of regret in it - or at least an attempt to make himself realize that this action is necessary.	game/tl/English/chapter/wildwest/sheriff.rpy	1788	[what]
-Sheriff_Chris_bcbb9450		The dog takes a few steps beside him as if to make sure the torture is continuing.	game/tl/English/chapter/wildwest/sheriff.rpy	1791	[what]
 Sheriff_Chris_7b601724	n	If you don't know anything, I can't spare you either.	game/tl/English/chapter/wildwest/sheriff.rpy	1794	"n sad ""[what]"""
 Sheriff_Chris_70ace099	n	Marvin is up to mischief and I have sworn to protect the world from him.	game/tl/English/chapter/wildwest/sheriff.rpy	1797	"n tough ""[what]"""
 Sheriff_Chris_448c8e9a	n	Any means is fine, Chris - any means.	game/tl/English/chapter/wildwest/sheriff.rpy	1800	"n tough ""[what]"""
-Sheriff_Chris_a926ef7e		Then he lowers the feather again, this time with a flowing movement against Chris' belly button.	game/tl/English/chapter/wildwest/sheriff.rpy	1803	[what]
-Sheriff_Chris_4fbbc94f		Chris's uncontrollable laughter echoes in your ears as he desperately tries to force his own body to calm down.	game/tl/English/chapter/wildwest/sheriff.rpy	1806	[what]
-Sheriff_Chris_6d72c20f		In vain - the tickling agony costs him every last shred of dignity.	game/tl/English/chapter/wildwest/sheriff.rpy	1809	[what]
-Sheriff_Chris_3796e2b2		At that moment, you put your ears back and feel the urge to jump down and help Chris.	game/tl/English/chapter/wildwest/sheriff.rpy	1812	[what]
-Sheriff_Chris_9bd5e932		But you notice how the tense muscles in the dog's body tighten, just waiting for you to give yourself away.	game/tl/English/chapter/wildwest/sheriff.rpy	1815	[what]
-Sheriff_Chris_dbd978ca		You hold your breath and look down at the horror taking place in this room:	game/tl/English/chapter/wildwest/sheriff.rpy	1818	[what]
-Sheriff_Chris_5d483458		Sheriff Noah draws the pen across Chris' skin, causing more laughter pain every second, to get to the bottom of a secret Chris can't unravel.	game/tl/English/chapter/wildwest/sheriff.rpy	1821	[what]
-Sheriff_Chris_43cab1d5		Chris' laughter is so infectious that a smile spreads across Noah's face, but his eyes also reflect compassion.	game/tl/English/chapter/wildwest/sheriff.rpy	1824	[what]
-Sheriff_Chris_4ef49692	c	Aaaah! H-Stop, please... I-I... can't take any more...	game/tl/English/chapter/wildwest/sheriff.rpy	1827	"c laugh ""[what]"""
-Sheriff_Chris_96f59539		Before Chris can catch his breath, the spring slides along his collarbones.	game/tl/English/chapter/wildwest/sheriff.rpy	1830	[what]
-Sheriff_Chris_10fd7c3a		Your gaze touches Noah's face: it looks like that of a person who feels neither joy nor triumph, but only an icy duty.	game/tl/English/chapter/wildwest/sheriff.rpy	1833	[what]
 Sheriff_Chris_d24ad21c	n	You can cry, laugh, plead... I won't stop until I know where Marvin is.	game/tl/English/chapter/wildwest/sheriff.rpy	1836	"n angry ""[what]"""
-Sheriff_Chris_959da7c0		His voice fades in Chris's renewed fits of gasping laughter.	game/tl/English/chapter/wildwest/sheriff.rpy	1839	[what]
-Sheriff_Chris_65e3ae60		A wild urge flares up inside you to do something, but you remain petrified.	game/tl/English/chapter/wildwest/sheriff.rpy	1842	[what]
-Sheriff_Chris_5053f020		The hellhound raises its head and recognizes your presence, but its master's orders are clear - the priority is Chris.	game/tl/English/chapter/wildwest/sheriff.rpy	1845	[what]
-Sheriff_Chris_c0fcf37b		So you watch in silence as the ticking clock on the wall becomes the only witness, tactfully accompanying the mercilessly progressing torture.	game/tl/English/chapter/wildwest/sheriff.rpy	1848	[what]
 Sheriff_Chris_8bbcae36	n	Damn, Chris... just tell me where Marvin is. I...	game/tl/English/chapter/wildwest/sheriff.rpy	1851	"n sad ""[what]"""
-Sheriff_Chris_679801e5		His voice breaks. He lowers his head, presses his lips together as if he can't bear the next sentence.	game/tl/English/chapter/wildwest/sheriff.rpy	1854	[what]
-Sheriff_Chris_83c7844a		The feather he had previously used to tickle him slips out of his hand and slides silently to the ground.	game/tl/English/chapter/wildwest/sheriff.rpy	1857	[what]
-Sheriff_Chris_a7eb6a00		Chris breathes shallowly and intermittently. His chest rises and falls frantically as the feather slips from his field of vision.	game/tl/English/chapter/wildwest/sheriff.rpy	1860	[what]
-Sheriff_Chris_614a2321		A fine sweat of fear glistens on his forehead. But even more than fear, you see exhaustion in his eyes.	game/tl/English/chapter/wildwest/sheriff.rpy	1863	[what]
 Sheriff_Chris_f4e75608	n	I can't do this anymore, do you hear me?	game/tl/English/chapter/wildwest/sheriff.rpy	1866	"n angry ""[what]"""
 Sheriff_Chris_e74bdd53	n	I don't want this... I don't want you...	game/tl/English/chapter/wildwest/sheriff.rpy	1869	"n angry ""[what]"""
-Sheriff_Chris_15635660		He is obviously looking for a word that he doesn't dare say.	game/tl/English/chapter/wildwest/sheriff.rpy	1872	[what]
-Sheriff_Chris_ec38ec25		Then the feeling suddenly whips out of him, and he shakes Chris violently, as if you could see every hated doubt flush from his innermost being.	game/tl/English/chapter/wildwest/sheriff.rpy	1875	[what]
 Sheriff_Chris_6cd0985f	n	Talk at last! Why are you forcing this? Do you think I like torturing someone?	game/tl/English/chapter/wildwest/sheriff.rpy	1878	"n sad ""[what]"""
-Sheriff_Chris_447ff332		His voice rises, the desperate anger is in every sound.	game/tl/English/chapter/wildwest/sheriff.rpy	1881	[what]
-Sheriff_Chris_90436f74		Your ears twitch as the dog growls briefly and leans forward, but Noah only raises a hand briefly to hold him back.	game/tl/English/chapter/wildwest/sheriff.rpy	1884	[what]
-Sheriff_Chris_e3fceaab		With his other hand he leans on Chris' shoulder, and at that moment you see it:	game/tl/English/chapter/wildwest/sheriff.rpy	1887	[what]
-Sheriff_Chris_7827b025		Tears make their way down Noah's cheeks.	game/tl/English/chapter/wildwest/sheriff.rpy	1890	[what]
-Sheriff_Chris_46ad7406		He sobs inaudibly, squeezing his eyes shut as if ashamed of his weakness.	game/tl/English/chapter/wildwest/sheriff.rpy	1893	[what]
-Sheriff_Chris_60fc0ab1	c	Noah... I... I really don't know. He was just gone.	game/tl/English/chapter/wildwest/sheriff.rpy	1896	"c sad ""[what]"""
-Sheriff_Chris_b98702db	c	He lets me down too.	game/tl/English/chapter/wildwest/sheriff.rpy	1899	"c angry ""[what]"""
-Sheriff_Chris_9a73e603		Your heart stops for a moment in shock.	game/tl/English/chapter/wildwest/sheriff.rpy	1902	[what]
-Sheriff_Chris_fb11a9ed		Marvin would never let Chris down.	game/tl/English/chapter/wildwest/sheriff.rpy	1905	[what]
-Sheriff_Chris_4ed7e340		He moves heaven and hell to find Chris again.	game/tl/English/chapter/wildwest/sheriff.rpy	1908	[what]
-Sheriff_Chris_718e6d2b		But of course Chris can't know that.	game/tl/English/chapter/wildwest/sheriff.rpy	1911	[what]
-Sheriff_Chris_bb0b2566		Marvin isn't there for him when he needs him most...	game/tl/English/chapter/wildwest/sheriff.rpy	1914	[what]
 Sheriff_Chris_3defda20	n	If you don't know... then what should I do?	game/tl/English/chapter/wildwest/sheriff.rpy	1917	"n sad ""[what]"""
 Sheriff_Chris_36811904	n	I swore an oath, Chris.	game/tl/English/chapter/wildwest/sheriff.rpy	1920	"n ""[what]"""
 Sheriff_Chris_63c630f5	n	I can't let you go, not without finding him.	game/tl/English/chapter/wildwest/sheriff.rpy	1923	"n tough ""[what]"""
 Sheriff_Chris_76cc0fec	n	But I... I can't...	game/tl/English/chapter/wildwest/sheriff.rpy	1926	"n sad ""[what]"""
-Sheriff_Chris_cf0ff73e		He breaks off again, his chin vibrating with suppressed sobs.	game/tl/English/chapter/wildwest/sheriff.rpy	1929	[what]
-Sheriff_Chris_618c7f8c	c	Noah... please...	game/tl/English/chapter/wildwest/sheriff.rpy	1932	"c sad ""[what]"""
-Sheriff_Chris_61afdd1e		He can say no more before Noah lifts his head, his tears openly visible. At this moment, their eyes cross at eye level.	game/tl/English/chapter/wildwest/sheriff.rpy	1935	[what]
-Sheriff_Chris_c242bb4a		You notice how the air around them thickens, as if they couldn't resist moving for a heartbeat.	game/tl/English/chapter/wildwest/sheriff.rpy	1938	[what]
-Sheriff_Chris_2193b3f3		Chris pulls his upper body forward as far as the restraints will allow and Noah comes towards him.	game/tl/English/chapter/wildwest/sheriff.rpy	1941	[what]
-Sheriff_Chris_7bdf3f02		A whispered, choked sound hangs in the air before their lips meet.	game/tl/English/chapter/wildwest/sheriff.rpy	1944	[what]
-Sheriff_Chris_b0aedf88		And despite the silent outcry in your head, you see how they both lose themselves in their despair for that one moment.	game/tl/English/chapter/wildwest/sheriff.rpy	1947	[what]
-Sheriff_Chris_c7c08ed5		Time seems to stand still. Chris' bound arms twitch minimally, as if he wants to pull Noah closer to him.	game/tl/English/chapter/wildwest/sheriff.rpy	1950	[what]
-Sheriff_Chris_c32c7263		Their tongues meet eagerly and dance together.	game/tl/English/chapter/wildwest/sheriff.rpy	1953	[what]
-Sheriff_Chris_03c367f1		But after a while, Noah suddenly tears himself away from Chris.	game/tl/English/chapter/wildwest/sheriff.rpy	1956	[what]
 Sheriff_Chris_c37fedb9	n	No!	game/tl/English/chapter/wildwest/sheriff.rpy	1959	"n angry ""[what]"""
 Sheriff_Chris_c6f6a66b	n	Medicine man! Sorcerer!	game/tl/English/chapter/wildwest/sheriff.rpy	1962	"n angry ""[what]"""
-Sheriff_Chris_a313fbc5	c	What?	game/tl/English/chapter/wildwest/sheriff.rpy	1965	"c surprised ""[what]"""
 Sheriff_Chris_76c18a0c	n	You have no power over me!	game/tl/English/chapter/wildwest/sheriff.rpy	1968	"n angry ""[what]"""
-Sheriff_Chris_a18b1ac5	c	What are you talking about?	game/tl/English/chapter/wildwest/sheriff.rpy	1971	"c suspicious ""[what]"""
-Sheriff_Chris_2a1e878a		Without another word, Noah unties him from the pillar and pushes him roughly back into his cell.	game/tl/English/chapter/wildwest/sheriff.rpy	1974	[what]
-Stable_00d0edb7		You glide over the city, which is very reminiscent of an old western movie, with light wing beats.	game/tl/English/chapter/wildwest/stable.rpy	781	[what]
-Stable_ff023233		You notice a familiar person at the stables.	game/tl/English/chapter/wildwest/stable.rpy	784	[what]
-Stable_9c7e8527		Jeff takes care of a white horse.	game/tl/English/chapter/wildwest/stable.rpy	787	[what]
-Stable_97778121	j	If only I could tell you!	game/tl/English/chapter/wildwest/stable.rpy	790	"j angry ""[what]"""
-Stable_10ed4f15		He speaks excitedly to the horse.	game/tl/English/chapter/wildwest/stable.rpy	793	[what]
-Stable_1f3b89d0	j	I'm still talking to him and suddenly he just disappears.	game/tl/English/chapter/wildwest/stable.rpy	796	"j sad ""[what]"""
-Stable_f5fa4287	j	That's not right!	game/tl/English/chapter/wildwest/stable.rpy	799	"j tough ""[what]"""
-Stable_8b18450a	j	The sheriff thinks it's this Indian's fault.	game/tl/English/chapter/wildwest/stable.rpy	802	"j suspicious ""[what]"""
-Stable_77ae878a	b	Who are you talking to?	game/tl/English/chapter/wildwest/stable.rpy	805	"b suspicious ""[what]"""
-Stable_0af6244e		Jeff turns to you.	game/tl/English/chapter/wildwest/stable.rpy	808	[what]
-Stable_76623dd1	j	A rabbit with wings?	game/tl/English/chapter/wildwest/stable.rpy	811	"j suspicious ""[what]"""
-Stable_b1f16fcb		Jeff eyes you curiously.	game/tl/English/chapter/wildwest/stable.rpy	814	[what]
-Stable_149b2a6a	j	Well, you don't see something like this every day!	game/tl/English/chapter/wildwest/stable.rpy	817	"j happy ""[what]"""
 Stable_1e37e4c8	horse	But that's no reason to just barge into our conversation!	game/tl/English/chapter/wildwest/stable.rpy	820	"horse neutral ""[what]"""
-Stable_78e5d58e	b	The horse can talk?	game/tl/English/chapter/wildwest/stable.rpy	823	"b surprised ""[what]"""
 Stable_32b82332	horse	Ask the winged rabbit...	game/tl/English/chapter/wildwest/stable.rpy	826	"horse suspicious ""[what]"""
-Stable_f9dbcb30	b	Okay, that's a good point.	game/tl/English/chapter/wildwest/stable.rpy	829	"b happy ""[what]"""
-Stable_882b4958	j	Can I help you?	game/tl/English/chapter/wildwest/stable.rpy	832	"j suspicious ""[what]"""
-Stable_0442962f	b	What is not going right?	game/tl/English/chapter/wildwest/stable.rpy	835	"b suspicious ""[what]"""
-Stable_9dce3bf1		Jeff turns to you.	game/tl/English/chapter/wildwest/stable.rpy	838	[what]
-Stable_4cf6aa4d	j	Haven't you heard? People are disappearing from the city.	game/tl/English/chapter/wildwest/stable.rpy	841	"j sad ""[what]"""
-Stable_2bd40f2c		It doesn't seem to impress him that you are a winged, talking rabbit.	game/tl/English/chapter/wildwest/stable.rpy	844	[what]
 Stable_d5ccfead	horse	They simply disappear - as if they had vanished from the face of the earth.	game/tl/English/chapter/wildwest/stable.rpy	847	"horse neutral ""[what]"""
-Stable_e6a077bc	b	You ... can speak?	game/tl/English/chapter/wildwest/stable.rpy	850	"b surprised ""[what]"""
 Stable_e025cc95	horse	Of course. You too!	game/tl/English/chapter/wildwest/stable.rpy	853	"horse ""[what]"""
-Stable_12536d89	b	Good point.	game/tl/English/chapter/wildwest/stable.rpy	856	"b suspicious ""[what]"""
 Stable_61c21991	horse	If you'll excuse us? We're having a conversation here.	game/tl/English/chapter/wildwest/stable.rpy	859	"horse angry ""[what]"""
-Stable_ad81da3e	j	Don't be so rude.	game/tl/English/chapter/wildwest/stable.rpy	862	"j angry ""[what]"""
-Stable_912eaa7f		Jeff turns back to you.	game/tl/English/chapter/wildwest/stable.rpy	865	[what]
-Stable_c90f1152	j	My name is Jeff. I'm the stable boy.	game/tl/English/chapter/wildwest/stable.rpy	868	"j friendly ""[what]"""
-Stable_3b6b5126	b	I'm Benjamin. You know. Tim's angel.	game/tl/English/chapter/wildwest/stable.rpy	871	"b neutral ""[what]"""
-Stable_0ad526b5	b	I am Benjamin. You already know. Tim's ... companion.	game/tl/English/chapter/wildwest/stable.rpy	874	"b neutral ""[what]"""
-Stable_239ef64a		He looks at you suspiciously.	game/tl/English/chapter/wildwest/stable.rpy	877	[what]
-Stable_32acbd46		But then he shrugs his shoulders.	game/tl/English/chapter/wildwest/stable.rpy	880	[what]
-Stable_7e5866ed	j	If you say so...	game/tl/English/chapter/wildwest/stable.rpy	883	"j neutral ""[what]"""
-Stable_f722f74c	j	You'll find Tim in the saloon.	game/tl/English/chapter/wildwest/stable.rpy	886	"j friendly ""[what]"""
-Stable_2dad2a1e	b	Thank you. I'll have a look for him.	game/tl/English/chapter/wildwest/stable.rpy	889	"b friendly ""[what]"""
-Stable_ae0503e4		You will find Jeff at the stables.	game/tl/English/chapter/wildwest/stable.rpy	892	[what]
-Stable_ecd04eaa		Bare-chested, he is grooming a white horse.	game/tl/English/chapter/wildwest/stable.rpy	895	[what]
-Stable_214ed89b		You fly over and land on the fence.	game/tl/English/chapter/wildwest/stable.rpy	898	[what]
 Stable_af969b70	horse	Oh, look who's back.	game/tl/English/chapter/wildwest/stable.rpy	901	"horse happy ""[what]"""
-Stable_ab440045	j	The flying rabbit!	game/tl/English/chapter/wildwest/stable.rpy	904	"j happy ""[what]"""
-Stable_a40fcbb6	j	You are so cute!	game/tl/English/chapter/wildwest/stable.rpy	907	"j flirt ""[what]"""
-Stable_9f18d7f9	b	"I am not ""cute!"""	game/tl/English/chapter/wildwest/stable.rpy	910	"b angry ""[what]"""
-Stable_eaf4b0dc	j	Yes, you are. At least in this form.	game/tl/English/chapter/wildwest/stable.rpy	913	"j flirt ""[what]"""
-Stable_1ae0d2e6	j	"But you're not the only ""sweetie"" here."	game/tl/English/chapter/wildwest/stable.rpy	916	"j flirt ""[what]"""
 Stable_fcde810f	horse	Oh, thank you!	game/tl/English/chapter/wildwest/stable.rpy	919	"horse surprised ""[what]"""
-Stable_3b39bb67		Tim seems a little confused when the horse suddenly starts talking.	game/tl/English/chapter/wildwest/stable.rpy	922	[what]
-Stable_d25374a4	t	Oh. You can talk too?	game/tl/English/chapter/wildwest/stable.rpy	925	"t suspicious ""[what]"""
 Stable_0eddeaad	horse	Of course. You too.	game/tl/English/chapter/wildwest/stable.rpy	928	"horse angry ""[what]"""
-Stable_d62ed516	t	Are you a demon too?	game/tl/English/chapter/wildwest/stable.rpy	931	"t ""[what]"""
-Stable_8cfe9f76	b	I am an angel, not a demon!	game/tl/English/chapter/wildwest/stable.rpy	934	"b angry ""[what]"""
 Stable_d3df0196	horse	I am a horse!	game/tl/English/chapter/wildwest/stable.rpy	937	"horse neutral ""[what]"""
-Stable_ebaa7af4		He whispers to Jeff:	game/tl/English/chapter/wildwest/stable.rpy	940	[what]
 Stable_6360ced9	horse	Is he mentally handicapped?	game/tl/English/chapter/wildwest/stable.rpy	943	"horse suspicious ""[what]"""
-Stable_f118cc5e	j	Shh. Be nice.	game/tl/English/chapter/wildwest/stable.rpy	946	"j friendly ""[what]"""
 Stable_68bf34d3	horse	I am always nice.	game/tl/English/chapter/wildwest/stable.rpy	949	"horse happy ""[what]"""
-Stable_91e451be	t	Well, you're cute too. But I actually meant Jeff.	game/tl/English/chapter/wildwest/stable.rpy	952	"t laugh ""[what]"""
-Stable_274ab9cb	j	Me?	game/tl/English/chapter/wildwest/stable.rpy	955	"j surprised ""[what]"""
-Stable_80478ae8	j	"Sweet? You probably meant ""masculine and attractive."""	game/tl/English/chapter/wildwest/stable.rpy	958	"j evil ""[what]"""
-Stable_026e343f	t	Uhm... Yeah, sure. What else.	game/tl/English/chapter/wildwest/stable.rpy	961	"t flirt ""[what]"""
 Stable_55efd0ef	horse	You're right. He is cute.	game/tl/English/chapter/wildwest/stable.rpy	964	"horse happy ""[what]"""
-Stable_695ed77a	j	Stop it you two! I'm going to blush!	game/tl/English/chapter/wildwest/stable.rpy	967	"j laugh ""[what]"""
-Stable_4d93fb11	t	So... do you come here often?	game/tl/English/chapter/wildwest/stable.rpy	970	"t neutral ""[what]"""
-Stable_eff83ed6		Tim steps a little closer to the fence.	game/tl/English/chapter/wildwest/stable.rpy	973	[what]
-Stable_a9369757	j	Well, I'm the stable boy. This is basically my workplace.	game/tl/English/chapter/wildwest/stable.rpy	976	"j flirt ""[what]"""
-Stable_fcf8a0cc	t	How interesting. Tell me more.	game/tl/English/chapter/wildwest/stable.rpy	979	"t flirt ""[what]"""
 Stable_6cb7080a	horse	He disposes of my shit. Literally.	game/tl/English/chapter/wildwest/stable.rpy	982	"horse happy ""[what]"""
-Stable_d13fb277	j	Don't listen to him.	game/tl/English/chapter/wildwest/stable.rpy	985	"j angry ""[what]"""
-Stable_01d55a9a		With a sharp sideways glance at the horse, he adds:	game/tl/English/chapter/wildwest/stable.rpy	988	[what]
-Stable_fe06b456	j	I am also responsible for his food!	game/tl/English/chapter/wildwest/stable.rpy	991	"j angry ""[what]"""
 Stable_79a194f2	horse	All right, all right.	game/tl/English/chapter/wildwest/stable.rpy	994	"horse sad ""[what]"""
-Stable_d5eaede8		Tim's finger lightly touches Jeff's arm.	game/tl/English/chapter/wildwest/stable.rpy	997	[what]
-Stable_7e460169	t	Surely your horse isn't jealous of you?	game/tl/English/chapter/wildwest/stable.rpy	1000	"t flirt ""[what]"""
 Stable_ad1c2812	horse	Don't be silly!	game/tl/English/chapter/wildwest/stable.rpy	1003	"horse angry ""[what]"""
-Stable_957b971e		It snorts and paws with its hoof.	game/tl/English/chapter/wildwest/stable.rpy	1006	[what]
-Stable_051346c0		Jeff leans forward a little and their eyes meet.	game/tl/English/chapter/wildwest/stable.rpy	1009	[what]
-Stable_5435b806	j	What should he be jealous of?	game/tl/English/chapter/wildwest/stable.rpy	1012	"j flirt ""[what]"""
-Stable_902cb598	t	Maybe the way you look at me?	game/tl/English/chapter/wildwest/stable.rpy	1015	"t suspicious ""[what]"""
-Stable_58ac69d8	j	How do I look at you?	game/tl/English/chapter/wildwest/stable.rpy	1018	"j smile ""[what]"""
-Stable_908f13d1	t	Like something ... appetizing.	game/tl/English/chapter/wildwest/stable.rpy	1021	"t friendly ""[what]"""
 Stable_9056a625	horse	Oh, come on. Get a room!	game/tl/English/chapter/wildwest/stable.rpy	1024	"horse suspicious ""[what]"""
-Stable_4519f49e		Jeff ignores the horse and instead touches Tim's face.	game/tl/English/chapter/wildwest/stable.rpy	1027	[what]
-Stable_8ce50d14	j	Indeed you are. You are scrumptious.	game/tl/English/chapter/wildwest/stable.rpy	1030	"j flirt ""[what]"""
-Stable_16614232	j	I'd ask you to join me in the gate, but then your white shirt would probably get dirty...	game/tl/English/chapter/wildwest/stable.rpy	1033	"j flirt ""[what]"""
-Stable_08e6a113	t	Because of all the horse manure?	game/tl/English/chapter/wildwest/stable.rpy	1036	"t laugh ""[what]"""
-Stable_d5a6403f	j	Yes, exactly!	game/tl/English/chapter/wildwest/stable.rpy	1039	"j laugh ""[what]"""
-Stable_165e002f		The horse just snorts and turns demonstratively away from the two of them.	game/tl/English/chapter/wildwest/stable.rpy	1042	[what]
-Stable_14245f90	t	Then I should probably take my shirt off first, shouldn't I?	game/tl/English/chapter/wildwest/stable.rpy	1045	"t evil ""[what]"""
-Stable_2b454338	j	In any case!	game/tl/English/chapter/wildwest/stable.rpy	1048	"j evil ""[what]"""
-Stable_3ab7afd2		Tim begins to unbutton his shirt and waistcoat. Then he folds both neatly and places them on the floor.	game/tl/English/chapter/wildwest/stable.rpy	1051	[what]
-Stable_f3642c37	j	You look even more appetizing now!	game/tl/English/chapter/wildwest/stable.rpy	1054	"j desire ""[what]"""
-Stable_c6deb24d	t	Would you like to try it?	game/tl/English/chapter/wildwest/stable.rpy	1057	"t desire ""[what]"""
-Stable_5fa167fe		Instead of replying, Jeff presses his lips to Tim's and the two boys melt into a long, passionate kiss.	game/tl/English/chapter/wildwest/stable.rpy	1060	[what]
-Stable_c6774559		After they come loose again, Jeff opens his pants and lets them slide to the floor.	game/tl/English/chapter/wildwest/stable.rpy	1063	[what]
-Stable_75fcde1c		He stands stark naked in front of Tim.	game/tl/English/chapter/wildwest/stable.rpy	1066	[what]
-Stable_ce28366b	j	Would you like to taste more?	game/tl/English/chapter/wildwest/stable.rpy	1069	"j desire ""[what]"""
-Stable_5143b190	t	Absolutely!	game/tl/English/chapter/wildwest/stable.rpy	1072	"t desire ""[what]"""
-Stable_2c65cbb1		Tim hurries to drop his pants as well.	game/tl/English/chapter/wildwest/stable.rpy	1075	[what]
-Stable_0a4a7ef2		Any attempt to keep them tidy and clean is forgotten.	game/tl/English/chapter/wildwest/stable.rpy	1078	[what]
-Stable_a573aec6		The horse neighs amusedly.	game/tl/English/chapter/wildwest/stable.rpy	1081	[what]
 Stable_66c6a757	horse	Is that all you have to offer?	game/tl/English/chapter/wildwest/stable.rpy	1084	"horse suspicious ""[what]"""
 Stable_fea7e96f	horse	Honestly, you can't win a flower pot with those two little stubby tails!	game/tl/English/chapter/wildwest/stable.rpy	1087	"horse happy ""[what]"""
-Stable_068951eb	t	What kind of flower pot?	game/tl/English/chapter/wildwest/stable.rpy	1090	"t suspicious ""[what]"""
-Stable_3e165698	j	Don't listen to him. He's just jealous.	game/tl/English/chapter/wildwest/stable.rpy	1093	"j friendly ""[what]"""
 Stable_b986e0ec	horse	Jealous? Jealous of what?	game/tl/English/chapter/wildwest/stable.rpy	1096	"horse angry ""[what]"""
 Stable_a3f11436	horse	To your micro-penises?	game/tl/English/chapter/wildwest/stable.rpy	1099	"horse happy ""[what]"""
-Stable_0613b442	j	It's perfect. Just the right size.	game/tl/English/chapter/wildwest/stable.rpy	1102	"j desire ""[what]"""
 Stable_70b0859f	horse	Sure. If you like it small...	game/tl/English/chapter/wildwest/stable.rpy	1105	"horse happy ""[what]"""
-Stable_7438d000		They hug each other even tighter, their stiff limbs wedged between their bodies.	game/tl/English/chapter/wildwest/stable.rpy	1108	[what]
-Stable_3bb350f9		Jeff inhales Tim's scent as if it were an aphrodisiac.	game/tl/English/chapter/wildwest/stable.rpy	1111	[what]
-Stable_8476f23f	j	You smell so good!	game/tl/English/chapter/wildwest/stable.rpy	1114	"j desire ""[what]"""
-Stable_a2f9a7c3	t	That was amazing!	game/tl/English/chapter/wildwest/stable.rpy	1117	"t happy ""[what]"""
-Stable_b499a699	j	Yes, and it felt so real!	game/tl/English/chapter/wildwest/stable.rpy	1120	"j desire ""[what]"""
 Stable_716a6ad7	horse	Why shouldn't it feel real?	game/tl/English/chapter/wildwest/stable.rpy	1123	"horse suspicious ""[what]"""
-Stable_6506f958	j	Well, for a dream...	game/tl/English/chapter/wildwest/stable.rpy	1126	"j suspicious ""[what]"""
-Stable_10744b8a	t	Why do you think this is a dream?	game/tl/English/chapter/wildwest/stable.rpy	1129	"t suspicious ""[what]"""
-Stable_a2ec4318		Jeff looks at Tim in disbelief.	game/tl/English/chapter/wildwest/stable.rpy	1132	[what]
-Stable_46946d13	j	Talking horses, flying rabbits...	game/tl/English/chapter/wildwest/stable.rpy	1135	"j tough ""[what]"""
-Stable_5ccc5a3a	t	Well, but demons and angels are normal?	game/tl/English/chapter/wildwest/stable.rpy	1138	"t suspicious ""[what]"""
-Stable_48d3bccc		Jeff shrugs his shoulders.	game/tl/English/chapter/wildwest/stable.rpy	1141	[what]
-Stable_63628036	j	Good point.	game/tl/English/chapter/wildwest/stable.rpy	1144	"j neutral ""[what]"""
-Stable_73598d88	j	Perhaps a dream within a dream?	game/tl/English/chapter/wildwest/stable.rpy	1147	"j suspicious ""[what]"""
-Stable_371e4dba	t	Or we're just going crazy.	game/tl/English/chapter/wildwest/stable.rpy	1150	"t laugh ""[what]"""
-Stable_5e9a2032	b	Okay. While you're discussing the big philosophical questions, I'm off to find Chris again.	game/tl/English/chapter/wildwest/stable.rpy	1153	"b tough ""[what]"""
-Stable_6e48ec32	t	That's all right!	game/tl/English/chapter/wildwest/stable.rpy	1156	"t angry ""[what]"""
-Stable_8cff4097	t	I'll get dressed quickly and then we can continue our search.	game/tl/English/chapter/wildwest/stable.rpy	1159	"t neutral ""[what]"""
-Stable_Sex_24c31a5e		After a while, they separate again and Jeff sinks to his knees.	game/tl/English/chapter/wildwest/stable_sex.rpy	170	[what]
-Stable_Sex_b43f8bce	t	What are you doing?	game/tl/English/chapter/wildwest/stable_sex.rpy	173	"t suspicous ""[what]"""
-Stable_Sex_5e6bf072	j	I just want to take a look at the display.	game/tl/English/chapter/wildwest/stable_sex.rpy	176	"j desire ""[what]"""
-Stable_Sex_8a3e1d15		He begins to stroke Tim's cock with a firm grip.	game/tl/English/chapter/wildwest/stable_sex.rpy	179	[what]
-Stable_Sex_482c82dd	t	Oh yes, that feels good!	game/tl/English/chapter/wildwest/stable_sex.rpy	182	"t desire ""[what]"""
-Stable_Sex_9e8e623b		Slowly, Jeff leans forward, his face purposefully approaching Tim's member.	game/tl/English/chapter/wildwest/stable_sex.rpy	185	[what]
-Stable_Sex_1a242248		Tim moans loudly as Jeff's lips and tongue touch the sensitive tip of his cock for the first time.	game/tl/English/chapter/wildwest/stable_sex.rpy	188	[what]
-Stable_Sex_c6f89c3b		Jeff's tongue tip plays a little with Tim's glans and licks up the precum before his lips close completely around it.	game/tl/English/chapter/wildwest/stable_sex.rpy	191	[what]
-Stable_Sex_b4fbbadc		The horse now limits itself to occasional snorting and pawing, but says nothing more.	game/tl/English/chapter/wildwest/stable_sex.rpy	194	[what]
-Stable_Sex_c946b98a		Jeff blows Tim for a while before telling him to turn around.	game/tl/English/chapter/wildwest/stable_sex.rpy	197	[what]
-Stable_Sex_1d4df49b	t	What are you planning?	game/tl/English/chapter/wildwest/stable_sex.rpy	200	"t suspicious ""[what]"""
-Stable_Sex_6bb56eb3	j	You'll notice that right away!	game/tl/English/chapter/wildwest/stable_sex.rpy	203	"j desire ""[what]"""
-Stable_Sex_69d4401b	t	Oh fuck!	game/tl/English/chapter/wildwest/stable_sex.rpy	206	"t ""[what]"""
-Stable_Sex_3ec9c9be		Tim moans with pleasure when he feels Jeff's tongue between his cheeks.	game/tl/English/chapter/wildwest/stable_sex.rpy	209	[what]
-Stable_Sex_d4f33ca1	t	Ohhh!	game/tl/English/chapter/wildwest/stable_sex.rpy	212	"t surprised ""[what]"""
-Stable_Sex_941a399f		Jeff's tongue gently penetrates him.	game/tl/English/chapter/wildwest/stable_sex.rpy	215	[what]
-Stable_Sex_3378d85a	t	What ... what are you doing?	game/tl/English/chapter/wildwest/stable_sex.rpy	218	"t surprised ""[what]"""
-Stable_Sex_921865a7	j	Just moisten a little!	game/tl/English/chapter/wildwest/stable_sex.rpy	221	"j evil ""[what]"""
-Stable_Sex_e38487a8	t	Moisten?	game/tl/English/chapter/wildwest/stable_sex.rpy	224	"t suspicious ""[what]"""
-Stable_Sex_6b31f915		With a mischievous smile, Jeff stands up and positions his cock.	game/tl/English/chapter/wildwest/stable_sex.rpy	227	[what]
-Stable_Sex_43225fac		Tim groans slightly as he feels it between his buttocks.	game/tl/English/chapter/wildwest/stable_sex.rpy	230	[what]
-Stable_Sex_10cede07	t	Oh!	game/tl/English/chapter/wildwest/stable_sex.rpy	233	"t surprised ""[what]"""
-Stable_Sex_00639a50	j	Ready?	game/tl/English/chapter/wildwest/stable_sex.rpy	236	"j evil ""[what]"""
-Stable_Sex_fa077b2a		Jeff pushes his hips forward with gentle pressure until his member slowly penetrates Tim.	game/tl/English/chapter/wildwest/stable_sex.rpy	239	[what]
-Stable_Sex_47fa0880	t	Oh, God. Yes!	game/tl/English/chapter/wildwest/stable_sex.rpy	242	"t desire ""[what]"""
-Stable_Sex_6ecf6127	t	Oh yes! Don't stop!	game/tl/English/chapter/wildwest/stable_sex.rpy	245	"t happy ""[what]"""
-Stable_Sex_26b726e9		With gentle pressure and rhythmic movements, Jeff penetrates Tim deeper and deeper.	game/tl/English/chapter/wildwest/stable_sex.rpy	248	[what]
-Tents_bfe434e9		Coming Soon	game/tl/English/chapter/wildwest/tents.rpy	7	[what]
-Wild_West_Scene_8ebe79bc		Dust tickles your nose as you wake up abruptly.	game/tl/English/chapter/wildwest/wild_west_start.rpy	170	[what]
-Wild_West_Scene_eac1d1ee		You feel strangely light, almost weightless. As you try to straighten up, you realize that something is wrong.	game/tl/English/chapter/wildwest/wild_west_start.rpy	173	[what]
-Wild_West_Scene_5c0a5822		Your body feels strange, as if it doesn't belong to you.	game/tl/English/chapter/wildwest/wild_west_start.rpy	176	[what]
-Wild_West_Scene_d509c15f		You look down at yourself and freeze.	game/tl/English/chapter/wildwest/wild_west_start.rpy	179	[what]
-Wild_West_Scene_d87b8135		Fur covers your entire body - soft, fluffy, white fur.	game/tl/English/chapter/wildwest/wild_west_start.rpy	182	[what]
-Wild_West_Scene_3fc09256		Fur covers your entire body - soft, fluffy, black fur.	game/tl/English/chapter/wildwest/wild_west_start.rpy	185	[what]
-Wild_West_Scene_ea1918f9		And as if that wasn't disturbing enough, you discover the delicate, feathery wings that spring from your shoulders.	game/tl/English/chapter/wildwest/wild_west_start.rpy	188	[what]
-Wild_West_Scene_b6c41791	b	What the hell?	game/tl/English/chapter/wildwest/wild_west_start.rpy	191	"b surprised ""[what]"""
-Wild_West_Scene_1fbcecc6	b	A rabbit? Really?	game/tl/English/chapter/wildwest/wild_west_start.rpy	194	"b angry ""[what]"""
-Wild_West_Scene_20c6d054	b	How degrading.	game/tl/English/chapter/wildwest/wild_west_start.rpy	197	"b sad ""[what]"""
-Wild_West_Scene_25cf13cd	b	It looks like I'm in a dream again.	game/tl/English/chapter/wildwest/wild_west_start.rpy	200	"b suspicious ""[what]"""
-Wild_West_Scene_ea839c6c	b	But I didn't even enter a dream!	game/tl/English/chapter/wildwest/wild_west_start.rpy	203	"b tough ""[what]"""
-Wild_West_Scene_888933fa	b	Maybe I'm dreaming myself?	game/tl/English/chapter/wildwest/wild_west_start.rpy	206	"b suspicious ""[what]"""
-Wild_West_Scene_e747b735	b	Can angels even dream?	game/tl/English/chapter/wildwest/wild_west_start.rpy	209	"b ""[what]"""
-Wild_West_Scene_77dcc2fe		Carefully turn your head to take a look at your surroundings.	game/tl/English/chapter/wildwest/wild_west_start.rpy	212	[what]
-Wild_West_Scene_c521f878		You find yourself in the middle of a surreal western landscape.	game/tl/English/chapter/wildwest/wild_west_start.rpy	215	[what]
-Wild_West_Scene_6cd34868		Dusty roads wind their way between weathered wooden buildings.	game/tl/English/chapter/wildwest/wild_west_start.rpy	218	[what]
-Wild_West_Scene_cca8dd7e		Rugged figures in cowboy hats and with flashing revolvers on their hips cavort on the sidewalks.	game/tl/English/chapter/wildwest/wild_west_start.rpy	221	[what]
-Wild_West_Scene_64d0febf		Rattling covered wagons rumble past and the air is filled with the neighing of horses and the hoarse shouts of the inhabitants.	game/tl/English/chapter/wildwest/wild_west_start.rpy	224	[what]
-Wild_West_Scene_5a863377		You raise your eyes to the sky and feel your wings spread out as if of their own accord.	game/tl/English/chapter/wildwest/wild_west_start.rpy	227	[what]
-Wild_West_Scene_a5f2e1e3	b	Well, at least my wings are working as usual!	game/tl/English/chapter/wildwest/wild_west_start.rpy	230	"b tough ""[what]"""
-Wild_West_Scene_c8040c3a		With a determined leap, you leap into the air and flap your wings vigorously.	game/tl/English/chapter/wildwest/wild_west_start.rpy	233	[what]
-Wild_West_Scene_ae99f0ba		However, a rabbit's body has completely different aerodynamics.	game/tl/English/chapter/wildwest/wild_west_start.rpy	236	[what]
-Wild_West_Scene_026fda8b		At first, you almost lose your balance, tip to the side and threaten to land on the dusty ground.	game/tl/English/chapter/wildwest/wild_west_start.rpy	239	[what]
-Wild_West_Scene_269ce944		But you don't give up, you fight doggedly to keep your balance and find the rhythm of your wing beats.	game/tl/English/chapter/wildwest/wild_west_start.rpy	242	[what]
-Wild_West_Scene_d7c511ac		You gain height with increasing safety.	game/tl/English/chapter/wildwest/wild_west_start.rpy	245	[what]
-Wild_West_Scene_00aa7737		The wind blows through your soft fur and the sun warms your wings.	game/tl/English/chapter/wildwest/wild_west_start.rpy	248	[what]
-credits_d849069c	centered	 Astram, Braden, hack back, Jansoft, Jatukun, Jonathan E., jhuang1, KarthusGmG, Luke, mrboom90, Nicholas K., nicos63, Peter H., Sean O'N., steph52140, Tux 	game/tl/English/credits.rpy	173	"centered ""[what]"""
-credits_89c23315	centered	By Mid Air Machine: \n Remember the Way \n Land of a Folk Divided	game/tl/English/credits.rpy	197	"centered ""[what]"""
-credits_1fbec6ea	centered	By Damiano Baldoni: \n The Heaven is far \n Misery	game/tl/English/credits.rpy	203	"centered ""[what]"""
-credits_276e9001	centered	By Greg Atkinson: \n Losers on a Christmas Eve	game/tl/English/credits.rpy	209	"centered ""[what]"""
-credits_ae117890	centered	By Nihilore: \n Jodie Foster	game/tl/English/credits.rpy	215	"centered ""[what]"""
-credits_fb0324e8	centered	By Andrew Codeman: \n Usual Fight	game/tl/English/credits.rpy	221	"centered ""[what]"""
-credits_c98bbd08	centered	Images:	game/tl/English/credits.rpy	227	"centered ""[what]"""
-credits_10f39676	centered	https://de.vecteezy.com/vektorkunst/150802-graffiti-set	game/tl/English/credits.rpy	233	"centered ""[what]"""

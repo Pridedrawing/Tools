@@ -200,12 +200,20 @@ if not os.path.exists(dialogue_path):
 # Read the text file with tab separator (robust against malformed quoting)
 spreadsheet = _read_dialogue_tab_robust(dialogue_path)
 
-# Column name in the spreadsheet that contains the audio file names
-file_name_column = "Identifier"
+def _pick_filename_column(df: pd.DataFrame) -> str:
+    """Prefer the Filename column if present, otherwise fall back to Identifier."""
+    if "Filename" in df.columns:
+        return "Filename"
+    if "Identifier" in df.columns:
+        return "Identifier"
+    return ""
 
-if file_name_column not in spreadsheet.columns:
+
+file_name_column = _pick_filename_column(spreadsheet)
+
+if not file_name_column:
     print(
-        f"Expected column '{file_name_column}' not found in '{dialogue_path}'. "
+        f"Expected columns 'Filename' or 'Identifier' not found in '{dialogue_path}'. "
         f"Columns found: {', '.join(spreadsheet.columns.astype(str))}"
     )
     exit()
@@ -243,6 +251,29 @@ def _normalize_identifier(name: str) -> str:
     return name.strip().lower()
 
 
+def _extract_audio_stem(value: str) -> str:
+    """Extract a file stem from a Filename or Identifier value."""
+    if not value:
+        return ""
+    value = value.strip().strip('"')
+    value = value.replace("\\", "/")
+    base = value.split("/")[-1]
+    if not base:
+        return ""
+    if "." in base:
+        return os.path.splitext(base)[0]
+    return base
+
+
+def _select_expected_keys(df: pd.DataFrame, column: str) -> set[str]:
+    values = df[column].dropna().astype(str).tolist()
+    if column == "Filename":
+        stems = [_extract_audio_stem(v) for v in values]
+    else:
+        stems = values
+    return set(_normalize_identifier(v) for v in stems if v)
+
+
 # Recursively gather audio files and normalize case (Windows is case-insensitive, but Python sets are not)
 audio_files_map: dict[str, list[str]] = {}
 for root, _dirs, files in os.walk(audio_folder_path):
@@ -254,7 +285,7 @@ for root, _dirs, files in os.walk(audio_folder_path):
         audio_files_map.setdefault(key, []).append(os.path.join(root, file))
 
 audio_files = set(audio_files_map.keys())
-spreadsheet_files = set(_normalize_identifier(v) for v in spreadsheet[file_name_column].astype(str).tolist())
+spreadsheet_files = _select_expected_keys(spreadsheet, file_name_column)
 
 missing_files = spreadsheet_files - audio_files
 extra_files = audio_files - spreadsheet_files

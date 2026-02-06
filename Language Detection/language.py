@@ -3,7 +3,7 @@ import requests
 import os
 
 # Load the data
-file_path = 'D:/Windows-Dateienordner/Dokumente/DAZ 3D/Novel/Test/Tools/Language Detection/dialogue.tab'
+file_path = 'C:/Users/olli_/Documents/GitHub/Tools/Language Detection/dialogue.tab'
 df = pd.read_csv(file_path, sep='\t')
 
 # DeepL API key
@@ -46,7 +46,7 @@ def detect_language(text):
 df['Language'] = df['Dialogue'].apply(detect_language)
 
 # Save the updated dataframe to a new file
-output_path = 'D:/Windows-Dateienordner/Dokumente/DAZ 3D/Novel/Test/Tools/Language Detection/dialogue_with_language.tab'
+output_path = 'C:/Users/olli_/Documents/GitHub/Tools/Language Detection/dialogue_with_language.tab'
 df.to_csv(output_path, sep='\t', index=False)
 
 print("Language detection completed and saved to:", output_path)

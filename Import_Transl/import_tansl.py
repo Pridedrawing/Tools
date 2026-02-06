@@ -76,7 +76,7 @@ def update_translation_files(game_folder, translations):
     print("Update complete!")
 
 def main():
-    base_folder = r"D:\Windows-Dateienordner\Dokumente\DAZ 3D\Novel\Test"
+    base_folder = r"C:\Users\olli_\Documents\GitHub"
     csv_path = os.path.join(base_folder, "Tools", "Import_Transl", "dialogue.csv")
     
     if not os.path.exists(csv_path):

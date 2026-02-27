@@ -200,10 +200,22 @@ if not os.path.exists(dialogue_path):
 # Read the text file with tab separator (robust against malformed quoting)
 spreadsheet = _read_dialogue_tab_robust(dialogue_path)
 
+_AUDIO_EXTS = {".mp3", ".ogg", ".wav", ".flac", ".opus"}
+
+
 def _pick_filename_column(df: pd.DataFrame) -> str:
-    """Prefer the Filename column if present, otherwise fall back to Identifier."""
+    """Prefer the Filename column only if it contains audio file paths; otherwise use Identifier.
+
+    French (and other tl) dialogue exports store the Ren'Py *script* path in the
+    Filename column (e.g. game/tl/french/scene/administration.rpy), not an audio
+    path.  In that case the Identifier column holds the voice-line key that
+    matches the actual audio filename stem.
+    """
     if "Filename" in df.columns:
-        return "Filename"
+        sample = df["Filename"].dropna().astype(str)
+        non_empty = sample[sample.str.strip() != ""].head(500)
+        if any(os.path.splitext(v.split("/")[-1])[1].lower() in _AUDIO_EXTS for v in non_empty):
+            return "Filename"
     if "Identifier" in df.columns:
         return "Identifier"
     return ""
@@ -321,10 +333,17 @@ with open(extra_files_csv_path, "w", newline="", encoding="utf-8") as csvfile:
         for path in sorted(paths):
             writer.writerow([file_key, path])
 
-# Filter the spreadsheet to keep only rows with missing files (case-insensitive)
+# Filter the spreadsheet to keep only rows with missing files (case-insensitive).
+# Apply the same key extraction used in _select_expected_keys so that full paths
+# in the Filename column (e.g. game/audio/voice/foo.mp3) resolve to the same stem
+# ("foo") that is stored in missing_keys.
 missing_keys = set(missing_files)
+if file_name_column == "Filename":
+    _row_key = lambda v: _normalize_identifier(_extract_audio_stem(v))
+else:
+    _row_key = _normalize_identifier
 missing_files_df = spreadsheet[
-    spreadsheet[file_name_column].astype(str).map(_normalize_identifier).isin(missing_keys)
+    spreadsheet[file_name_column].astype(str).map(_row_key).isin(missing_keys)
 ]
 
 # Save the filtered dataframe to a new tab-separated file next to this script.

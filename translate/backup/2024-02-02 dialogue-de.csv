@@ -1,0 +1,325 @@
+Identifier,Character,Dialogue,Filename,Line Number,Ren'Py Script
+Bar_Connor_cc8ebaee,c,Let's do the interview!,game/tl/deutsch/scene/News/beach/Bar_Connor.rpy,7,"c happy ""[what]"""
+Bar_Connor_5932c1a5,t,Let's talk to the others first before I talk to you. Okay?,game/tl/deutsch/scene/News/beach/Bar_Connor.rpy,13,"t neutral ""[what]"""
+Bar_Connor_561d5d7e,c,Sure.,game/tl/deutsch/scene/News/beach/Bar_Connor.rpy,19,"c sad ""[what]"""
+Bar_Julian_99f7e164,j,Coming soon!,game/tl/deutsch/scene/News/beach/bar_julian.rpy,7,"j sad ""[what]"""
+Bar_Julio_6f906dfd,jc,That was... intense.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,7,"jc suspicious ""[what]"""
+Bar_Julio_a3a6df05,jc,I hope you don't mind if I continue my sunbath.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,13,"jc friendly ""[what]"""
+Bar_Julio_73cae028,jc,Alone.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,19,"jc suspicious ""[what]"""
+Bar_Julio_1f49bb5a,,"The morning sun casts a lazy, golden hue over the beach, the sound of gentle waves creating a rhythmic backdrop.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,25,[what]
+Bar_Julio_46c6cb50,,"You follow Tom as he approaches Julio, who's lounging on a beach chair under the shade of a brightly colored parasol.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,31,[what]
+Bar_Julio_e840eb59,,"A cooling box sits beside him, a can of cola perched on top, beads of condensation trickling down its side.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,37,[what]
+Bar_Julio_5dd0ac41,,"Julio looks up, his relaxed demeanor shifting to annoyance as he spots Tom and the camera in your hands.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,43,[what]
+Bar_Julio_ce78e3df,,You can't help but feel a twinge of sympathy; it's clear he wasn't expecting this intrusion.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,49,[what]
+Bar_Julio_262fa109,t,"You are Julio, right?",game/tl/deutsch/scene/News/beach/bar_julio.rpy,55,"t happy ""[what]"""
+Bar_Julio_9ddfac3e,t,I'm Tom Wallerby from PrideTV.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,61,"t ""[what]"""
+Bar_Julio_b043101e,t,We are talking to members of the wrestling team today.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,67,"t ""[what]"""
+Bar_Julio_0da28a48,,Tom kneels down next to him.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,73,[what]
+Bar_Julio_d846e164,,"You notice him making eye contact, touching Julio's thigh slightly.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,79,[what]
+Bar_Julio_ff4b607c,,"Combined with his friendly expression, you realize he is trying to make Julio feel at ease.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,85,[what]
+Bar_Julio_1f4d2cc2,jc,"I'm here to relax, not to give interviews. Can't this wait?",game/tl/deutsch/scene/News/beach/bar_julio.rpy,91,"jc angry ""[what]"""
+Bar_Julio_b5aa104c,,"Tom, undeterred, flashes a persuasive smile.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,97,[what]
+Bar_Julio_ed5d75f3,t,"It'll only take a few minutes, Julio.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,103,"t friendly ""[what]"""
+Bar_Julio_5a15b901,t,Your perspective as an exchange student is really valuable to our viewers.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,109,"t flirt ""[what]"""
+Bar_Julio_828f4bcc,,"You adjust the camera, capturing the interplay of sunlight and shadow, the vibrant colors of the beach forming a stark contrast to Julio's evident discomfort.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,115,[what]
+Bar_Julio_8de3773c,jc,Fine. But make it quick.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,121,"jc sad ""[what]"""
+Bar_Julio_d1b3c294,t,"So, Julio, how has your experience been on the wrestling team here compared to back home?",game/tl/deutsch/scene/News/beach/bar_julio.rpy,127,"t friendly ""[what]"""
+Bar_Julio_8e5f96f3,,"Julio takes a moment, his gaze drifting towards the ocean, as if searching for the right words.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,133,[what]
+Bar_Julio_14bb019e,jc,"It's different... I don't always feel understood. Cultural differences, I guess.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,139,"jc sad ""[what]"""
+Bar_Julio_1e746f05,,"Tom nods, encouraging him to elaborate.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,145,[what]
+Bar_Julio_9efd0673,t,"Has that been a challenge for you, integrating with the team?",game/tl/deutsch/scene/News/beach/bar_julio.rpy,151,"t friendly ""[what]"""
+Bar_Julio_1e3efa27,,There's a brief flicker of vulnerability in Julio's eyes before he guards himself again.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,157,[what]
+Bar_Julio_2e5b81ee,jc,"Yes, it's not easy. I work hard, but sometimes I must prove myself more than others.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,163,"jc tough ""[what]"""
+Bar_Julio_960f69a6,,"The sound of the waves seems to underscore his words, a natural symphony to the underlying tension of the conversation.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,169,[what]
+Bar_Julio_9f71feb5,t,That sounds tough. Do you feel like you have the support you need from your teammates and coaches?,game/tl/deutsch/scene/News/beach/bar_julio.rpy,175,"t neutral ""[what]"""
+Bar_Julio_70cfac25,,"Julio pauses, taking another sip of his cola, the can now slick with moisture in the warm air.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,181,[what]
+Bar_Julio_9a03fcfa,jc,"It varies. Some people are great, others... Well, they have their preconceptions.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,187,"jc tough ""[what]"""
+Bar_Julio_b5d90c54,,The interview with Julio under the parasol takes a more serious turn as Tom broaches a delicate subject.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,193,[what]
+Bar_Julio_f04bdc69,t,"Julio, about the recent incident involving [name] and the headmaster... What was your perspective on that?",game/tl/deutsch/scene/News/beach/bar_julio.rpy,199,"t worry ""[what]"""
+Bar_Julio_e5260601,,"Julio shifts uncomfortably in his beach chair, his gaze momentarily flicking towards you, [name], behind the camera.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,205,[what]
+Bar_Julio_0c2e830e,jc,"I... I saw it, but only from a distance. It wasn’t right what happened.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,211,"jc sad ""[what]"""
+Bar_Julio_33edf031,,"There's a hint of something more in his tone, a mix of confusion and disapproval.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,217,[what]
+Bar_Julio_7862c48d,t,Were there others involved?,game/tl/deutsch/scene/News/beach/bar_julio.rpy,223,"t suspicious ""[what]"""
+Bar_Julio_a3b74ec8,,"Julio takes a deep breath, his discomfort evident.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,229,[what]
+Bar_Julio_bf77066f,jc,I... I don't want to get anyone in trouble.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,235,"jc sad ""[what]"""
+Bar_Julio_39fddddb,jc,"Like I said, I was not involved in it anyway.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,241,"jc angry ""[what]"""
+Bar_Julio_6d5f4972,,"His eyes flash back to you again, seeking advice.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,247,[what]
+Bar_Julio_d0a24b02,c,That is enough. We are done here.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,253,"c angry ""[what]"""
+Bar_Julio_a82aaa5f,t,But...,game/tl/deutsch/scene/News/beach/bar_julio.rpy,259,"t sad ""[what]"""
+Bar_Julio_87e413cd,c,I said we are done!,game/tl/deutsch/scene/News/beach/bar_julio.rpy,265,"c angry ""[what]"""
+Bar_Julio_fa3081b1,c,Or do you want to look for another cameraman?,game/tl/deutsch/scene/News/beach/bar_julio.rpy,271,"c suspicious ""[what]"""
+Bar_Julio_d696aa73,t,[RelVal],game/tl/deutsch/scene/News/beach/bar_julio.rpy,277,"t sad ""[what]"""
+Bar_Julio_afab1df1,jc,[RelVal],game/tl/deutsch/scene/News/beach/bar_julio.rpy,283,"jc flirt ""[what]"""
+Bar_Julio_c680ed04,,Tom sighs but accepts his defeat.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,289,[what]
+Bar_Julio_6cff00fe,,His reporter smile flashed back on.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,295,[what]
+Bar_Julio_f89c2530,t,Thank you for your time!,game/tl/deutsch/scene/News/beach/bar_julio.rpy,301,"t friendly ""[what]"""
+Bar_Julio_53c6fc27,,"Sensing Julio's growing unease, Tom adopts a more soothing demeanor. He leans in slightly, his voice softer, trying to create a sense of trust and ease.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,307,[what]
+Bar_Julio_c600e5c5,t,"Julio, I can see this is tough for you to discuss. We want to understand what happened, to get the full picture.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,313,"t flirt ""[what]"""
+Bar_Julio_93d3cd45,,"Tom's words seem to have a gentle, reassuring effect.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,319,[what]
+Bar_Julio_71e89bbf,,"Julio takes a deep breath, visibly trying to relax under the interview pressure.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,325,[what]
+Bar_Julio_9a288708,jc,It's just... there's a lot of tension around this. I don’t want to make things worse.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,331,"jc sad ""[what]"""
+Bar_Julio_06b4b0e7,,You and Tom begin to massage Julio's feet.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,337,[what]
+Bar_Julio_296f285a,,"Tom, with a subtle gesture, begins to massage Julio's feet.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,343,[what]
+Bar_Julio_341e140f,jc,What?,game/tl/deutsch/scene/News/beach/bar_julio.rpy,349,"jc surprised ""[what]"""
+Bar_Julio_cd842732,t,Just relax!,game/tl/deutsch/scene/News/beach/bar_julio.rpy,355,"t friendly ""[what]"""
+Bar_Julio_54a8f237,,"Julio falls back into the chair, his eyes closing almost immediately.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,361,[what]
+Bar_Julio_10615d47,jc,Ohhh... Oh my God!,game/tl/deutsch/scene/News/beach/bar_julio.rpy,367,"jc ""[what]"""
+Bar_Julio_f28937ac,jc,This... feels so good!,game/tl/deutsch/scene/News/beach/bar_julio.rpy,373,"jc ""[what]"""
+Bar_Julio_612151b3,t,Shhh... Just relax.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,379,"t flirt ""[what]"""
+Bar_Julio_b0d33a79,,Both of you continue to massage Julio's feet for several minutes before he starts to talk again.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,385,[what]
+Bar_Julio_c9f2e866,,Tom continues to massage Julio's feet for several minutes before he starts to talk again.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,391,[what]
+Bar_Julio_387f6411,t,So... Who was helping?,game/tl/deutsch/scene/News/beach/bar_julio.rpy,397,"t friendly ""[what]"""
+Bar_Julio_97c8995f,jc,Hmm?,game/tl/deutsch/scene/News/beach/bar_julio.rpy,403,"jc suspicious ""[what]"""
+Bar_Julio_1cdc3a5f,,You can tell Julio was about to fall asleep.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,409,[what]
+Bar_Julio_1a2c8c32,t,The wrestling event.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,415,"t ""[what]"""
+Bar_Julio_ddac8daf,jc,"Oh, yeah. Right.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,421,"jc neutral ""[what]"""
+Bar_Julio_b32ccd28,jc,"Max and Vincent, they weren't just witnesses.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,427,"jc sad ""[what]"""
+Bar_Julio_75517b4e,jc,"They were... I don't know, it seemed like they were part of it, supporting the headmaster.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,433,"jc ""[what]"""
+Bar_Julio_53363de8,,"You feel a jolt at the mention of their names, the memory of the incident still raw.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,439,[what]
+Bar_Julio_d4e53209,jc,I got the impression Vincent liked it to be tied up and humiliated this way.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,445,"jc friendly ""[what]"""
+Bar_Julio_906260b5,t,Why do you think so?,game/tl/deutsch/scene/News/beach/bar_julio.rpy,451,"t suspicious ""[what]"""
+Bar_Julio_8859c027,,"Julio shrugs, his face relaxed.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,457,[what]
+Bar_Julio_25bb3514,jc,He seemed rather eager to follow the headmaster's request.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,463,"jc flirt ""[what]"""
+Bar_Julio_8a99af7b,t,"And how do you feel about that, being part of the team?",game/tl/deutsch/scene/News/beach/bar_julio.rpy,469,"t neutral ""[what]"""
+Bar_Julio_8fc8620d,,"Julio's eyes were still closed, and he seemed to be in a trance-like state.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,475,[what]
+Bar_Julio_2e4cee8e,jc,It's confusing. I don’t understand why they would do that. It’s not the kind of team spirit I believe in.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,481,"jc neutral ""[what]"""
+Bar_Julio_dc20f76b,jc,Why aren’t you asking [name] about this? He was the one involved.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,487,"jc suspicious ""[what]"""
+Bar_Julio_99858604,,"Tom responds with a measured tone, his gaze briefly meeting yours.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,493,[what]
+Bar_Julio_e011b9e3,t,"I will be talking to [name], but it’s important to get the story from different perspectives first. Everyone’s view matters.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,499,"t friendly ""[what]"""
+Bar_Julio_2a219531,,"Julio nods, seemingly satisfied with the answer, though the shadows of doubt and discomfort linger in his expression, which are quickly washed away by another press of Tom's skilled fingers.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,505,[what]
+Bar_Julio_077a3b36,jc,Oh my God! How are you doing that?,game/tl/deutsch/scene/News/beach/bar_julio.rpy,511,"jc flirt ""[what]"""
+Bar_Julio_03797de5,jc,This feels so good!,game/tl/deutsch/scene/News/beach/bar_julio.rpy,517,"jc friendly ""[what]"""
+Bar_Julio_28d0291b,,Tom loses the laces of his pants and slowly drops them without stopping to massage Julio.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,523,[what]
+Bar_Julio_77449936,,You follow his lead.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,529,[what]
+Bar_Julio_f8290324,,You keep filming as Tom loses the laces of his pants and slowly drops them without stopping to massage Julio.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,535,[what]
+Bar_Julio_0d1edef1,,"If he noticed, he did not say anything. His eyes are still closed with a tranquilized expression on his face.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,541,[what]
+Bar_Julio_e20bdbbb,jc,"There are... rumors about the headmaster, not just regarding [name].",game/tl/deutsch/scene/News/beach/bar_julio.rpy,547,"jc sad ""[what]"""
+Bar_Julio_7f8e24da,jc,But I don’t want to spread gossip.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,553,"jc tough ""[what]"""
+Bar_Julio_c41f4549,,"As the interview nears its end, Tom shifts the focus to a more personal aspect of Julio's life, lightening the mood after the intense previous discussion.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,559,[what]
+Bar_Julio_b75393db,t,"Julio, aside from wrestling, what are your goals while you're here in the States?",game/tl/deutsch/scene/News/beach/bar_julio.rpy,565,"t flirt ""[what]"""
+Bar_Julio_a1faef16,,You watch in fascination as he slowly maneuvers his hip in position - without Julio even noticing it.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,571,[what]
+Bar_Julio_c224fcea,,You watch (and film) in fascination as he slowly maneuvers his hip in position - without Julio even noticing it.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,577,[what]
+Bar_Julio_10fae7fd,,You follow his lead as he rubs his love-stick against Julio's foot.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,583,[what]
+Bar_Julio_4b3877c3,,He starts to rub his love stick against Julio's foot.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,589,[what]
+Bar_Julio_a02ffe25,jc,What ... are you doing?,game/tl/deutsch/scene/News/beach/bar_julio.rpy,595,"jc surprised ""[what]"""
+Bar_Julio_b75393db_1,t,"Julio, aside from wrestling, what are your goals while you're here in the States?",game/tl/deutsch/scene/News/beach/bar_julio.rpy,601,"t flirt ""[what]"""
+Bar_Julio_b1491a22,,Tom continues the interview as if nothing else was going on.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,607,[what]
+Bar_Julio_7fcbc072,,Julio looked deeply confused but answered the question.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,613,[what]
+Bar_Julio_48898f5c,jc,"Well, I want to experience as much as I can.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,619,"jc desire ""[what]"""
+Bar_Julio_492c18e2,,His hand wandered to his crotch.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,625,[what]
+Bar_Julio_4225764c,jc,"Different cultures, new people.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,631,"jc ""[what]"""
+Bar_Julio_3b4cbda4,,You can tell he is just as confused as tempted by the suddenly very different situation.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,637,[what]
+Bar_Julio_bbee3015,jc,"I'm studying international relations, so this is a great opportunity.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,643,"jc ""[what]"""
+Bar_Julio_7d7c5c4b,t,It is always good to have new experiences!,game/tl/deutsch/scene/News/beach/bar_julio.rpy,649,"t desire ""[what]"""
+Bar_Julio_a7e849e5,,Tom stated while he continued to rub Julio's foot.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,655,[what]
+Bar_Julio_9e3aa112,t,What are some of your interests outside of wrestling and studies?,game/tl/deutsch/scene/News/beach/bar_julio.rpy,661,"t ""[what]"""
+Bar_Julio_c74f0275,,"Tom gets up, and your tongue slowly glides over Julio's erection, which is visible through the thin fabric.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,667,[what]
+Bar_Julio_8bfb6851,jc,Uhhh...,game/tl/deutsch/scene/News/beach/bar_julio.rpy,673,"jc ""[what]"""
+Bar_Julio_bfd5827e,t,Your hobbies?,game/tl/deutsch/scene/News/beach/bar_julio.rpy,679,"t flirt ""[what]"""
+Bar_Julio_dbfab7b1,,Tom reminds him of the question while your right hand slowly grabs his butt and the left one plays with his nipple.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,685,[what]
+Bar_Julio_1a841622,jc,My... interests? I...,game/tl/deutsch/scene/News/beach/bar_julio.rpy,691,"jc ""[what]"""
+Bar_Julio_1b41d386,,He has clear problems concentrating while you gently free his glans with your lips.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,697,[what]
+Bar_Julio_6c98d8ab,,His tip greets you wet with precum.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,703,[what]
+Bar_Julio_f96bc3fd,,Tom gets up and places his own feet on Julio's now quite big bulge.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,709,[what]
+Bar_Julio_53635aca,jc,I love photography.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,715,"jc desire ""[what]"""
+Bar_Julio_0b030d96,,Julio moans slightly as Tom gently moves his foot forth and back.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,721,[what]
+Bar_Julio_34d6aa4e,jc,"Capturing moments, you know? It's like freezing a piece of time.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,727,"jc ""[what]"""
+Bar_Julio_98178e4e,jc,"And I enjoy exploring the outdoors, hiking, and visiting new places.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,733,"jc ""[what]"""
+Bar_Julio_2b59a3c1,,Carefully you lick the precum up while Tom's foot pushes Julio's speedo further down.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,739,[what]
+Bar_Julio_5f59968c,t,I have a new place for you to explore.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,745,"t desire ""[what]"""
+Bar_Julio_94daa93a,,Tom states while he slowly pushes his big cock in Julio's mouth.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,751,[what]
+Bar_Julio_2f8adbf1,t,"Oh yes! Take it, boy!",game/tl/deutsch/scene/News/beach/bar_julio.rpy,757,"t happy ""[what]"""
+Bar_Julio_ee5e6db9,,Julio chokes a bit as Tom pushes his giant cock deep into Julio's throat.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,763,[what]
+Bar_Julio_3dc7bb4d,,Tom chuckled.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,769,[what]
+Bar_Julio_4532e7e7,t,Too much for you?,game/tl/deutsch/scene/News/beach/bar_julio.rpy,775,"t flirt ""[what]"""
+Bar_Julio_e47a2cb1,,"Before Julio could answer, he gestured for you to switch positions.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,781,[what]
+Bar_Julio_cea0483f,,"Before Julio could answer, he returned the favor.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,787,[what]
+Bar_Julio_5196b41e,jc,Uhh!,game/tl/deutsch/scene/News/beach/bar_julio.rpy,793,"jc surprised ""[what]"""
+Bar_Julio_8255ff14,,You could tell he was on the edge already when his lips slowly closed around your glans.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,799,[what]
+Bar_Julio_f20e599e,,"As soon as Tom's lips touched Julian's glans, he began to struggle hard.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,805,[what]
+Bar_Julio_86d6112f,jc,Careful!,game/tl/deutsch/scene/News/beach/bar_julio.rpy,811,"jc surprised ""[what]"""
+Bar_Julio_c8f76a30,jc,I ... I'm almost there!,game/tl/deutsch/scene/News/beach/bar_julio.rpy,817,"jc angry ""[what]"""
+Bar_Julio_d2766f87,,Tom watched with fascination when Julian pumped his semen all over his body.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,823,[what]
+Bar_Julio_a0549f85,t,Damn! I was just pulling down your speedo!,game/tl/deutsch/scene/News/beach/bar_julio.rpy,829,"t laugh ""[what]"""
+Bar_Julio_5e87329a,jc,Sorry. I just ... I couldn't hold it any longer.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,835,"jc sad ""[what]"""
+Bar_Julio_62056986,,Tom continued to strip down his swimwear.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,841,[what]
+Bar_Julio_35cfa855,t,"No problem. That was hot, actually.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,847,"t friendly ""[what]"""
+Bar_Julio_af9b5f60,t,I just hope you don't mind...,game/tl/deutsch/scene/News/beach/bar_julio.rpy,853,"t evil ""[what]"""
+Bar_Julio_51b9fe91,,He grabbed Julian's legs and pushed them upwards.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,859,[what]
+Bar_Julio_461740fe,jc,What?!,game/tl/deutsch/scene/News/beach/bar_julio.rpy,865,"jc surprised ""[what]"""
+Bar_Julio_0ec3250a,,Tom bend down and licked Julian's hole.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,871,[what]
+Bar_Julio_f583b3b1,,"Since Tom intended to proceed, you also force your cock back into Julian's mouth.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,877,[what]
+Bar_Julio_f0f2a610,jc,Mmmh!,game/tl/deutsch/scene/News/beach/bar_julio.rpy,883,"jc surprised ""[what]"""
+Bar_Julio_f3705a01,jc,Ohh... oh my... that ... feels ... AMAZING!,game/tl/deutsch/scene/News/beach/bar_julio.rpy,889,"jc desire ""[what]"""
+Bar_Julio_6cd69c25,,"After a short while, Tom got up and slowly pushed his love stick into Julio's now wet entrance.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,895,[what]
+Bar_Julio_e3ccbeb2,jc,Hmmpf!,game/tl/deutsch/scene/News/beach/bar_julio.rpy,901,"jc surprised ""[what]"""
+Bar_Julio_8ae2460b,,"He couldn't talk with your dick still in his mouth, but you can see Julio's cock already growing bigger again.",game/tl/deutsch/scene/News/beach/bar_julio.rpy,907,[what]
+Bar_Julio_d92c5897,c,I... I can't hold it much longer!,game/tl/deutsch/scene/News/beach/bar_julio.rpy,913,"c angry ""[what]"""
+Bar_Julio_40b142aa,jc,Give it to me!,game/tl/deutsch/scene/News/beach/bar_julio.rpy,919,"jc evil ""[what]"""
+Bar_Julio_454ccb52,,He opened his mouth and was ready to be showered with your sperm.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,925,[what]
+Bar_Julio_2e35f9ac,c,Oh fuck!,game/tl/deutsch/scene/News/beach/bar_julio.rpy,931,"c surprised ""[what]"""
+Bar_Julio_21c23dfb,t,Oh yes! I'm going to pump you to the top!,game/tl/deutsch/scene/News/beach/bar_julio.rpy,937,"t flirt ""[what]"""
+Bar_Julio_a0d46f45,t,Ahhh!,game/tl/deutsch/scene/News/beach/bar_julio.rpy,943,"t angry ""[what]"""
+Bar_Julio_8e5a79e9,t,I'd say this was a great Interview!,game/tl/deutsch/scene/News/beach/bar_julio.rpy,949,"t happy ""[what]"""
+Bar_Julio_753366ab,t,"I am a lucky man, having you all around here!",game/tl/deutsch/scene/News/beach/bar_julio.rpy,955,"t flirt ""[what]"""
+Bar_Julio_e918ecae,t,It's like winning the jackpot!,game/tl/deutsch/scene/News/beach/bar_julio.rpy,961,"t happy ""[what]"""
+Bar_Julio_13870250,,He paused for a moment as he puffed on his cigarette.,game/tl/deutsch/scene/News/beach/bar_julio.rpy,967,[what]
+Bar_Julio_dc1e0ef6,t,And I am even getting paid for it!,game/tl/deutsch/scene/News/beach/bar_julio.rpy,973,"t happy ""[what]"""
+Bar_Julio_96048e32,t,That's what I call a DREAM JOB!,game/tl/deutsch/scene/News/beach/bar_julio.rpy,979,"t flirt ""[what]"""
+Bar_Jupiter_a4bf930c,jk,Coming soon!,game/tl/deutsch/scene/News/beach/bar_jupiter.rpy,7,"jk sad ""[what]"""
+Bar_Max_abfdbf76,ma,Coming soon!,game/tl/deutsch/scene/News/beach/bar_max.rpy,7,"ma sad ""[what]"""
+Bar_Nathan_678ffb67,na,Coming soon!,game/tl/deutsch/scene/News/beach/bar_nathan.rpy,7,"na sad ""[what]"""
+Bar_Ned_b413c6c9,n,Coming soon!,game/tl/deutsch/scene/News/beach/bar_ned.rpy,7,"n neutral ""[what]"""
+Bar_Ron_91566a6d,r,Coming soon!,game/tl/deutsch/scene/News/beach/bar_ron.rpy,7,"r neutral ""[what]"""
+Bar_Vincent_391ca39a,v,Coming soon!,game/tl/deutsch/scene/News/beach/bar_vincent.rpy,7,"v neutral ""[what]"""
+Beach_Base_e7045acb,,"You step off the bus, feeling the warm sand beneath your shoes.",game/tl/deutsch/scene/News/beach/beach.rpy,7,[what]
+Beach_Base_a982fb26,,"The beach spa area unfolds before you like a picture from a travel brochure - pristine white sands, azure waters, and the gentle sway of palm trees in the ocean breeze.",game/tl/deutsch/scene/News/beach/beach.rpy,13,[what]
+Beach_Base_3bbab465,,But the beauty of the scene does little to lift the heaviness in your heart.,game/tl/deutsch/scene/News/beach/beach.rpy,19,[what]
+Beach_Base_caca9432,,"As you walk, the sounds of the beach fill the air - the rhythmic crash of waves, the distant laughter of families, the occasional cry of a seagull.",game/tl/deutsch/scene/News/beach/beach.rpy,25,[what]
+Beach_Base_efe3316f,,"Your teammates laugh and joke with one another, excited to unwind after a long week of grueling practices.",game/tl/deutsch/scene/News/beach/beach.rpy,31,[what]
+Beach_Base_2ce1ebba,,The salty sea breeze tussles your hair as you enjoy the pleasant scene.,game/tl/deutsch/scene/News/beach/beach.rpy,37,[what]
+Beach_Base_e7d56ef3,,"Your gaze drifts to the horizon where the sky meets the sea, a distant and unattainable line.",game/tl/deutsch/scene/News/beach/beach.rpy,43,[what]
+Beach_Base_2e594cd1,,"You wonder if this retreat can wash away the scandal clinging to you and the team or if it's just a temporary escape, a brief respite from the storm brewing ever since those pictures hit social media.",game/tl/deutsch/scene/News/beach/beach.rpy,49,[what]
+Beach_Base_ebca1cfd,,"You trudge along the sandy path, the weight of the recent events pulling down each step.",game/tl/deutsch/scene/News/beach/beach.rpy,55,[what]
+Beach_Base_bac89bb8,,Your thoughts drift back to the scandal.,game/tl/deutsch/scene/News/beach/beach.rpy,61,[what]
+Beach_Base_69ad2d92,c,Is this really going to help? Just a day at a beach?,game/tl/deutsch/scene/News/beach/beach.rpy,67,"c suspicious ""[what]"""
+Beach_Base_bc54671a,,"Your voice barely rises above the sound of the waves, and you're not even sure who you're asking – yourself, the universe, or maybe just the wind.",game/tl/deutsch/scene/News/beach/beach.rpy,73,[what]
+Beach_Base_0c8f2330,,"You feel a mix of anger and humiliation, a cocktail of emotions that's been your constant companion since the images went viral.",game/tl/deutsch/scene/News/beach/beach.rpy,79,[what]
+Beach_Base_d4a2ff57,,Even though it wasn't even you who has been humiliated - this time.,game/tl/deutsch/scene/News/beach/beach.rpy,85,[what]
+Beach_Base_c067e50a,,"You remember the comments online, the way people dissected your reaction, analyzed your every move in those images and videos.",game/tl/deutsch/scene/News/beach/beach.rpy,91,[what]
+Beach_Base_23f35882,,"The names they gave you, the insults and evil remarks.",game/tl/deutsch/scene/News/beach/beach.rpy,97,[what]
+Beach_Base_e23b40df,,"It’s like being stuck in a bad dream where everyone knows your most embarrassing moment, and you can’t wake up.",game/tl/deutsch/scene/News/beach/beach.rpy,103,[what]
+Beach_Base_e7c74c8d,,"Your gaze settles on the ocean, its vastness a stark reminder of how small and exposed you feel.",game/tl/deutsch/scene/News/beach/beach.rpy,109,[what]
+Beach_Base_e6227363,,"Here, surrounded by the beach's natural beauty, you should feel some peace, but the turmoil within you churns as relentlessly as the waves.",game/tl/deutsch/scene/News/beach/beach.rpy,115,[what]
+Beach_Base_90c00bad,,"You wonder about the future, about your place in the university, and in the larger scheme of things.",game/tl/deutsch/scene/News/beach/beach.rpy,121,[what]
+Beach_Base_09cdf2d5,,The headmaster's idea of a retreat seems more like a desperate attempt to glue back together what's been broken.,game/tl/deutsch/scene/News/beach/beach.rpy,127,[what]
+Beach_Base_dbdae586,,"But you know some cracks are too deep to be unseen, even if they're momentarily forgotten in the tranquility of a place like this.",game/tl/deutsch/scene/News/beach/beach.rpy,133,[what]
+Beach_Base_fc522d82,c,"He hasn't changed. He won't. And next time, it could be any of us.",game/tl/deutsch/scene/News/beach/beach.rpy,139,"c sad ""[what]"""
+Beach_Base_f8c52f16,,"As you look around at your teammates, some trying to make the best of the situation, others just going through the motions, you realize they might be thinking the same thing.",game/tl/deutsch/scene/News/beach/beach.rpy,145,[what]
+Beach_Base_54e5ae88,,"The spa day is just a band-aid on a wound that's still open, a temporary distraction from the inevitable reality that awaits when you all return.",game/tl/deutsch/scene/News/beach/beach.rpy,151,[what]
+Beach_Base_e7297fd1,v,I'll head to the beach volleyball field.,game/tl/deutsch/scene/News/beach/beach.rpy,157,"v happy ""[what]"""
+Beach_Base_688b342a,v,Who wants to join me?,game/tl/deutsch/scene/News/beach/beach.rpy,163,"v ""[what]"""
+Beach_Base_c5f4291d,ma,I am coming!,game/tl/deutsch/scene/News/beach/beach.rpy,169,"ma happy ""[what]"""
+Beach_Base_66102707,jc,I'll find a private spot in the dune and sunbathe!,game/tl/deutsch/scene/News/beach/beach.rpy,175,"jc happy ""[what]"""
+Beach_Base_0855db84,,"As you soak in the sun's rays, you notice a man setting up camera equipment near the bar.",game/tl/deutsch/scene/News/beach/beach.rpy,181,[what]
+Beach_Base_412cb53a,t,"Good morning, beautiful people!",game/tl/deutsch/scene/News/beach/beach.rpy,187,"t happy ""[what]"""
+Beach_Base_9b6931b6,t,"I'm Tom Wallerby, your friendly neighborhood weatherman from Pride TV!",game/tl/deutsch/scene/News/beach/beach.rpy,193,"t friendly ""[what]"""
+Beach_Base_2bc7a132,,"He announces, speaking loudly enough for those nearby to hear.",game/tl/deutsch/scene/News/beach/beach.rpy,199,[what]
+Beach_Base_9b7b93d1,,"A few of your teammates exchange curious glances, clearly intrigued by the cheerful stranger.",game/tl/deutsch/scene/News/beach/beach.rpy,205,[what]
+Beach_Base_39020252,t,"We are going live in a few minutes, folks!",game/tl/deutsch/scene/News/beach/beach.rpy,211,"t ""[what]"""
+Beach_Base_d993eb2d,t,Just getting everything set up here for our beachside forecast.,game/tl/deutsch/scene/News/beach/beach.rpy,217,"t ""[what]"""
+Beach_Base_7bdf4beb,t,Please continue with what you are doing as if I am not here.,game/tl/deutsch/scene/News/beach/beach.rpy,223,"t neutral ""[what]"""
+Beach_Base_6bb02943,t,"Just please don't look directly into the camera, and don't step between me and the cameraman.",game/tl/deutsch/scene/News/beach/beach.rpy,229,"t suspicious ""[what]"""
+Beach_Base_e158e1fc,t,Speaking of which...,game/tl/deutsch/scene/News/beach/beach.rpy,235,"t ""[what]"""
+Beach_Base_bfa090c4,,He scratches his head.,game/tl/deutsch/scene/News/beach/beach.rpy,241,[what]
+Beach_Base_3ffb4974,t,Where the hell is he?,game/tl/deutsch/scene/News/beach/beach.rpy,247,"t angry ""[what]"""
+Beach_Base_6aa9f027,,He gets out his phone and starts talking.,game/tl/deutsch/scene/News/beach/beach.rpy,253,[what]
+Beach_Base_1c6a7a6c,t,Where are you?,game/tl/deutsch/scene/News/beach/beach.rpy,259,"t angry ""[what]"""
+Beach_Base_396f88fd,t,What do you mean? You are not coming?,game/tl/deutsch/scene/News/beach/beach.rpy,265,"t surprised ""[what]"""
+Beach_Base_79b843a8,t,"Listen. I promise it won't happen again, okay?",game/tl/deutsch/scene/News/beach/beach.rpy,271,"t worry ""[what]"""
+Beach_Base_8353b657,t,Come on! I am supposed to go live in just a few minutes.,game/tl/deutsch/scene/News/beach/beach.rpy,277,"t sad ""[what]"""
+Beach_Base_6961e2aa,t,How am I supposed to do it without a cameraman?,game/tl/deutsch/scene/News/beach/beach.rpy,283,"t angry ""[what]"""
+Beach_Base_e9589eed,t,"Okay, fine. I don't need you.",game/tl/deutsch/scene/News/beach/beach.rpy,289,"t hate ""[what]"""
+Beach_Base_30680eb4,t,Your feet were smelly anyway.,game/tl/deutsch/scene/News/beach/beach.rpy,295,"t ""[what]"""
+Beach_Base_74fff75a,,He put the phone away and mumbled to himself:,game/tl/deutsch/scene/News/beach/beach.rpy,301,[what]
+Beach_Base_b27f3064,t,I can't resist smelly feet.,game/tl/deutsch/scene/News/beach/beach.rpy,307,"t sexy ""[what]"""
+Beach_Base_a7f1e2cc,,He looks around.,game/tl/deutsch/scene/News/beach/beach.rpy,313,[what]
+Beach_Base_6605b62a,t,"Hey, you!",game/tl/deutsch/scene/News/beach/beach.rpy,319,"t hi ""[what]"""
+Beach_Base_45adff28,,He waves at you.,game/tl/deutsch/scene/News/beach/beach.rpy,325,[what]
+Beach_Base_7850735b,t,"Look, I'm in a bind here. My cameraman won't show up.",game/tl/deutsch/scene/News/beach/beach.rpy,331,"t friendly ""[what]"""
+Beach_Base_d50d2e52,t,Think you could help me out for the day?,game/tl/deutsch/scene/News/beach/beach.rpy,337,"t suspicious ""[what]"""
+Beach_Base_aa0ac4cd,,"You're taken aback. Why would he ask you, of all people?",game/tl/deutsch/scene/News/beach/beach.rpy,343,[what]
+Beach_Base_f6e3e0a1,c,"I study art, so I have learned a thing or two about cameras already.",game/tl/deutsch/scene/News/beach/beach.rpy,349,"c friendly ""[what]"""
+Beach_Base_7c7722eb,t,[RelVal],game/tl/deutsch/scene/News/beach/beach.rpy,355,"t happy ""[what]"""
+Beach_Base_4ee23290,t,Wonderful! So you will do it?,game/tl/deutsch/scene/News/beach/beach.rpy,361,"t happy ""[what]"""
+Beach_Base_71d2b7ea,c,I study economics. Cameras are not exactly my field of expertise.,game/tl/deutsch/scene/News/beach/beach.rpy,367,"c suspicious ""[what]"""
+Beach_Base_d696aa73,t,[RelVal],game/tl/deutsch/scene/News/beach/beach.rpy,373,"t sad ""[what]"""
+Beach_Base_307cabff,t,It is not very difficult.,game/tl/deutsch/scene/News/beach/beach.rpy,379,"t neutral ""[what]"""
+Beach_Base_cf87b0c9,t,I am sure you can do it!,game/tl/deutsch/scene/News/beach/beach.rpy,385,"t flirt ""[what]"""
+Beach_Base_7a5cf88c,c,"I study sports, not art. I don't know nothing about cameras.",game/tl/deutsch/scene/News/beach/beach.rpy,391,"c neutral ""[what]"""
+Beach_Base_d696aa73_1,t,[RelVal],game/tl/deutsch/scene/News/beach/beach.rpy,397,"t sad ""[what]"""
+Beach_Base_b7a07478,t,So you know a lot about cameras?,game/tl/deutsch/scene/News/beach/beach.rpy,403,"t evil ""[what]"""
+Beach_Base_f066d7c0,c,What?,game/tl/deutsch/scene/News/beach/beach.rpy,409,"c surprised ""[what]"""
+Beach_Base_94da09fa,t,If you don't know nothing...,game/tl/deutsch/scene/News/beach/beach.rpy,415,"t laugh ""[what]"""
+Beach_Base_ecbc0d36,c,You know what I mean!,game/tl/deutsch/scene/News/beach/beach.rpy,421,"c angry ""[what]"""
+Beach_Base_8e83eded,c,"Don’t worry, I’ll guide you through it. It’s pretty straightforward, and you’ll be doing me a huge favor.",game/tl/deutsch/scene/News/beach/beach.rpy,427,"c flirt ""[what]"""
+Beach_Base_3b36cfc1,c,I am sure you can do it.,game/tl/deutsch/scene/News/beach/beach.rpy,433,"c friendly ""[what]"""
+Beach_Base_4a08acb3,c,"I have read about it, but I have no camera experience.",game/tl/deutsch/scene/News/beach/beach.rpy,439,"c suspicious ""[what]"""
+Beach_Base_a08ef442,,He waves dismissively.,game/tl/deutsch/scene/News/beach/beach.rpy,445,[what]
+Beach_Base_fdbda93c,t,That's good enough for me!,game/tl/deutsch/scene/News/beach/beach.rpy,451,"t flirt ""[what]"""
+Beach_Base_a2b8c84c,t,You just have to keep in the frame.,game/tl/deutsch/scene/News/beach/beach.rpy,457,"t neutral ""[what]"""
+Beach_Base_2119a8a8,t,"It’s pretty straightforward, and you’ll be doing me a huge favor.",game/tl/deutsch/scene/News/beach/beach.rpy,463,"t friendly ""[what]"""
+Beach_Base_6b386679,c,I have no experience with this type of camera.,game/tl/deutsch/scene/News/beach/beach.rpy,469,"c suspicious ""[what]"""
+Beach_Base_fb646fec,c,But I am sure I can figure it out.,game/tl/deutsch/scene/News/beach/beach.rpy,475,"c friendly ""[what]"""
+Beach_Base_9860a910,c,I study engineering after all.,game/tl/deutsch/scene/News/beach/beach.rpy,481,"c hi ""[what]"""
+Beach_Base_7c7722eb_1,t,[RelVal],game/tl/deutsch/scene/News/beach/beach.rpy,487,"t happy ""[what]"""
+Beach_Base_b7de82e1,t,Wonderful! So will you do it?,game/tl/deutsch/scene/News/beach/beach.rpy,493,"t happy ""[what]"""
+Beach_Base_e9bdbe36,c,"Well, I was looking forward to a relaxing day at the beach.",game/tl/deutsch/scene/News/beach/beach.rpy,499,"c suspicious ""[what]"""
+Beach_Base_f0f5e16c,c,Not to work for you.,game/tl/deutsch/scene/News/beach/beach.rpy,505,"c angry ""[what]"""
+Beach_Base_11250e50,t,It is just for the weather broadcast.,game/tl/deutsch/scene/News/beach/beach.rpy,511,"t flirt ""[what]"""
+Beach_Base_556b6259,t,"15 minutes max! Come on, I am desperate here!",game/tl/deutsch/scene/News/beach/beach.rpy,517,"t neutral ""[what]"""
+Beach_Base_fcbf55a9,,He looks at you with new interest.,game/tl/deutsch/scene/News/beach/beach.rpy,523,[what]
+Beach_Base_499c1499,t,"Oh, I would love to owe you a \""favor.\"" ",game/tl/deutsch/scene/News/beach/beach.rpy,529,"t desire ""[what]"""
+Beach_Base_4e5ee3c0,,"As you stand beside Tom, setting up the camera, you feel a spark of something unfamiliar in recent days - a sense of purpose.",game/tl/deutsch/scene/News/beach/beach.rpy,535,[what]
+Beach_Base_11a40123,t,"Let’s start with some practice shots, and then we'll dive into the broadcast.",game/tl/deutsch/scene/News/beach/beach.rpy,541,"t caution ""[what]"""
+Beach_Base_30d61692,t,Ready?,game/tl/deutsch/scene/News/beach/beach.rpy,547,"t flirt ""[what]"""
+Beach_Base_5b51f848,,"You nod, feeling the weight of the camera in your hands, heavier than its physical heft, laden with the potential of untold stories.",game/tl/deutsch/scene/News/beach/beach.rpy,553,[what]
+Beach_Base_0580c096,,Tom explains to you the different knobs and settings you need to know.,game/tl/deutsch/scene/News/beach/beach.rpy,559,[what]
+Beach_Base_49821d0c,,You can smell his aftershave while he stands close to you.,game/tl/deutsch/scene/News/beach/beach.rpy,565,[what]
+Beach_Base_0b1d0422,,"You cannot see the different buttons while you look through the lens, but Tom patiently explains everything you need to know, while you notice his hands occasionally glide \""accidently\"" over your body.",game/tl/deutsch/scene/News/beach/beach.rpy,571,[what]
+Beach_Base_1cd66c5c,,"There is a sweet tension in the air, and you have a hard time focusing on the things Tom is actually explaining to you.",game/tl/deutsch/scene/News/beach/beach.rpy,577,[what]
+Beach_Base_e29e8687,t,Okay. You got it? Can we go live?,game/tl/deutsch/scene/News/beach/beach.rpy,583,"t suspicious ""[what]"""
+Beach_Base_863299bd,c,I don't know.,game/tl/deutsch/scene/News/beach/beach.rpy,589,"c worry ""[what]"""
+Beach_Base_db2e6ea0,t,"Ready or not, here we go!",game/tl/deutsch/scene/News/beach/beach.rpy,595,"t friendly ""[what]"""
+Beach_Base_914f2395,t,That was great!,game/tl/deutsch/scene/News/beach/beach.rpy,601,"t happy ""[what]"""
+Beach_Base_be862b44,c,"That was fun, actually.",game/tl/deutsch/scene/News/beach/beach.rpy,607,"c flirt ""[what]"""
+Beach_Base_e02a32ac,t,Hold on a second.,game/tl/deutsch/scene/News/beach/beach.rpy,613,"t suspicious ""[what]"""
+Beach_Base_f6f02029,,He narrows his eyes at you.,game/tl/deutsch/scene/News/beach/beach.rpy,619,[what]
+Beach_Base_aae60069,t,"You are the guy she was talking about, are you not?",game/tl/deutsch/scene/News/beach/beach.rpy,625,"t surprised ""[what]"""
+Beach_Base_8b06b4cf,t,The one from social media?,game/tl/deutsch/scene/News/beach/beach.rpy,631,"t suspicious ""[what]"""
+Beach_Base_e88a527c,c,"I am on the wrestling team, but Vincent got tied up.",game/tl/deutsch/scene/News/beach/beach.rpy,637,"c neutral ""[what]"""
+Beach_Base_d9f77bd5,c,I think he liked it actually.,game/tl/deutsch/scene/News/beach/beach.rpy,643,"c flirt ""[what]"""
+Beach_Base_a220a0e6,c,What if I am?,game/tl/deutsch/scene/News/beach/beach.rpy,649,"c worried ""[what]"""
+Beach_Base_4df26e2e,,You can see a sparkle in Tom's eyes.,game/tl/deutsch/scene/News/beach/beach.rpy,655,[what]
+Beach_Base_6e7c980a,t,They are all here today? The whole team?,game/tl/deutsch/scene/News/beach/beach.rpy,661,"t suspicious ""[what]"""
+Beach_Base_b2a61299,c,Yes...,game/tl/deutsch/scene/News/beach/beach.rpy,667,"c suspicious ""[what]"""
+Beach_Base_6e7784bc,t,Wonderful! This could be my chance!,game/tl/deutsch/scene/News/beach/beach.rpy,673,"t happy ""[what]"""
+Beach_Base_fc9e90e2,c,Your - chance? For what?,game/tl/deutsch/scene/News/beach/beach.rpy,679,"c ""[what]"""
+Beach_Base_22f27d38,t,My chance to finally have a REAL story to talk about.,game/tl/deutsch/scene/News/beach/beach.rpy,685,"t ""[what]"""
+Beach_Base_046cfbe2,t,My chance to prove I am MORE than just the weather guy!,game/tl/deutsch/scene/News/beach/beach.rpy,691,"t ""[what]"""
+Beach_Base_229be330,c,Listen. I have enough trouble for this already.,game/tl/deutsch/scene/News/beach/beach.rpy,697,"c angry ""[what]"""
+Beach_Base_5350baf4,c,We all came here to relax and forget about the thing.,game/tl/deutsch/scene/News/beach/beach.rpy,703,"c ""[what]"""
+Beach_Base_d4800d3d,c,I don't need you to poke around and make it even worse than it is already!,game/tl/deutsch/scene/News/beach/beach.rpy,709,"c ""[what]"""
+Beach_Base_c4a08f27,t,Don't you understand? This is my chance!,game/tl/deutsch/scene/News/beach/beach.rpy,715,"t sad ""[what]"""
+Beach_Base_6d6ecd33,t,I NEED this!,game/tl/deutsch/scene/News/beach/beach.rpy,721,"t angry ""[what]"""
+Beach_Base_34ae30a1,t,And I can help you!,game/tl/deutsch/scene/News/beach/beach.rpy,727,"t flirt ""[what]"""
+Beach_Base_cb3a117c,c,How can you help me?,game/tl/deutsch/scene/News/beach/beach.rpy,733,"c suspicious ""[what]"""
+Beach_Base_07d51aa5,t,The story is out. There is nothing you can do about that.,game/tl/deutsch/scene/News/beach/beach.rpy,739,"t neutral ""[what]"""
+Beach_Base_6420a0b2,t,BUT...,game/tl/deutsch/scene/News/beach/beach.rpy,745,"t friendly ""[what]"""
+Beach_Base_1bfe657f,,He pauses for a moment.,game/tl/deutsch/scene/News/beach/beach.rpy,751,[what]
+Beach_Base_f800cec9,t,We can make sure the story is presented the right way.,game/tl/deutsch/scene/News/beach/beach.rpy,757,"t flirt ""[what]"""
+Beach_Base_c5efec74,,You hesitate for a moment.,game/tl/deutsch/scene/News/beach/beach.rpy,763,[what]
+Beach_Base_9a0f573d,c," \""The right way?\"" What do you mean by that?",game/tl/deutsch/scene/News/beach/beach.rpy,769,"c suspicious ""[what]"""
+Beach_Base_a1e0aeb1,t,There are always different angles from which you can tell a story.,game/tl/deutsch/scene/News/beach/beach.rpy,775,"t ""[what]"""
+Beach_Base_53d8a58f,t,You want to humiliate the headmaster in return?,game/tl/deutsch/scene/News/beach/beach.rpy,781,"t evil ""[what]"""
+Beach_Base_79408af6,,He pauses for a moment to let you process the thought.,game/tl/deutsch/scene/News/beach/beach.rpy,787,[what]
+Beach_Base_b02b6a41,t,Or maybe you want to protect the college?,game/tl/deutsch/scene/News/beach/beach.rpy,793,"t friendly ""[what]"""
+Beach_Base_b82e0f2b,t,Some fellow student you want to blame...,game/tl/deutsch/scene/News/beach/beach.rpy,799,"t tough ""[what]"""
+Beach_Base_156a8c4f,,Another pause.,game/tl/deutsch/scene/News/beach/beach.rpy,805,[what]
+Beach_Base_95da1af0,t,... or you want to protect?,game/tl/deutsch/scene/News/beach/beach.rpy,811,"t worry ""[what]"""
+Beach_Base_9ca619de,,You begin to understand.,game/tl/deutsch/scene/News/beach/beach.rpy,817,[what]
+Beach_Base_1a2d938a,t,Help me do the interviews.,game/tl/deutsch/scene/News/beach/beach.rpy,823,"t flirt ""[what]"""
+Beach_Base_a10697e2,t,I still need a cameraman.,game/tl/deutsch/scene/News/beach/beach.rpy,829,"t sad ""[what]"""
+Beach_Base_ead39d25,t,"And I promise you, I will frame the story the \""right\"" way.",game/tl/deutsch/scene/News/beach/beach.rpy,835,"t happy ""[what]"""
+Beach_Base_63d58bef,c,"And the \""right\"" way would be MY point of view?",game/tl/deutsch/scene/News/beach/beach.rpy,841,"c suspicious ""[what]"""
+Beach_Base_2057706d,t,Now you get it!,game/tl/deutsch/scene/News/beach/beach.rpy,847,"t evil ""[what]"""
+Beach_Base_773e3bdd,c,Isn't that ... unethical?,game/tl/deutsch/scene/News/beach/beach.rpy,853,"c ""[what]"""
+Beach_Base_8a101798,,Tom laughs at you.,game/tl/deutsch/scene/News/beach/beach.rpy,859,[what]
+Beach_Base_e1b6e0ad,t,"Ah, sweet summer child!",game/tl/deutsch/scene/News/beach/beach.rpy,865,"t happy ""[what]"""
+Beach_Base_43950c7b,c,What?,game/tl/deutsch/scene/News/beach/beach.rpy,871,"c angry ""[what]"""
+Beach_Base_4f3ef6bd,t,"As a Literature student, you should know better!",game/tl/deutsch/scene/News/beach/beach.rpy,877,"t friendly ""[what]"""
+Beach_Base_30226ebc,t,Seriously. Every news report is framed. Of course it is.,game/tl/deutsch/scene/News/beach/beach.rpy,883,"t flirt ""[what]"""
+Beach_Base_7b2dbde8,t,The facts only make up a minor percentage of the story.,game/tl/deutsch/scene/News/beach/beach.rpy,889,"t ""[what]"""
+Beach_Base_3be97ed0,t,It is how it is presented to you that makes all the difference.,game/tl/deutsch/scene/News/beach/beach.rpy,895,"t tough ""[what]"""
+Beach_Base_10b96f94,,"While you still ponder about his words, Tom waves at you.",game/tl/deutsch/scene/News/beach/beach.rpy,901,[what]
+Beach_Base_772e7867,t,Come on! We have a lot of work to do!,game/tl/deutsch/scene/News/beach/beach.rpy,907,"t happy ""[what]"""

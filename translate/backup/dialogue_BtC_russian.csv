@@ -1,0 +1,444 @@
+Identifier,Character,Dialogue,Filename,Line Number,Ren'Py Script
+registration_c077c1f9,a,So... What do you want?,game/tl/russian/scene/administration.rpy,1018,"a tough ""[what]"""
+registration_0b7a92c4,c,I lost my student ID.,game/tl/russian/scene/administration.rpy,1024,"c sad ""[what]"""
+registration_2b59cb65,,"Another long look, this time from toe to head.",game/tl/russian/scene/administration.rpy,1030,[what]
+registration_5cd78e3e,a,This is because the young people today are all reckless and careless and stupid!,game/tl/russian/scene/administration.rpy,1036,"a angry ""[what]"""
+registration_9989d20f,c,At least we are not old and mean.,game/tl/russian/scene/administration.rpy,1042,"c angry ""[what]"""
+registration_7eb133bc,a,{b}WHAT DID YOU JUST SAY?{/b},game/tl/russian/scene/administration.rpy,1048,"a angry ""[what]"" with vpunch"
+registration_d8b0e592,c,You heard me.,game/tl/russian/scene/administration.rpy,1054,"c neutral ""[what]"""
+registration_d4cf67ff,a,Too bad I cannot discipline you! Because you deserve it like nobody else.,game/tl/russian/scene/administration.rpy,1060,"a angry ""[what]"""
+registration_ec2d5324,a,But maybe there will come an opportunity some beautiful day?,game/tl/russian/scene/administration.rpy,1066,"a evil ""[what]"""
+registration_abecba3b,c,"Are you threatening me, sir?",game/tl/russian/scene/administration.rpy,1072,"c suspicious ""[what]"""
+registration_46cb44ea,a,Not at all!,game/tl/russian/scene/administration.rpy,1078,"a friendly ""[what]"""
+registration_8eacf4da,c,[RelVal],game/tl/russian/scene/administration.rpy,1084,"c sad ""[what]"""
+registration_3b4f43d6,c,You are right. I am sorry. I will try not to be so 'reckless and careless and stupid' next time.,game/tl/russian/scene/administration.rpy,1090,"c sad ""[what]"""
+registration_dcf16aa3,a,Are you making fun of me?,game/tl/russian/scene/administration.rpy,1096,"a suspicious ""[what]"""
+registration_6cfcb630,c,"No, sir. I wouldn't dare to!",game/tl/russian/scene/administration.rpy,1102,"c neutral ""[what]"""
+registration_a0ff8eaf,a,"You shouldn't, if you know what is good for you!",game/tl/russian/scene/administration.rpy,1108,"a friendly ""[what]"""
+registration_043dc297,c,[RelVal],game/tl/russian/scene/administration.rpy,1114,"c happy ""[what]"""
+registration_5418e7b2,c,...,game/tl/russian/scene/administration.rpy,1120,"c neutral ""[what]"""
+registration_95511e03,a,Very well.,game/tl/russian/scene/administration.rpy,1126,"a neutral ""[what]"""
+registration_3f3bcf0f,a,What is your name?,game/tl/russian/scene/administration.rpy,1132,"a neutral ""[what]"""
+registration_2fd0140e,a,I cannot help you if you don't tell me your name!,game/tl/russian/scene/administration.rpy,1138,"a angry ""[what]"""
+registration_9c8666bb,c,Sorry. My name is Connor.,game/tl/russian/scene/administration.rpy,1144,"c sad ""[what]"""
+registration_1492c7eb,a,You really had to think about that?,game/tl/russian/scene/administration.rpy,1150,"a suspicious ""[what]"""
+registration_7957bf60,a,"Very well, [name].",game/tl/russian/scene/administration.rpy,1156,"a tough ""[what]"""
+registration_fc20f8d5,a,How old are you?,game/tl/russian/scene/administration.rpy,1162,"a neutral ""[what]"""
+age_9e2901db,a,Just because I am wearing glasses does not mean that I am blind. Or stupid.,game/tl/russian/scene/administration.rpy,1168,"a angry ""[what]"""
+age_fcfd8269,a,Tell me your real age or go away.,game/tl/russian/scene/administration.rpy,1174,"a tough ""[what]"""
+age_175355bb,a,"Sorry, no minors are permitted here.",game/tl/russian/scene/administration.rpy,1180,"a tough ""[what]"""
+age_157f2e0e,a,"All right, so you are [age] years old?",game/tl/russian/scene/administration.rpy,1186,"a friendly ""[what]"""
+age_bb579431,c,"Yes, sir.",game/tl/russian/scene/administration.rpy,1192,"c friendly ""[what]"""
+age_a9d3fe66,a,What grade are you in?,game/tl/russian/scene/administration.rpy,1198,"a tough ""[what]"""
+age_8f56bee1,c,It is my second year.,game/tl/russian/scene/administration.rpy,1204,"c friendly ""[what]"""
+age_58660384,a,So you are a Sophomore.,game/tl/russian/scene/administration.rpy,1210,"a neutral ""[what]"""
+age_2a1adea1,a,И как же ты умудрился потерять свой студенческий?,game/tl/russian/scene/administration.rpy,344,"a angry ""[what]"""
+age_8b448a7a,,Another judging look.,game/tl/russian/scene/administration.rpy,1216,[what]
+age_4fa56262,c,I didn't mean to!,game/tl/russian/scene/administration.rpy,1222,"c boxing ""[what]"""
+age_e1d6629f,a,"Watch your tone, young man!",game/tl/russian/scene/administration.rpy,1228,"a angry ""[what]"""
+age_db7c9797,a,"Are you aware this program contains nudity, sexual interactions and explicit content?",game/tl/russian/scene/administration.rpy,1234,"a neutral ""[what]"""
+age_1c063aa8,c,Is this a subject I can study?,game/tl/russian/scene/administration.rpy,1240,"c happy ""[what]"""
+age_e72eb2ce,a,"If you don't agree to this I will have to force you off the campus. So take this serious, please.",game/tl/russian/scene/administration.rpy,1246,"a tough ""[what]"" with vpunch"
+age_56b647e2,c,I understand.,game/tl/russian/scene/administration.rpy,1252,"c neutral ""[what]"""
+age_3ec576d9,a,A good decision.,game/tl/russian/scene/administration.rpy,1258,"a friendly ""[what]"""
+age_3b63a19b,a,"Also, this program contains homosexual content.",game/tl/russian/scene/administration.rpy,1264,"a tough ""[what]"""
+age_a6f55fea,c,Really?,game/tl/russian/scene/administration.rpy,1270,"c suspicious ""[what]"""
+age_f56d32c3,a,This would not have been possible in my day. These people would be locked away or worse.,game/tl/russian/scene/administration.rpy,1276,"a angry ""[what]"""
+age_258602a4,a,"Nowadays, they are encouraged to spread their filthy ideology everywhere.",game/tl/russian/scene/administration.rpy,1282,"a angry ""[what]"""
+age_7c5d2821,,"The Administrator closes his eyes and starts to audibly breath in-and-out, until his breathing frequency is at a normal pace again.",game/tl/russian/scene/administration.rpy,1288,[what]
+age_420e3632,a,"Anyway. This is the official policy. If you do not agree, you have my sympathy. But unfortunately, I could not grant you access.",game/tl/russian/scene/administration.rpy,1294,"a neutral ""[what]"""
+age_8459eb3e,c,Gay is fine for me.,game/tl/russian/scene/administration.rpy,1300,"c happy ""[what]"""
+age_9e145366,a,Why am I not surprised?,game/tl/russian/scene/administration.rpy,1306,"a suspicious ""[what]"""
+age_f99aeb93,a,Mine neither. You might just have saved your soul. God bless you.,game/tl/russian/scene/administration.rpy,1312,"a friendly ""[what]"""
+age_91880804,a,Even this is obviously not enough.,game/tl/russian/scene/administration.rpy,1318,"a angry ""[what]"""
+age_342889cb,a,Furthermore you may be confronted with bondage and humiliation and many more delicious sins for which you will burn in Hell for all eternity!,game/tl/russian/scene/administration.rpy,1324,"a angry ""[what]"""
+age_4d0e9f9e,c,Sounds like fun!,game/tl/russian/scene/administration.rpy,1330,"c evil ""[what]"""
+age_ec6a8970,a,Hell! All! ETERNITY!,game/tl/russian/scene/administration.rpy,1336,"a angry ""[what]"" with vpunch"
+age_b77943a2,c,I-I'm not sure...,game/tl/russian/scene/administration.rpy,1342,"c suspicious ""[what]"""
+age_8118e15d,a,That's what I thought!,game/tl/russian/scene/administration.rpy,1348,"a angry ""[what]"""
+age_03cea9b4,a,I'm sure you'll enjoy one of the jocks tearing you up from the inside while you are tied to a pole somewhere!,game/tl/russian/scene/administration.rpy,1354,"a evil ""[what]"""
+age_ec444db2,c,...,game/tl/russian/scene/administration.rpy,1360,"c down ""[what]"""
+age_1913c845,a,It is too much depravity for any sane mind. You made the morally-correct decision.,game/tl/russian/scene/administration.rpy,1366,"a friendly ""[what]"""
+age_864313ea,a,Move away and never come back and your soul just might be welcomed in heaven after all.,game/tl/russian/scene/administration.rpy,1372,"a sad ""[what]"""
+age_68979afc,,He gives you another one of those severe looks.,game/tl/russian/scene/administration.rpy,1378,[what]
+age_ac66d146,a,Very well. Here are some brochures in case you change your mind and seek a way back to God.,game/tl/russian/scene/administration.rpy,1384,"a sad ""[what]"""
+age_25a3a910,c,Why homosexuality is a sin. Your way straight to god.,game/tl/russian/scene/administration.rpy,1390,"c suspicious ""[what]"""
+age_2d218ecf,c,"I am good, thank you.",game/tl/russian/scene/administration.rpy,1396,"c friendly ""[what]"""
+age_28e8809c,a,I have done my duty to save your soul.,game/tl/russian/scene/administration.rpy,1402,"a tough ""[what]"""
+age_2c841e31,a,I am pretty sure I will hear your screams all the way up into heaven.,game/tl/russian/scene/administration.rpy,1408,"a evil ""[what]"""
+age_c6b7f0f9,c,Or maybe I will meet you in Hell.,game/tl/russian/scene/administration.rpy,1414,"c friendly ""[what]"""
+age_59527dde,a,Don't be ridiculous!,game/tl/russian/scene/administration.rpy,1420,"a angry ""[what]"""
+age_8eacf4da,c,[RelVal],game/tl/russian/scene/administration.rpy,1426,"c sad ""[what]"""
+age_fe71e4ad,c,"Thank you, I will take a look.",game/tl/russian/scene/administration.rpy,1432,"c friendly ""[what]"""
+age_1b2d628d,a,"It is not too late, my son!",game/tl/russian/scene/administration.rpy,1438,"a friendly ""[what]"""
+age_d31d85c4,a,Confess your sins and there might still be salvation for you.,game/tl/russian/scene/administration.rpy,1444,"a tough ""[what]"""
+age_de1a2c0a,c,Okay...,game/tl/russian/scene/administration.rpy,1450,"c suspicious ""[what]"""
+age_043dc297,c,[RelVal],game/tl/russian/scene/administration.rpy,1456,"c happy ""[what]"""
+age_c0514f68,a,Study subject?,game/tl/russian/scene/administration.rpy,1462,"a neutral ""[what]"""
+age_32c6c8b7,a,"Really? Art? Also known as \""Future Homeless\"".",game/tl/russian/scene/administration.rpy,1468,"a sad ""[what]"""
+age_1d0a943b,a,"If I ever see you painting on anything other than paper, you will regret it. I promise you that!",game/tl/russian/scene/administration.rpy,1474,"a angry ""[what]"""
+age_8eacf4da_1,c,[RelVal],game/tl/russian/scene/administration.rpy,1480,"c sad ""[what]"""
+age_76dec30a,a,Well this is a subject with a bright future! Your journey to become CFO or even CEO!,game/tl/russian/scene/administration.rpy,1486,"a happy ""[what]"""
+age_3067a19d,a,"Or to end in the administration office of some scrappy little college, lead by spineless liberals!",game/tl/russian/scene/administration.rpy,1492,"a sad ""[what]"""
+age_8eacf4da_2,c,[RelVal],game/tl/russian/scene/administration.rpy,1498,"c sad ""[what]"""
+age_8007058e,a,"Seriously? Are you just here for the parties, drugs and girls?",game/tl/russian/scene/administration.rpy,1504,"a neutral ""[what]"""
+age_846b039f,a,You do realize some of our students are actually here to LEARN?,game/tl/russian/scene/administration.rpy,1510,"a tough ""[what]"""
+age_ef7580ec,a,"An intellectual, are you? You don't look like one, that's for sure.",game/tl/russian/scene/administration.rpy,1516,"a tough ""[what]"""
+age_f87d9c6c,a,But don't think you can talk youself out of trouble in MY office! I will be keeping an eye on you...,game/tl/russian/scene/administration.rpy,1522,"a angry ""[what]"""
+age_2cfb6077,,A dark shadow seems to pass over the Administrator's eyes.,game/tl/russian/scene/administration.rpy,1528,[what]
+age_edfb39e8,,"You can't help but feel the aura of menace radiating from him, if only for an instant.",game/tl/russian/scene/administration.rpy,1534,[what]
+age_1029b872,,Then he regains his cold and professional demeanor.,game/tl/russian/scene/administration.rpy,1540,[what]
+age_8eacf4da_3,c,[RelVal],game/tl/russian/scene/administration.rpy,1546,"c sad ""[what]"""
+age_e8fcd5dc,a,"Engineering? How unexpectedly practical of you, this is a wise choice.",game/tl/russian/scene/administration.rpy,1552,"a happy ""[what]"""
+age_437dfbcc,a,"Learning how to build things. True, honest work.",game/tl/russian/scene/administration.rpy,1558,"a friendly ""[what]"""
+age_043dc297_1,c,[RelVal],game/tl/russian/scene/administration.rpy,1564,"c happy ""[what]"""
+age_6d217aac,c,Can I have my ID now please?,game/tl/russian/scene/administration.rpy,1570,"c neutral ""[what]"""
+age_f5d44594,a,"Oh, there is a message for you.",game/tl/russian/scene/administration.rpy,1576,"a neutral ""[what]"""
+age_9da6b8e2,c,A message?,game/tl/russian/scene/administration.rpy,1582,"c suspicious ""[what]"""
+age_6bd1037d,,Who could possibly have left a message for you with the administrator?,game/tl/russian/scene/administration.rpy,1588,[what]
+age_189ab363,,Even HE didn't know you would be coming to his office today.,game/tl/russian/scene/administration.rpy,1594,[what]
+age_2791036e,a,The Headmaster of this school would like a word with you.,game/tl/russian/scene/administration.rpy,1600,"a neutral ""[what]"""
+age_72ee2e4a,a,"It is unusual for him to take an interest in a student, he normally has much bigger things to worry about.",game/tl/russian/scene/administration.rpy,1606,"a tough ""[what]"""
+age_db8af26b,a,This is usually not a good sign.,game/tl/russian/scene/administration.rpy,1612,"a evil ""[what]"""
+age_697b9917,,"A tangled knot seems to form in your guts, and then sink like a stone.",game/tl/russian/scene/administration.rpy,1618,[what]
+age_9fefa818,c,Does the message say why the headmaster needs to see me?,game/tl/russian/scene/administration.rpy,1624,"c suspicious ""[what]"""
+age_a330192f,,"You think hard, but can't imagine what this could be about. The semester just started, you can't be in trouble already. Can you?",game/tl/russian/scene/administration.rpy,1630,[what]
+age_ece2c58b,a,No. It does not.,game/tl/russian/scene/administration.rpy,1636,"a neutral ""[what]"""
+age_b7b6a541,c,Is this all?,game/tl/russian/scene/administration.rpy,1642,"c neutral ""[what]"""
+age_17f52332,a,You'll find you have a new roommate this year.,game/tl/russian/scene/administration.rpy,1648,"a neutral ""[what]"""
+age_1e632d02,a,You should return to your dorm and introduce yourself.,game/tl/russian/scene/administration.rpy,1654,"a neutral ""[what]"""
+age_13df53d5,a,Perhaps you may even try reading a book or two in the library.,game/tl/russian/scene/administration.rpy,1660,"a tough ""[what]"""
+age_c0fe0fbd,c,I hope my roommate this year is better than the one I was stuck with last year.,game/tl/russian/scene/administration.rpy,1666,"c neutral ""[what]"""
+age_b576cc51,a,The Headmaster {i}may{/i} be ready for you to visit his office in a few hours. Now please leave.,game/tl/russian/scene/administration.rpy,1672,"a neutral ""[what]"""
+morning_4_26b68bd7,,"You're talking quietly to Julian about what happened last night, your both worried.",game/tl/russian/scene/Afterparty/Morning/morning_4.rpy,103,[what]
+morning_4_23115db4,j,What happens when he wakes up? Fuck!,game/tl/russian/scene/Afterparty/Morning/morning_4.rpy,109,"j worry ""[what]"""
+morning_4_b31c085f,c,I don't know dude were fucked!,game/tl/russian/scene/Afterparty/Morning/morning_4.rpy,115,"c sad ""[what]"""
+morning_4_ac8e4255,,"You hear something coming from your room, it sounds like it might be Ron waking up",game/tl/russian/scene/Afterparty/Morning/morning_4.rpy,121,[what]
+morning_4_5b2fee29,r,"Uhh, my head.",game/tl/russian/scene/Afterparty/Morning/morning_4.rpy,127,"r shy nude ""[what]"""
+morning_4_dae8a559,r,What happened?,game/tl/russian/scene/Afterparty/Morning/morning_4.rpy,133,"r suspicious nude ""[what]"""
+morning_4_3efc4461,,R looks for clothes to wear and then notices he's covered in Jizz,game/tl/russian/scene/Afterparty/Morning/morning_4.rpy,139,[what]
+morning_4_9dafe6ab,r,I can't find my clothes and ... what's this sticky stuff?,game/tl/russian/scene/Afterparty/Morning/morning_4.rpy,145,"r caution nude ""[what]"""
+morning_4_02c1180d,,Julian and C hear Ron waking up while they were talking in private and come rushing in,game/tl/russian/scene/Afterparty/Morning/morning_4.rpy,151,[what]
+morning_4_723b574f,j,You... you're......awake!,game/tl/russian/scene/Afterparty/Morning/morning_4.rpy,157,"j surprised ""[what]"""
+morning_4_fd25b9b4,c,Ummmm.... how are you?,game/tl/russian/scene/Afterparty/Morning/morning_4.rpy,163,"c worry ""[what]"""
+morning_4_4cc95f76,j,"Please not now both of you, I feel weird; I think I just need to have a shower and then I'll be back to normal",game/tl/russian/scene/Afterparty/Morning/morning_4.rpy,169,"j worry nude ""[what]"""
+morning_4_ed19e4c2,c,Do you need anything?,game/tl/russian/scene/Afterparty/Morning/morning_4.rpy,175,"c neutral ""[what]"""
+morning_4_000a9973,j,ummmmm...yeah we could go out and find clothes for you,game/tl/russian/scene/Afterparty/Morning/morning_4.rpy,181,"j worry ""[what]"""
+morning_4_895ac022,r,"sure, thanks...but I'm gonna go have a shower now",game/tl/russian/scene/Afterparty/Morning/morning_4.rpy,187,"r suspicious ""[what]"""
+morning_4_5d37a200,,Ron heads to showers while Julian goes out looking for some new clothes.,game/tl/russian/scene/Afterparty/Morning/morning_4.rpy,193,[what]
+nathan_bio_3cd133d2,NA,To fuck you was the hottest thing I ever did.,game/tl/russian/scene/biography/nathan_bio.rpy,85,"NA desire ""[what]"""
+nathan_bio_3d5d900a,NA,Too bad you were wearing the chastity cage already.,game/tl/russian/scene/biography/nathan_bio.rpy,165,"NA sad ""[what]"""
+nathan_bio_dde29652,NA,I would have loved to see your cock in all its glory!,game/tl/russian/scene/biography/nathan_bio.rpy,171,"NA suspicious ""[what]"""
+nathan_bio_a22d29ee,NA,It did not stop you from cumming though.,game/tl/russian/scene/biography/nathan_bio.rpy,177,"NA desire ""[what]"""
+nathan_bio_26fdd16c,NA,I didn't even know it was possible.,game/tl/russian/scene/biography/nathan_bio.rpy,183,"NA suspicious ""[what]"""
+nathan_bio_3a113815,NA,Maybe you can teach me how to do it?,game/tl/russian/scene/biography/nathan_bio.rpy,189,"NA desire ""[what]"""
+nathan_bio_943c26a6,NA,I am glad you refused to wear that cage!,game/tl/russian/scene/biography/nathan_bio.rpy,195,"NA happy ""[what]"""
+nathan_bio_6c8ab584,NA,You have a nice cock!,game/tl/russian/scene/biography/nathan_bio.rpy,201,"NA desire ""[what]"""
+nathan_bio_7880eec0,NA,It would be a shame to lock it away!,game/tl/russian/scene/biography/nathan_bio.rpy,207,"NA ""[what]"""
+nathan_bio_ffcdca88,NA,"And you seemed to have some fun, too.",game/tl/russian/scene/biography/nathan_bio.rpy,91,"NA happy ""[what]"""
+nathan_bio_62c2c3b3,NA,"I wasn't sure if you wanted me to do it, or not.",game/tl/russian/scene/biography/nathan_bio.rpy,213,"NA suspicious ""[what]"""
+nathan_bio_7fb3578f,NA,"Hard to tell, with your gag in your mouth and all.",game/tl/russian/scene/biography/nathan_bio.rpy,115,"NA evil ""[what]"""
+nathan_bio_fb6fa1fd,NA,"Based on the \""result\"", I'd say you liked it.",game/tl/russian/scene/biography/nathan_bio.rpy,121,"NA desire ""[what]"""
+nathan_bio_23f3c163,NA,"In the end, at least.",game/tl/russian/scene/biography/nathan_bio.rpy,219,"NA suspicious ""[what]"""
+nathan_bio_45757421,NA,Too bad you did not want me to fuck you!,game/tl/russian/scene/biography/nathan_bio.rpy,145,"NA sad ""[what]"""
+nathan_bio_bed31f0b,NA,I am sure you would have liked it!,game/tl/russian/scene/biography/nathan_bio.rpy,151,"NA angry ""[what]"""
+nathan_bio_f94ec92e,NA,Anyway.,game/tl/russian/scene/biography/nathan_bio.rpy,157,"NA neutral ""[what]"""
+wrestling_ceremony_winner_ca1970ae,H,"Congratulations, [name]!",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,733,"H happy ""[what]"""
+wrestling_ceremony_winner_aab980d9,H,Hopefully you now know how your stellar performance has become a catalyst for great things to come!,game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,739,"H happy ""[what]"""
+wrestling_ceremony_winner_90bb43be,H,"To truly appreciate your achievement, you'll be displayed here in the gym until the end of instruction today.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,745,"H happy ""[what]"""
+wrestling_ceremony_winner_9684e5ab,,Здорово!,game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,631,[what]
+wrestling_ceremony_winner_452611ec,,"Целый день быть голым в школьном спортзале. Кусок мяса, на который можно поглазеть.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,637,[what]
+wrestling_ceremony_winner_80954780,,"Иногда ты любишь быть в центре внимания, но не в такой же ситуации!",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,643,[what]
+wrestling_ceremony_winner_a5e7da0a,,"Все взгляды устремлены на тебя, на твой член, на раздвинутые ноги ... здесь многое нужно осмыслить.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,649,[what]
+wrestling_ceremony_winner_73e35595,,И весь пот от борьбы тоже не помогает.,game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,655,[what]
+wrestling_ceremony_winner_d603d7c9,,"Вздохнув сквозь кляп, ты поднимаешь голову, чтобы посмотреть на всех...",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,661,[what]
+wrestling_ceremony_winner_7d296535,,"..изо всех сил стараешься принять это странное обращение как награду, о которой говорил директор.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,667,[what]
+wrestling_ceremony_winner_83d3b8cf,H,"In fact, speaking of things to come...",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,751,"H happy ""[what]"""
+wrestling_ceremony_winner_605da53c,H,Let me formally introduce our school's new learning initiative!,game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,757,"H happy ""[what]"""
+wrestling_ceremony_winner_10d81388,H,I think you'll all really enjoy it...,game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,763,"H lust ""[what]"""
+w_ceremony_win_cage_e876f180,,"You see the Headmaster look directly at you again, his dark smirk returning.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,769,[what]
+w_ceremony_win_cage_bd3b0ba6,H,"As for you, [name]...",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,775,"H evil ""[what]"""
+w_ceremony_win_cage_315f0d38,H,"Since you excelled in our wrestling unit, I'd like to offer you a choice.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,781,"H friendly ""[what]"""
+w_ceremony_win_cage_101e5b8e,H,"I can get your cage on you now, making you the first student to enter this new program...",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,787,"H ""[what]"""
+w_ceremony_win_cage_ce11c16c,H,"Or - I could leave it in your locker, and you could remain as you are until you're freed and have an opportunity to retrieve it yourself.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,793,"H ""[what]"""
+w_ceremony_win_cage_a7d1441f,H,I genuinely have no idea what others might like to see from this display...,game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,799,"H happy ""[what]"""
+w_ceremony_win_cage_1675f70a,H,But I leave it up to you. Do you want to be put into chastity now?,game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,805,"H neutral ""[what]"""
+w_ceremony_win_cage_e0984288,,"Honestly, it didn't feel like much of a choice to you.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,811,[what]
+w_ceremony_win_cage_cf2d3ec8,,"You were already here, presented to the masses.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,817,[what]
+w_ceremony_win_cage_41d816d8,,Might as well make the Headmaster happy and not get on his bad side.,game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,823,[what]
+w_ceremony_win_cage_a4b9d813,,Besides...maybe it'll be some kind of distraction?,game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,829,[what]
+w_ceremony_win_cage_6c66b1a6,,"You whimper submissively into the gag, nodding your head.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,835,[what]
+w_ceremony_win_cage_4772f03d,H,Excellent...I'm glad you're so willing to take our college's new program head-on.,game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,841,"H happy ""[what]"""
+w_ceremony_win_cage_6e9f99d3,,"Fortunately (or maybe unfortunately) for you, all the cage talk has made your boner completely disappear.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,847,[what]
+w_ceremony_win_cage_4d278ad9,,All the easier for the Headmaster's new sporty henchmen to help you get locked up.,game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,853,[what]
+w_ceremony_win_cage_6383d96c,,Vincent looks down at your still erected cock.,game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,925,[what]
+w_ceremony_win_cage_33c87b7a,v,I think he is a bit too excited to have it attached to him.,game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,1227,"v suspicious nude ""[what]"""
+w_ceremony_win_cage_f8d0d36c,,The headmaster grins.,game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,937,[what]
+w_ceremony_win_cage_df36286e,H,"Well, there is an easy solution to that, right?",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,943,"H happy ""[what]"""
+w_ceremony_win_cage_40c5f85d,,"Vincent and Max smirk at each other, while closing in at you again.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,949,[what]
+w_ceremony_win_cage_7717d914,,"Realisation dawns on you, when Max's finger touch your dick.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,955,[what]
+w_ceremony_win_cage_04f98664,c,Mmmph!,game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,961,"c gag nude ""[what]"""
+w_ceremony_win_cage_9a5995ab,,You try to move your hip away from Max' hand as much as the restrains allow you to do.,game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,967,[what]
+w_ceremony_win_cage_b7f54ed5,,"By doing so, you press your butt against Vincent's hip.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,973,[what]
+w_ceremony_win_cage_9849fb15,,You feel his erection throught the smooth and thin fabric.,game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,979,[what]
+w_ceremony_win_cage_6b583cb1,,"Max' thumb gently strikes your glans, and your own precum makes this small movement soft and exhilarating.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,985,[what]
+w_ceremony_win_cage_a8fcafc5,,"You try even more to move your hip away, causing only to rub even more against Vincent's bulge.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,991,[what]
+w_ceremony_win_cage_e5c425ba,,The voices of the other students and visitors fade out.,game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,997,[what]
+w_ceremony_win_cage_1117e116,,"You don't notice even the headmaster anymore, who looks at you like wolf fixating his prey.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,1003,[what]
+w_ceremony_win_cage_47c8e684,,All your hear is Vincent's soft moan each time you rub your hip against his waist.,game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,1009,[what]
+w_ceremony_win_cage_eb017e23,,"Vincent's hands glide all over your body, while Max's merciless gentle fingers stimulate you.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,1015,[what]
+w_ceremony_win_cage_a7bbd9c6,,Max' and Vincent's smell mix serve as an aphrodisiac to you.,game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,1021,[what]
+w_ceremony_win_cage_71ba6f5d,,"You feel Max boner pressed agains your hip, as he moves even closer and his finger close in around your dick - not as gentle as before anymore, but still pleasing.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,1027,[what]
+w_ceremony_win_cage_57086bb3,,"You can feel your dick pule in his hands, and you know you have lost the battle.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,1033,[what]
+w_ceremony_win_cage_36a5a373,,No way you could hold it much longer.,game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,1039,[what]
+w_ceremony_win_cage_d2e2e267,,"You wiggle even stronger, even though it brings you even closer to it.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,1045,[what]
+w_ceremony_win_cage_04f98664_1,c,Mmmph!,game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,1051,"c gag nude ""[what]"""
+w_ceremony_win_cage_889abb07,v,"Oh, fuck!",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,1233,"v pain nude ""[what]"""
+w_ceremony_win_cage_37681642,v,I can't hold it any longer!,game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,1063,"v ""[what]"""
+w_ceremony_win_cage_55da38b3,,"Vincent's hip now starts to rub up and down on your butt, in a very fast pace.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,1069,[what]
+w_ceremony_win_cage_c8f10ec2,,"Your own movement also increases, while Vincent exhales an animalistic sound.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,1075,[what]
+w_ceremony_win_cage_2b2e1cc5,,"Something between a moan, a battle cery and a growl.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,1081,[what]
+w_ceremony_win_cage_5cc8ce2f,,"The soft fabric sperating his stone-hard dick become wet, while his hip rubs even more violently against yours.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,1087,[what]
+w_ceremony_win_cage_a6520e67,,"At this point, your own animalistic sound gets muffled by the gag, while you shoot your cum in a high arch through the gymnasium.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,1093,[what]
+w_ceremony_win_cage_10269ec6,,"You breath heavily, and the gag makes it even harder to breath.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,1099,[what]
+w_ceremony_win_cage_2de102b7,,"Vincent moves away from you, obviously embarrassed by his own lost of control, and awkwardly trying to hide the very obvious semen spot on his suit.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,1105,[what]
+w_ceremony_win_cage_09b44791,,You already feel your dick to become soft again. Finally.,game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,1111,[what]
+w_ceremony_win_cage_7b98779a,h,"Oh, Vincent! Did you have a little accident there?",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,1117,"h happy ""[what]"""
+w_ceremony_win_cage_7b6eea5c,v,Uhmm...,game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,1239,"v sad nude ""[what]"""
+w_ceremony_win_cage_f328c25b,h,Anyway. I think [name] is now ready for the cage.,game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,1129,"h neutral ""[what]"""
+w_ceremony_win_cage_469f6d0e,h,"Max, would you be so nice?",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,1135,"h friendly ""[what]"""
+w_ceremony_win_cage_3b15c692,ma,Sure!,game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,1245,"ma happy nude ""[what]"""
+w_ceremony_win_cage_8ba44aa7,,"He hands the device to Max, who approaches you with absolute glee.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,1147,[what]
+w_ceremony_win_cage_a3d3dbdd,,"He gets a tight grip on your genitals, making sure you can't really get far.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,1153,[what]
+w_ceremony_win_cage_92b6bce9,,"You groan as he locks the ring around the base of your cock, clicking the cage and its lock into place.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,1159,[what]
+w_ceremony_win_cage_77fee3a0,,"Once he lets go, you feel the heft of the cage for the first time.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,1165,[what]
+w_ceremony_win_cage_5763b1a4,,"It weighs down you, making everything hang a bit lower than usual.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,1171,[what]
+w_ceremony_win_cage_58b22c2d,,"It was cold to the touch, sending a shiver through you as it presses against your manhood.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,1177,[what]
+w_ceremony_win_cage_8dfe0104,ma,"Quite the look for your little pecker, pipsqueak.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,1251,"ma laugh nude ""[what]"""
+w_ceremony_win_cage_0fe4d267,,"You sigh and nod, accepting your fate as the caged and displayed mascot for the day.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,1189,[what]
+w_ceremony_win_cage_5e8f7f85,,There's no way you're letting this show of your embarrassment somehow get worse.,game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,859,[what]
+w_ceremony_win_cage_ab83467d,,"You grunt angrily into the gag, shaking your head defiantly at the Headmaster as you tug at your bonds.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,865,[what]
+w_ceremony_win_cage_fd89bdc1,,You see a wave of disappointment come across the Headmaster's face at your reaction.,game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,871,[what]
+w_ceremony_win_cage_08067094,H,I had hoped you would be a bit more...enthusiastic about this new initiative.,game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,877,"H angry ""[what]"""
+w_ceremony_win_cage_bef7bfe8,H,"With your physical success in class today, I thought you might welcome the treatment.",game/tl/russian/scene/Wrestling/wrestling_ceremony_winner.rpy,883,"H ""[what]"""
+wrestling_epilogue_74da2b94,,"After many hours left suspended in the gym, you begin to understand why some people really hate physical education.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,7,[what]
+wrestling_epilogue_c3cee353,,Putting aside the countless onlookers you had throughout the day...,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,13,[what]
+wrestling_epilogue_48bb7e52,,"Whose stares, comments, and even occasional touches on your body only exacerbated your discomfort...",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,19,[what]
+wrestling_epilogue_6f1010f1,,You were really tired of staring at these bleachers and this floor.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,25,[what]
+wrestling_epilogue_a194d3ca,,"You could feel the sweat coating the skin beneath all your restraints, thanks to your constant squirming.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,31,[what]
+wrestling_epilogue_7f19e360,,And there is still that ever-present weight on your genitals...can't forget about that.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,43,[what]
+wrestling_epilogue_773d2f6a,,"Based on what was said about your display and how long it would last, you should be getting out soon.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,49,[what]
+wrestling_epilogue_aa7c8e0f,,"The final classes of the day should be ending, meaning someone should be by soon to free you.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,55,[what]
+wrestling_epilogue_11735128,,"Whether it would be the Headmaster, the Administrator, or maybe even Max and Vincent...you weren't sure.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,61,[what]
+wrestling_epilogue_95670104,,"You aren't crazy about any of those options, honestly.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,67,[what]
+wrestling_epilogue_9af3f6a6,H,"Attention, everyone! May I have your attention, please? Thank you.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,73,"H neutral ""[what]"""
+wrestling_epilogue_848eb02e,H,"I understand that the wrestling event stirred up a lot of emotions, but it's time to regain control and leave the sports hall. I expect each and every one of you to calm down and exit the premises without delay.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,79,"H angry ""[what]"""
+wrestling_epilogue_fcb0b22a,,"The gym was darker now, the shadow of your bound body cast upon the hardwood floor by the setting sun shining through the windows.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,85,[what]
+wrestling_epilogue_b23c0220,,But nobody came to free you.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,91,[what]
+wrestling_epilogue_38963069,,You started to worry they might just have forgotten about you.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,97,[what]
+wrestling_epilogue_6c3fa076,,How long has it been since the light went off?,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,103,[what]
+wrestling_epilogue_5682ae8e,,It felt like hours.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,109,[what]
+wrestling_epilogue_bc5a6390,,Will you have to stay like this all night?,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,115,[what]
+wrestling_epilogue_cc6cfc26,,"Every muscle, every bone in your body screamed in agony, begging for release.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,121,[what]
+wrestling_epilogue_72fb9a89,,Or at least a different position.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,127,[what]
+wrestling_epilogue_5189564a,,But you were totally fixed where you are.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,133,[what]
+wrestling_epilogue_23898d94,,"What, if they they forgot about you entirely? If nobody comes, even in the morning?",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,139,[what]
+wrestling_epilogue_5f1c76e6,,"When is the next, regular lesson sheduled?",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,145,[what]
+wrestling_epilogue_1dbe7d30,,"Sports lessons usually start in the afternoon, if at all...",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,151,[what]
+wrestling_epilogue_d82ae216,,"Then, you are pulled from your mental spiral by the familiar sound of the gym doors opening.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,157,[what]
+wrestling_epilogue_0aff0b8c,,"Finally, the end of your day is here...",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,163,[what]
+wrestling_epilogue_063b9582,,...or so you think.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,169,[what]
+wrestling_epilogue_d64eb25a,,You hear a humming before you see anyone.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,175,[what]
+wrestling_epilogue_2404147c,,"It's a jaunty tune...very carefree, almost joyful.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,181,[what]
+wrestling_epilogue_b985e725,,"He is approaching you from behind, so you cannot see him.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,187,[what]
+wrestling_epilogue_0881496c,na,"Hey there, [name]...",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,193,"na happy nude ""[what]"""
+wrestling_epilogue_e40b4c61,,The voice sounds familiar.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,199,[what]
+wrestling_epilogue_0fd8be48,,Was his name...Nathan? That sounds right.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,205,[what]
+wrestling_epilogue_abc165c4,,Strange that he would be the one sent to release you...,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,211,[what]
+wrestling_epilogue_228a3575,,"You two had never spoken before today, and he didn't seem like the type interested in helping the Headmaster.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,217,[what]
+wrestling_epilogue_568f6912,na,Nice to finally have some alone time with you.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,223,"na ""[what]"""
+wrestling_epilogue_9c756416,,"You let out a thankful noise through your gag, grateful to finally get out of this embarrassing situation.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,229,[what]
+wrestling_epilogue_502b29f8,,"But Nathan doesn't reach for your gag, or your restraints.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,235,[what]
+wrestling_epilogue_d75b67a7,,"Instead, his hands reach from behind on your chest, and start to glide very softly over your skin.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,241,[what]
+wrestling_epilogue_e5028b3a,na,"Honestly, I'm grateful this little display got put together...",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,247,"na ""[what]"""
+wrestling_epilogue_045a5507,na,Lets me really see you in all your glory.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,253,"na ""[what]"""
+wrestling_epilogue_70ca7c35,,"You get slightly nervous at the way he's talking about you, starting to squirm a little bit.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,259,[what]
+wrestling_epilogue_9bd24dfc,na,I've seen you around plenty...thought about saying hello a few times.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,265,"na ""[what]"""
+wrestling_epilogue_52954041,na,"Never seemed like the right time, you know?",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,271,"na suspicious nude ""[what]"""
+wrestling_epilogue_427f122a,na,"But, well...it was an open invitation for us to come and see you like this.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,277,"na happy nude ""[what]"""
+wrestling_epilogue_0b0cd1ca,na,"And my father...he, uh...taught me to never say no to an invitation.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,283,"na angry nude ""[what]"""
+wrestling_epilogue_4a2d1e4a,,"Nathan pauses for a moment, taking his hands off you briefly to look down at the ground.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,289,[what]
+wrestling_epilogue_51635b3b,,"It's hard to tell, but he seemed...bothered, bringing his dad up.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,295,[what]
+wrestling_epilogue_44f6adbe,,"He snaps out of it, moving closer so you can feel his breath on your neck.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,301,[what]
+wrestling_epilogue_06128955,,"His hand moves to your bare chest, resting there as he speaks.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,307,[what]
+wrestling_epilogue_9ee008af,na,"Pretty exciting, huh?",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,313,"na happy nude ""[what]"""
+wrestling_epilogue_d8c20c94,na,Knowing someone could just walk in on us whenever?,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,319,"na suspicious nude ""[what]"""
+wrestling_epilogue_f34bfa0e,na,Gets me in the mood to do something...risky.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,325,"na ""[what]"""
+wrestling_epilogue_478fb11b,,"Nathan's hand cascades downward slowly, and you whimper in both fear and anticipation.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,331,[what]
+wrestling_epilogue_3881503a,,"Suddenly, you yelp as you feel his fingers exploring your groin.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,337,[what]
+wrestling_epilogue_58bca627,,"They cup your balls, as his hand gently wraps around them and your cock.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1516,[what]
+wrestling_epilogue_b2f0c881,na,It's great you do not wear your cage already!,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1522,"na desire nude ""[what]"""
+wrestling_epilogue_7e1843e0,,"They cup your balls, as his hand gently wraps around them and your caged cock.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,343,[what]
+wrestling_epilogue_a421d01e,na,It's too bad you're already wearing your cage...,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,349,"na sad nude ""[what]"""
+wrestling_epilogue_7e9c9239,na,I left mine in my locker for just a little bit...so I could see you first.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,355,"na happy nude ""[what]"""
+wrestling_epilogue_97662c33,na,Seeing this much of you...let's just say I'm glad I held off on putting it on.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,361,"na desire nude ""[what]"""
+wrestling_epilogue_87c69c0a,,"With such a sensual touch, you feel your dick straining against the device, and you groan in frustration.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,367,[what]
+wrestling_epilogue_7f73cd55,,"Peering into Nathan's eyes, you try to figure out what he's planning on doing next.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,373,[what]
+wrestling_epilogue_ea16ec9f,,"Before you can even come to a conclusion, he answers the question for you.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,379,[what]
+wrestling_epilogue_378899c1,na,"Might as well show you what I'm working with, huh?",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1141,"na desire nude ""[what]"""
+wrestling_epilogue_f34a29c4,na,Maybe it'll...give you something to really drool over.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1147,"na suspicious nude ""[what]"""
+wrestling_epilogue_9b50a181,,"He now goew over to your side, and you can see him for the first time.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,397,[what]
+wrestling_epilogue_88a29465,,You realize he is completely naked already.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,403,[what]
+wrestling_epilogue_ae9c5180,,"You can tell he enjoys the situation, almost like...he wants someone to catch him doing this.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,409,[what]
+wrestling_epilogue_21a9d5f4,,"He stands behind you with a smirk, slightly to your side with his erection rubbing against the side of your leg.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,415,[what]
+wrestling_epilogue_2fd9619e,,"Part of you was jealous, seeing his hardon unincumbered like that...but the other part of you was pretty nervous.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,421,[what]
+wrestling_epilogue_9a02c1b9,,"The nude Nathan strokes himself a few times, chuckling a bit.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,427,[what]
+wrestling_epilogue_846b33b9,na,I gotta be honest...this is one of the hottest things I've ever done...,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1153,"na desire nude ""[what]"""
+wrestling_epilogue_27ffc55c,na,And we haven't even done anything yet!,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1159,"na happy nude ""[what]"""
+wrestling_epilogue_65ea531e,na,"But hey, speaking of which...",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1165,"na suspicious nude ""[what]"""
+wrestling_epilogue_91d7c78f,,"His free hand suddenly grips one of your asscheeks, and even more surprisingly...",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,451,[what]
+wrestling_epilogue_8173c4a6,,...you feel his fingers hovering just outside your hole.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,457,[what]
+wrestling_epilogue_6d3c921b,na,You wanna...have some real fun?,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1171,"na suspicious nude ""[what]"""
+wrestling_epilogue_0caf2f88,,"Somehow, it finally dawns on you...Nathan wants to fuck you.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,469,[what]
+wrestling_epilogue_359dd67f,,Like...actually {b}{i}fuck{/i}{/b} you.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,475,[what]
+wrestling_epilogue_416c88c1,,"As crazy as it is, you've never actually had someone do that to you before.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,481,[what]
+wrestling_epilogue_5ba254b4,,"You'd experimented a bit back there on your own, of course, but...",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,487,[what]
+wrestling_epilogue_371a7996,,...nothing like {i}this.{/i},game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,493,[what]
+wrestling_epilogue_3a220252,,But...is this really how you want it to happen for the first time?,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,499,[what]
+wrestling_epilogue_ec32a473,na,[RelVal],game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1528,"na happy nude ""[what]"""
+wrestling_epilogue_df228cab,,"You moan loudly into your gag, nodding vigorously at the boy.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,505,[what]
+wrestling_epilogue_a42f43c2,,"It might not be the most common circumstance for a first time...captured, caged, and completely helpess.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,511,[what]
+wrestling_epilogue_f781f4c2,,But at this college...it somehow feels completely on brand.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,517,[what]
+wrestling_epilogue_06a2d00b,,"Nathan moans himself, pumping his cock a bit faster now in anticipation.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,523,[what]
+wrestling_epilogue_74f4ecd8,na,Adventurous...I like that.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1177,"na desire nude ""[what]"""
+wrestling_epilogue_719066a4,,"He spits on his fingers and with no further warning, you feel one of Nathan's fingers push into your entrance, making you groan loudly.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,563,[what]
+wrestling_epilogue_8b40f0ad,na,[RelVal],game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1534,"na sad nude ""[what]"""
+wrestling_epilogue_13deb733,,"While Nathan's proposition was certainly tempting, it also scared the hell out of you.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,569,[what]
+wrestling_epilogue_5c743f4c,,"You let out a light whimper, the nervousness evident as you share a glance with him.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,575,[what]
+wrestling_epilogue_532eff22,,"Whe he looks back, you see genuine concern behind his eyes, beyond the lust he presents so forwardly.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,581,[what]
+wrestling_epilogue_a3b6afc4,na,Don't be scared...,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1183,"na friendly nude ""[what]"""
+wrestling_epilogue_e150d223,na,I promise I'll be as gentle as I can.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1189,"na desire nude ""[what]"""
+wrestling_epilogue_fcb3ace7,na,"And make it as fun as possible while I'm at it, too.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1195,"na happy nude ""[what]"""
+wrestling_epilogue_e3e1aaf1,,"You stand a bit taller in your bondage, straightening your back and taking a deep breath.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,605,[what]
+wrestling_epilogue_b2488377,,"Nodding slowly, you give him the go ahead.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,611,[what]
+wrestling_epilogue_ae3c97ae,,Trepidation be damned.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,617,[what]
+wrestling_epilogue_717d85b9,,"Nathan smiles back at you, nodding too.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,623,[what]
+wrestling_epilogue_0757f1cf,na,That's good...trust is a good start.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1201,"na smile nude ""[what]"""
+wrestling_epilogue_b9008d38,na,[RelVal],game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1540,"na angry nude ""[what]"""
+wrestling_epilogue_4ce72828,,"You shake your head definatly, tugging at your restraints and protesting into the ball gag.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,635,[what]
+wrestling_epilogue_a411be8a,,You don't want this random guy fucking you like this!,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,641,[what]
+wrestling_epilogue_5162619b,,This whole gym experience has been harrowing enough already...,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,647,[what]
+wrestling_epilogue_b1f3df4b,,"Nathan seems disappointed, but moves his hand away from your ass and moves back to face you.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,653,[what]
+wrestling_epilogue_1f598e5d,na,I get it...not that kind of kinky.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1207,"na sad nude ""[what]"""
+wrestling_epilogue_669e0173,na,"Maybe some other time, huh?",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1213,"na desire nude ""[what]"""
+wrestling_epilogue_ebdfc579,,"You see him glance down at his engorged cock for a moment, almost like he's trying to figure out how to solve that problem.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,671,[what]
+wrestling_epilogue_7c535a95,na,But with these new cages...,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1546,"na suspicious nude ""[what]"""
+wrestling_epilogue_4ffc50b3,na,...I guess we'll see.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1225,"na neutral nude ""[what]"""
+wrestling_epilogue_9518251b,,"He eyes your own nude form one final time as well, still both curious and eager to continue.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,689,[what]
+wrestling_epilogue_f4fb2b6e,,But he holds himself back...and you appreciate that.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,695,[what]
+wrestling_epilogue_2bb2928a,na,"See you around, [name].",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1231,"na neutral nude ""[what]"""
+wrestling_epilogue_db0f40a2,,"He starts to walk away, unfazed by his own nudity as he strolls toward the doors.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,713,[what]
+wrestling_epilogue_45493864,,"You whimper helplessly behind your gag for a moment, hoping the boy would at least get you out of your predicament while here...",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,719,[what]
+wrestling_epilogue_3f455b65,,"Seemingly wishful thinking, especially from someone you just rejected.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,725,[what]
+wrestling_epilogue_2c8d50f1,,"Just as it began, the exchange now ends with you alone in the dark gymnasium.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,731,[what]
+wrestling_epilogue_ebfb58e2,,Hopefully freedom would actually find its way through those doors soon...,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,737,[what]
+wrestling_epilogue_c6f754b3,,"With little warning, you feel one of Nathan's fingers push into your entrance, making you groan loudly.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,743,[what]
+wrestling_epilogue_79331f5f,,"Your dick strains inside its cage, desperate to find release in more ways than one.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,749,[what]
+wrestling_epilogue_e4d85694,,Nathan could very literally feel your body's enthusiasm as your hole gripped his finger tightly.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,755,[what]
+wrestling_epilogue_1997b667,na,Fuck...you really are tight...!,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1552,"na desire nude ""[what]"""
+wrestling_epilogue_dbaeda49,,You hold tight to the rope that suspends you when you feel a second finger push its way inside you.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,767,[what]
+wrestling_epilogue_ceb16883,,"Your breathing is heavier now, and your heart is beating rapidly.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,773,[what]
+wrestling_epilogue_1db305c3,,You're not sure if Nathan can tell you're a virgin or not...,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,779,[what]
+wrestling_epilogue_9526f504,,"But, if he can, he certainly doesn't say anything.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,785,[what]
+wrestling_epilogue_6f30bd42,,Maybe to preserve what modesty and dignity you have left.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,791,[what]
+wrestling_epilogue_8f77bd39,,"Before you know it, you feel the tip of Nathan's manhood pressed against you, replacing his fingers.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,797,[what]
+wrestling_epilogue_7db36e07,,You don't even have time to fully process what's happening as he pushes himself into you.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,803,[what]
+wrestling_epilogue_c2b6a4a4,,"You grind your teeth against the ball gag, and your body goes into some kind of overdrive.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,809,[what]
+wrestling_epilogue_2bcc8a33,,"Even though Nathan starts out slow, it feels like lightning speed.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,815,[what]
+wrestling_epilogue_413526f5,,A sort of electricity sends a current of energy through your whole body.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,821,[what]
+wrestling_epilogue_aa8d98fc,,It feels like every single individual strand of hair on your body is now standing on end.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,827,[what]
+wrestling_epilogue_e472ee84,,"Goosebumps cover your skin as a shiver runs through your spine with every move Nathan makes, no matter how small.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,833,[what]
+wrestling_epilogue_5a92d71a,,"You could feel yourself trembling, your legs shaking as they try to keep you balanced against him.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,839,[what]
+wrestling_epilogue_25e76213,,"It was painful, obviously...Nathan was anything but small.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,845,[what]
+wrestling_epilogue_e6b1406a,,"But the mental noise and physical stimulation was so overwhelming, it almost drowned it out.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,851,[what]
+wrestling_epilogue_dada6b5d,,"Nathan quickly began thrusting, and you could tell he is making some guttural noises...",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,857,[what]
+wrestling_epilogue_15945929,,...you know he's telling you how good it feels and how tight you are...,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,863,[what]
+wrestling_epilogue_b5a17a8d,,But your brain was entirely focused on one thing:,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,869,[what]
+wrestling_epilogue_36beb801,,Being {b}{i}fucked.{/i}{/b},game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,875,[what]
+wrestling_epilogue_7575f50e,,"There's no point trying to listen, or parce through what's causing your body to feel what way.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,881,[what]
+wrestling_epilogue_79b2a638,,You're almost detatched from all that.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,887,[what]
+wrestling_epilogue_f36f9176,,"Instead, you hear yourself grunting and moaning...",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,893,[what]
+wrestling_epilogue_20fe97fb,,And look down to see your hips excitedly swaying in unison with Nathan's.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,899,[what]
+wrestling_epilogue_74775f65,,You see his hands gripping your waist...,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,905,[what]
+wrestling_epilogue_1b1470aa,,...occasionally fondling your balls...,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,911,[what]
+wrestling_epilogue_3318bc69,,...tweaking and massaging your nipples...,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,917,[what]
+wrestling_epilogue_605c3d47,,Doing what he said he would: everything to make you feel good.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,923,[what]
+wrestling_epilogue_abbdc790,,"And boy, was it {b}{i}fucking working!{/i}{/b}",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,929,[what]
+wrestling_epilogue_dd0ecf66,,"Then, as if yanking you from a dream...",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,935,[what]
+wrestling_epilogue_9ee01463,,{b}{i}BAM!{/i}{/b},game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1243,"""[what]"" with vpunch"
+wrestling_epilogue_c47a68e4,,"A distinct burning sensation filled your ass, and Nathan's moans became louder than ever.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,947,[what]
+wrestling_epilogue_f3debe8e,,"You felt his essence spurting into you, deep inside your hole.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,953,[what]
+wrestling_epilogue_bd458a9e,,"You strain in your bonds, whimpering and wheezing into the rubber ball that fills your mouth.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,959,[what]
+wrestling_epilogue_d2e5b82e,,"As Nathan's sweat-covered body trembled against you, the overstimulation finally caught up with your caged cock.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,965,[what]
+wrestling_epilogue_79cd6992,,"In response to Nathan's release, you watch as cum suddenly erupted out of your chastity cage.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,971,[what]
+wrestling_epilogue_6ca8e1d4,,"Your whines become interspersed with moans as you're forced into a limp orgasm, pooling onto the gym floor in front of you.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,977,[what]
+wrestling_epilogue_5417baa6,,"As Nathan's sweat-covered body trembled against you, the overstimulation finally caught up with your cock.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1558,[what]
+wrestling_epilogue_1bf1ca04,,"In response to Nathan's release, you watch as cum suddenly erupted out of your rock-hard dick.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1564,[what]
+wrestling_epilogue_bbc6efa9,,"Even though Nathan did not stroke, or even touch it recently.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1570,[what]
+wrestling_epilogue_dac31a26,,"Your whines become interspersed with moans as you're forced into a orgasm, pooling onto the gym floor in front of you.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1576,[what]
+wrestling_epilogue_3919a2ec,,You didn't even know that was possible.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,983,[what]
+wrestling_epilogue_7d817c00,,"But now, with the haze of ecstasy quickly fading...",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,989,[what]
+wrestling_epilogue_160badf4,,The pain the experience has brought upon you starts moving to the forefront of your mind.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,995,[what]
+wrestling_epilogue_1df9f6a6,,Your wrists and ankles are sweaty and raw from the restraints.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1001,[what]
+wrestling_epilogue_72a8771f,,Your back and hips are sore from all your thrusting and squirming.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1007,[what]
+wrestling_epilogue_37ef6e1c,,Your own manhood burns from stretching and throbbing inside its metal prison.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1013,[what]
+wrestling_epilogue_504e76f9,,"And your ass twitches from the rapid fucking it just received, trying to tighten again into its previously relaxed state.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1019,[what]
+wrestling_epilogue_ddf38a4c,na,Holy shit...,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1249,"na surprised nude ""[what]"""
+wrestling_epilogue_6c376fa7,na,That was...fucking wild...,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1255,"na happy nude ""[what]"""
+wrestling_epilogue_d084920f,na,"I...wow, that was intense.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1261,"na desire nude ""[what]"""
+wrestling_epilogue_bde35bcb,,"You groan as you feel Nathan's cock slide out of you, tearing up from the pain.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1043,[what]
+wrestling_epilogue_5d4ad916,,You would give anything to just sit down for a few minutes.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1049,[what]
+wrestling_epilogue_d265ada3,,"Well...maybe not, actually.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1055,[what]
+wrestling_epilogue_55fb98ee,na,You seem to have enjoyed yourself too...,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1267,"na friendly nude ""[what]"""
+wrestling_epilogue_483457ef,na,So much for chastity.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1273,"na happy nude ""[what]"""
+wrestling_epilogue_2a717a9b,,"You croak out a chuckle, but you can't help but just stare at Nathan, desperate to get off of these bonds.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1073,[what]
+wrestling_epilogue_7449c71c,,"He laughs himself, nodding along with his own heavy breathing.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1079,[what]
+wrestling_epilogue_c7252383,na,Hopefully we get to...do this again...I've got plenty more fun ideas...,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1279,"na desire nude ""[what]"""
+wrestling_epilogue_9ebf651b,na,Maybe we'll actually...get caught next time.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1285,"na suspicious nude ""[what]"""
+wrestling_epilogue_619078e4,,"Nathan playfully pats your balls once, then heads towards the exit of the gym.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1097,[what]
+wrestling_epilogue_044e414e,na,I think it is time for you be released.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1582,"na suspicious nude ""[what]"""
+wrestling_epilogue_cc776d57,na,You definitely earned it in my book!,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1377,"na happy nude ""[what]"""
+wrestling_epilogue_e520ddad,,Suddenly the school's loudspeaker come to life.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1303,[what]
+wrestling_epilogue_f22db251,h,Don't you dare to free him!,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1309,"h angry ""[what]"""
+wrestling_epilogue_67275e74,,Now it dawned to you: The surveillance cameras!,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1315,[what]
+wrestling_epilogue_82dadcc8,,He must have watched the whole time.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1321,[what]
+wrestling_epilogue_222b6979,na,{b}DAD?!{/b},game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1383,"na surprised nude ""[what]"""
+wrestling_epilogue_8bd2f417,,A long silence followed.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1333,[what]
+wrestling_epilogue_c0089f25,h,I {b}told{/b} you to call me headmaster while at college!,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1339,"h angry ""[what]"""
+wrestling_epilogue_f3a5e167,h,Now go!,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1345,"h angry ""[what]"""
+wrestling_epilogue_211c3ff9,na,"Yes, sir.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1389,"na sad nude ""[what]"""
+wrestling_epilogue_66e75ed8,a,You have unlocked a Gallery Item!,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1395,"a happy ""[what]"""
+wrestling_epilogue_43365458,,Nathan winked at you and whispered:,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1357,[what]
+wrestling_epilogue_ccc5da84,na,Looks like we got caught after all!,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1401,"na happy nude ""[what]"""
+wrestling_epilogue_b9a1fc8d,na,I wonder what he is going to do about.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1407,"na desire nude ""[what]"""
+wrestling_epilogue_289165cb,,He chuckles.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1413,[what]
+wrestling_epilogue_0d446c3f,na,I guess we are in trouble!,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1419,"na evil nude ""[what]"""
+wrestling_epilogue_13ca334e,,"You whine into the gag again, and Nathan calls back to you as he leaves.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1103,[what]
+wrestling_epilogue_2744ed03,na,You'll be out soon! Like the Headmaster said...enjoy it.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1425,"na friendly nude ""[what]"""
+wrestling_epilogue_0054f513,na,I certainly did.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1431,"na desire nude ""[what]"""
+wrestling_epilogue_a5d80aaf,,"You whimper and pull at your restraints, but quickly stop moving once the pain returns.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1121,[what]
+wrestling_epilogue_496eea6e,,"Instead, you elect to remain as still as possible, your mind left reeling from the experience.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1127,[what]
+wrestling_epilogue_ba82a259,,"At least you had a lot to think about, right?",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1133,[what]
+wrestling_epilogue_90702678,,They left you hang there all night.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1437,[what]
+wrestling_epilogue_2b0f789f,,"It felt like an eternity, and your muscles and joints hurt, as if they were about to just disconnect.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1443,[what]
+wrestling_epilogue_8a223b61,,"Even in the morning, nobody came.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1449,[what]
+wrestling_epilogue_02d8dc0f,,"You heard a loud, metallic sound, and suddently the climbing rope detached, causing you to fall on the floor.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1455,[what]
+wrestling_epilogue_cfa42f37,,"For at least an hour, you just lay there.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1461,[what]
+wrestling_epilogue_ad02cd7e,,"Your hands and feet still secured, but your muscles were no longer in agony.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1467,[what]
+wrestling_epilogue_748705bf,,"But you were thirsty like never before in your life, and you just needed the gag out of your mouth.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1473,[what]
+wrestling_epilogue_23c4caa7,,"With nobody coming for your aid, you decided to help yourself.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1479,[what]
+wrestling_epilogue_5a6db4c9,,With the help of your teeth you manage to open the knot of the rope.,game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1485,[what]
+wrestling_epilogue_d24d4cbb,,"The shackels weren't secured with a lock, you once the hands were free, you could open them easily.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1491,[what]
+wrestling_epilogue_fa71c68e,,"You drank eagerly from the water dispender, and fell asleep on the bench of the locker room, right until the afternoon, when the first class arrived.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1497,[what]
+wrestling_epilogue_4fa9f585,,"They laughed at you, but you did not care.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1503,[what]
+wrestling_epilogue_d5591a7d,,"You stumbled like a drunk over the campus towards the dorm, ignoring all the laughs and the pointing fingers.",game/tl/russian/scene/Wrestling/wrestling_epilogue.rpy,1509,[what]

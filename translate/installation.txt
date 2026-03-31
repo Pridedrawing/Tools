@@ -1,0 +1,8 @@
+pip install deepl
+
+save_path = r"C:\Users\olli_\Documents\GitHub\B_Engel\game\tl\English\audio\voice\"
+The r in front of the quotation mark is important.
+
+In string literals, a backslash sometimes forms "escape sequences". For example: \n is a new-line character, \t is a TAB character, and so on. So for example "[...]\game\tl\English\[...]" would get treated as "[...]\game    l\English\[...]". The r tells Python not to do any of this shenanigans.
+You could leave out the r but then you'd need to replace all of the back-slashes with forward-slashes.
+

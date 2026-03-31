@@ -1,0 +1,6 @@
+elevenlabs>=0.2.19
+
+# Qwen TTS (optional - only needed if using --provider qwen)
+# torch>=2.0.0
+# soundfile>=0.12.1
+# qwen-tts

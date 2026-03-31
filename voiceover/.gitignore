@@ -1,0 +1,7 @@
+*.tab
+*.csv
+config.py
+set_env.ps1
+.venv/
+__pycache__/
+log.txt

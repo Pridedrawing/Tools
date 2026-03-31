@@ -1,0 +1,49 @@
+Identifier,Character,Dialogue,Filename,Line Number,Ren'Py Script
+h_class02_b9d20e0a,m,Was tust du denn da?,game/tl/English/chapter/h_classroom.rpy,5585,"m oh ""[what]"""
+h_class02_4373ed32,h,Nehmt das als meine letzte Warnung!,game/tl/English/chapter/h_classroom.rpy,5591,"h angry ""[what]"""
+h_class02_1615c0ba,h,"Wenn das noch einmal passiert, wird das Konsequenzen haben!",game/tl/English/chapter/h_classroom.rpy,5597,"h tough ""[what]"""
+h_class02_46b090d4,h,Habt ihr das verstanden?,game/tl/English/chapter/h_classroom.rpy,5603,"h angry ""[what]"""
+h_class02_f1b8cd48,c,Ja Herr Hartmann!,game/tl/English/chapter/h_classroom.rpy,5609,"c sad ""[what]"""
+h_class02_e161b7c0,t,Es wird nicht wieder vorkommen!,game/tl/English/chapter/h_classroom.rpy,5615,"t sad ""[what]"""
+h_class02_3d20cca4,h,Das will ich auch hoffen!,game/tl/English/chapter/h_classroom.rpy,5621,"h tough ""[what]"""
+h_class02_a38f251f,h,Und nun geht!,game/tl/English/chapter/h_classroom.rpy,5627,"h neutral ""[what]"""
+h_class02_2b08fe14,h,Ihr schreibt mir beide einen zehnseitigen Aufsatz über das heutige Thema!,game/tl/English/chapter/h_classroom.rpy,5633,"h tough ""[what]"""
+h_class02_e04a556d,c,Aber...,game/tl/English/chapter/h_classroom.rpy,5639,"c oh ""[what]"""
+h_class02_11962ecd,h,Kein aber! Und jetzt raus mit euch!,game/tl/English/chapter/h_classroom.rpy,5645,"h angry ""[what]"""
+h_class02_b7369ba9,t,"Ja, Herr Hartmann.",game/tl/English/chapter/h_classroom.rpy,5651,"t sad ""[what]"""
+Ben_Up_747e93f9,,Ben liebt dich.,game/tl/English/emotions/relationships.rpy,7,[what]
+Ben_Up_7f4925a6,,Ben gefällt das.,game/tl/English/emotions/relationships.rpy,13,[what]
+Chris_Up_6a718de0,,Chris liebt dich.,game/tl/English/emotions/relationships.rpy,19,[what]
+Chris_Up_d59c0e04,,Chris gefällt das.,game/tl/English/emotions/relationships.rpy,25,[what]
+Hartmann_Up_b3cc488d,,Herr Hartmann liebt dich.,game/tl/English/emotions/relationships.rpy,31,[what]
+Hartmann_Up_09e5fdfc,,Herrn Hartmann gefällt das.,game/tl/English/emotions/relationships.rpy,37,[what]
+Jeff_Up_90e9e868,,Jeff liebt dich.,game/tl/English/emotions/relationships.rpy,43,[what]
+Jeff_Up_63d27c8b,,Jeff gefällt das.,game/tl/English/emotions/relationships.rpy,49,[what]
+Kyle_Up_3725d108,,Kyle liebt dich.,game/tl/English/emotions/relationships.rpy,55,[what]
+Kyle_Up_10e95f2d,,Kyle gefällt das.,game/tl/English/emotions/relationships.rpy,61,[what]
+Lucifer_Up_cceb5dcd,,[erzengel] liebt dich.,game/tl/English/emotions/relationships.rpy,67,[what]
+Lucifer_Up_9a2f49cc,,[erzengel] gefällt das.,game/tl/English/emotions/relationships.rpy,73,[what]
+Marvin_Up_10f99a3f,,Marvin liebt dich.,game/tl/English/emotions/relationships.rpy,79,[what]
+Marvin_Up_eb5360f5,,Marvin gefällt das.,game/tl/English/emotions/relationships.rpy,85,[what]
+Sabrina_Up_197dec8f,,Sabrina liebt dich.,game/tl/English/emotions/relationships.rpy,91,[what]
+Sabrina_Up_fcba44a6,,Sabrina gefällt das.,game/tl/English/emotions/relationships.rpy,97,[what]
+Tim_Up_058dd25a,,Tim liebt dich.,game/tl/English/emotions/relationships.rpy,103,[what]
+Tim_Up_8bfaf825,,Tim gefällt das.,game/tl/English/emotions/relationships.rpy,109,[what]
+Ben_Down_8b46a4ec,,Ben hasst dich.,game/tl/English/emotions/relationships.rpy,115,[what]
+Ben_Down_e985d95b,,Ben gefällt das nicht.,game/tl/English/emotions/relationships.rpy,121,[what]
+Chris_Down_aed8dfd9,,Chris hasst dich.,game/tl/English/emotions/relationships.rpy,127,[what]
+Chris_Down_0e2ddbee,,Chris gefällt das nicht.,game/tl/English/emotions/relationships.rpy,133,[what]
+Hartmann_Down_9d5d5c87,,Herr Hartmann hasst dich.,game/tl/English/emotions/relationships.rpy,139,[what]
+Hartmann_Down_4cb14309,,Herrn Hartmann gefällt das nicht.,game/tl/English/emotions/relationships.rpy,145,[what]
+Jeff_Down_4dc7dc89,,Jeff hasst dich.,game/tl/English/emotions/relationships.rpy,151,[what]
+Jeff_Down_07773fac,,Jeff gefällt das nicht.,game/tl/English/emotions/relationships.rpy,157,[what]
+Kyle_Down_27ebcdc6,,Kyle hasst dich.,game/tl/English/emotions/relationships.rpy,163,[what]
+Kyle_Down_639642d6,,Kyle gefällt das nicht.,game/tl/English/emotions/relationships.rpy,169,[what]
+Lucifer_Down_6f80c77a,,[erzengel] hasst dich.,game/tl/English/emotions/relationships.rpy,175,[what]
+Lucifer_Down_113da25e,,[erzengel] gefällt das nicht.,game/tl/English/emotions/relationships.rpy,181,[what]
+Marvin_Down_6b8231c3,,Marvin hasst dich.,game/tl/English/emotions/relationships.rpy,187,[what]
+Marvin_Down_273f6d64,,Marvin gefällt das nicht.,game/tl/English/emotions/relationships.rpy,193,[what]
+Sabrina_Down_f0a1ebf7,,Sabrina hasst dich.,game/tl/English/emotions/relationships.rpy,199,[what]
+Sabrina_Down_af6950bd,,Sabrina gefällt das nicht.,game/tl/English/emotions/relationships.rpy,205,[what]
+Tim_Down_be775978,,Tim hasst dich.,game/tl/English/emotions/relationships.rpy,211,[what]
+Tim_Down_b1fe3615,,Tim gefällt das nicht.,game/tl/English/emotions/relationships.rpy,217,[what]

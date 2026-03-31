@@ -1,0 +1,17 @@
+voices = { # Defines the voices' dictionary
+    "a": "PX0fpx2EHrG8U0wRvCCF",
+    "b": "6fwVA1GWeEc9fdKKNESQ",
+    "c": "n3SEmh2ypYxS3AdLl1nf",
+    "d": "vMdNkaXzo9JHPsIJUbMX", # As the demonised version of himself
+    "h": "JXX7YPMaAlcqTl9pH8J6",
+    "j": "b96DG8d7JBAaPnJbjZz5",
+    "l": "YYlciIjj3I7izz1lMuKt",
+    "m": "mS0Zq8OgFOFm9aYmGmd3",
+    "md": "mS0Zq8OgFOFm9aYmGmd3",
+    "s": "P7lvHAtkRUqrGsGTHMOo",
+    "t": "x7ffNFsdkDMXkfzwndRu",
+    "z": 0, # Ignored
+    "": "wliD5CA11uxB4uCpqxVj",
+    "e_nvl": "P7lvHAtkRUqrGsGTHMOo", # Sabrina on the phone
+    "n_nvl": "b96DG8d7JBAaPnJbjZz5" # Jeff on the phone
+}

@@ -1,0 +1,11 @@
+# Copy this file to `set_env.ps1` (same folder) and fill in your real keys.
+# DO NOT commit `set_env.ps1` (it is gitignored).
+#
+# Usage (PowerShell, from this folder):
+#   . .\set_env.ps1
+#   python .\gen.py --help
+
+$Env:ELEVENLABS_API_KEY = "PASTE_YOUR_ELEVENLABS_KEY_HERE"
+
+# Optional: if you also use ElevenLabs via other scripts
+# $Env:ELEVENLABS_API_KEY = "..."

@@ -1,0 +1,174 @@
+Identifier,Character,Dialogue,Filename,Line Number,Ren'Py Script
+Bar_Connor_cc8ebaee,c,Let's do the interview!,game/tl/portuguese/scene/News/beach/Bar_Connor.rpy,7,"c happy ""[what]"""
+Bar_Connor_5932c1a5,t,Let's talk to the others first before I talk to you. Okay?,game/tl/portuguese/scene/News/beach/Bar_Connor.rpy,13,"t neutral ""[what]"""
+Bar_Connor_561d5d7e,c,Sure.,game/tl/portuguese/scene/News/beach/Bar_Connor.rpy,19,"c sad ""[what]"""
+Bar_Julian_99f7e164,j,Coming soon!,game/tl/portuguese/scene/News/beach/bar_julian.rpy,7,"j sad ""[what]"""
+Bar_Julio_6f906dfd,jc,That was... intense.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,7,"jc suspicious ""[what]"""
+Bar_Julio_a3a6df05,jc,I hope you don't mind if I continue my sunbath.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,13,"jc friendly ""[what]"""
+Bar_Julio_73cae028,jc,Alone.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,19,"jc suspicious ""[what]"""
+Bar_Julio_1f49bb5a,,"The morning sun casts a lazy, golden hue over the beach, the sound of gentle waves creating a rhythmic backdrop.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,25,[what]
+Bar_Julio_46c6cb50,,"You follow Tom as he approaches Julio, who's lounging on a beach chair under the shade of a brightly colored parasol.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,31,[what]
+Bar_Julio_e840eb59,,"A cooling box sits beside him, a can of cola perched on top, beads of condensation trickling down its side.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,37,[what]
+Bar_Julio_5dd0ac41,,"Julio looks up, his relaxed demeanor shifting to annoyance as he spots Tom and the camera in your hands.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,43,[what]
+Bar_Julio_ce78e3df,,You can't help but feel a twinge of sympathy; it's clear he wasn't expecting this intrusion.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,49,[what]
+Bar_Julio_262fa109,t,"You are Julio, right?",game/tl/portuguese/scene/News/beach/bar_julio.rpy,55,"t happy ""[what]"""
+Bar_Julio_9ddfac3e,t,I'm Tom Wallerby from PrideTV.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,61,"t ""[what]"""
+Bar_Julio_b043101e,t,We are talking to members of the wrestling team today.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,67,"t ""[what]"""
+Bar_Julio_0da28a48,,Tom kneels down next to him.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,73,[what]
+Bar_Julio_d846e164,,"You notice him making eye contact, touching Julio's thigh slightly.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,79,[what]
+Bar_Julio_ff4b607c,,"Combined with his friendly expression, you realize he is trying to make Julio feel at ease.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,85,[what]
+Bar_Julio_1f4d2cc2,jc,"I'm here to relax, not to give interviews. Can't this wait?",game/tl/portuguese/scene/News/beach/bar_julio.rpy,91,"jc angry ""[what]"""
+Bar_Julio_b5aa104c,,"Tom, undeterred, flashes a persuasive smile.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,97,[what]
+Bar_Julio_ed5d75f3,t,"It'll only take a few minutes, Julio.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,103,"t friendly ""[what]"""
+Bar_Julio_5a15b901,t,Your perspective as an exchange student is really valuable to our viewers.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,109,"t flirt ""[what]"""
+Bar_Julio_828f4bcc,,"You adjust the camera, capturing the interplay of sunlight and shadow, the vibrant colors of the beach forming a stark contrast to Julio's evident discomfort.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,115,[what]
+Bar_Julio_8de3773c,jc,Fine. But make it quick.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,121,"jc sad ""[what]"""
+Bar_Julio_d1b3c294,t,"So, Julio, how has your experience been on the wrestling team here compared to back home?",game/tl/portuguese/scene/News/beach/bar_julio.rpy,127,"t friendly ""[what]"""
+Bar_Julio_8e5f96f3,,"Julio takes a moment, his gaze drifting towards the ocean, as if searching for the right words.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,133,[what]
+Bar_Julio_14bb019e,jc,"It's different... I don't always feel understood. Cultural differences, I guess.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,139,"jc sad ""[what]"""
+Bar_Julio_1e746f05,,"Tom nods, encouraging him to elaborate.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,145,[what]
+Bar_Julio_9efd0673,t,"Has that been a challenge for you, integrating with the team?",game/tl/portuguese/scene/News/beach/bar_julio.rpy,151,"t friendly ""[what]"""
+Bar_Julio_1e3efa27,,There's a brief flicker of vulnerability in Julio's eyes before he guards himself again.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,157,[what]
+Bar_Julio_2e5b81ee,jc,"Yes, it's not easy. I work hard, but sometimes I must prove myself more than others.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,163,"jc tough ""[what]"""
+Bar_Julio_960f69a6,,"The sound of the waves seems to underscore his words, a natural symphony to the underlying tension of the conversation.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,169,[what]
+Bar_Julio_9f71feb5,t,That sounds tough. Do you feel like you have the support you need from your teammates and coaches?,game/tl/portuguese/scene/News/beach/bar_julio.rpy,175,"t neutral ""[what]"""
+Bar_Julio_70cfac25,,"Julio pauses, taking another sip of his cola, the can now slick with moisture in the warm air.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,181,[what]
+Bar_Julio_9a03fcfa,jc,"It varies. Some people are great, others... Well, they have their preconceptions.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,187,"jc tough ""[what]"""
+Bar_Julio_b5d90c54,,The interview with Julio under the parasol takes a more serious turn as Tom broaches a delicate subject.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,193,[what]
+Bar_Julio_f04bdc69,t,"Julio, about the recent incident involving [name] and the headmaster... What was your perspective on that?",game/tl/portuguese/scene/News/beach/bar_julio.rpy,199,"t worry ""[what]"""
+Bar_Julio_e5260601,,"Julio shifts uncomfortably in his beach chair, his gaze momentarily flicking towards you, [name], behind the camera.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,205,[what]
+Bar_Julio_0c2e830e,jc,"I... I saw it, but only from a distance. It wasn’t right what happened.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,211,"jc sad ""[what]"""
+Bar_Julio_33edf031,,"There's a hint of something more in his tone, a mix of confusion and disapproval.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,217,[what]
+Bar_Julio_7862c48d,t,Were there others involved?,game/tl/portuguese/scene/News/beach/bar_julio.rpy,223,"t suspicious ""[what]"""
+Bar_Julio_a3b74ec8,,"Julio takes a deep breath, his discomfort evident.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,229,[what]
+Bar_Julio_bf77066f,jc,I... I don't want to get anyone in trouble.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,235,"jc sad ""[what]"""
+Bar_Julio_39fddddb,jc,"Like I said, I was not involved in it anyway.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,241,"jc angry ""[what]"""
+Bar_Julio_6d5f4972,,"His eyes flash back to you again, seeking advice.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,247,[what]
+Bar_Julio_d0a24b02,c,That is enough. We are done here.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,253,"c angry ""[what]"""
+Bar_Julio_a82aaa5f,t,But...,game/tl/portuguese/scene/News/beach/bar_julio.rpy,259,"t sad ""[what]"""
+Bar_Julio_87e413cd,c,I said we are done!,game/tl/portuguese/scene/News/beach/bar_julio.rpy,265,"c angry ""[what]"""
+Bar_Julio_fa3081b1,c,Or do you want to look for another cameraman?,game/tl/portuguese/scene/News/beach/bar_julio.rpy,271,"c suspicious ""[what]"""
+Bar_Julio_d696aa73,t,[RelVal],game/tl/portuguese/scene/News/beach/bar_julio.rpy,277,"t sad ""[what]"""
+Bar_Julio_afab1df1,jc,[RelVal],game/tl/portuguese/scene/News/beach/bar_julio.rpy,283,"jc flirt ""[what]"""
+Bar_Julio_c680ed04,,Tom sighs but accepts his defeat.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,289,[what]
+Bar_Julio_6cff00fe,,His reporter smile flashed back on.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,295,[what]
+Bar_Julio_f89c2530,t,Thank you for your time!,game/tl/portuguese/scene/News/beach/bar_julio.rpy,301,"t friendly ""[what]"""
+Bar_Julio_53c6fc27,,"Sensing Julio's growing unease, Tom adopts a more soothing demeanor. He leans in slightly, his voice softer, trying to create a sense of trust and ease.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,307,[what]
+Bar_Julio_c600e5c5,t,"Julio, I can see this is tough for you to discuss. We want to understand what happened, to get the full picture.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,313,"t flirt ""[what]"""
+Bar_Julio_93d3cd45,,"Tom's words seem to have a gentle, reassuring effect.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,319,[what]
+Bar_Julio_71e89bbf,,"Julio takes a deep breath, visibly trying to relax under the interview pressure.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,325,[what]
+Bar_Julio_9a288708,jc,It's just... there's a lot of tension around this. I don’t want to make things worse.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,331,"jc sad ""[what]"""
+Bar_Julio_06b4b0e7,,You and Tom begin to massage Julio's feet.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,337,[what]
+Bar_Julio_296f285a,,"Tom, with a subtle gesture, begins to massage Julio's feet.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,343,[what]
+Bar_Julio_341e140f,jc,What?,game/tl/portuguese/scene/News/beach/bar_julio.rpy,349,"jc surprised ""[what]"""
+Bar_Julio_cd842732,t,Just relax!,game/tl/portuguese/scene/News/beach/bar_julio.rpy,355,"t friendly ""[what]"""
+Bar_Julio_54a8f237,,"Julio falls back into the chair, his eyes closing almost immediately.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,361,[what]
+Bar_Julio_10615d47,jc,Ohhh... Oh my God!,game/tl/portuguese/scene/News/beach/bar_julio.rpy,367,"jc ""[what]"""
+Bar_Julio_f28937ac,jc,This... feels so good!,game/tl/portuguese/scene/News/beach/bar_julio.rpy,373,"jc ""[what]"""
+Bar_Julio_612151b3,t,Shhh... Just relax.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,379,"t flirt ""[what]"""
+Bar_Julio_b0d33a79,,Both of you continue to massage Julio's feet for several minutes before he starts to talk again.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,385,[what]
+Bar_Julio_c9f2e866,,Tom continues to massage Julio's feet for several minutes before he starts to talk again.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,391,[what]
+Bar_Julio_387f6411,t,So... Who was helping?,game/tl/portuguese/scene/News/beach/bar_julio.rpy,397,"t friendly ""[what]"""
+Bar_Julio_97c8995f,jc,Hmm?,game/tl/portuguese/scene/News/beach/bar_julio.rpy,403,"jc suspicious ""[what]"""
+Bar_Julio_1cdc3a5f,,You can tell Julio was about to fall asleep.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,409,[what]
+Bar_Julio_1a2c8c32,t,The wrestling event.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,415,"t ""[what]"""
+Bar_Julio_ddac8daf,jc,"Oh, yeah. Right.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,421,"jc neutral ""[what]"""
+Bar_Julio_b32ccd28,jc,"Max and Vincent, they weren't just witnesses.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,427,"jc sad ""[what]"""
+Bar_Julio_75517b4e,jc,"They were... I don't know, it seemed like they were part of it, supporting the headmaster.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,433,"jc ""[what]"""
+Bar_Julio_53363de8,,"You feel a jolt at the mention of their names, the memory of the incident still raw.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,439,[what]
+Bar_Julio_d4e53209,jc,I got the impression Vincent liked it to be tied up and humiliated this way.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,445,"jc friendly ""[what]"""
+Bar_Julio_906260b5,t,Why do you think so?,game/tl/portuguese/scene/News/beach/bar_julio.rpy,451,"t suspicious ""[what]"""
+Bar_Julio_8859c027,,"Julio shrugs, his face relaxed.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,457,[what]
+Bar_Julio_25bb3514,jc,He seemed rather eager to follow the headmaster's request.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,463,"jc flirt ""[what]"""
+Bar_Julio_8a99af7b,t,"And how do you feel about that, being part of the team?",game/tl/portuguese/scene/News/beach/bar_julio.rpy,469,"t neutral ""[what]"""
+Bar_Julio_8fc8620d,,"Julio's eyes were still closed, and he seemed to be in a trance-like state.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,475,[what]
+Bar_Julio_2e4cee8e,jc,It's confusing. I don’t understand why they would do that. It’s not the kind of team spirit I believe in.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,481,"jc neutral ""[what]"""
+Bar_Julio_dc20f76b,jc,Why aren’t you asking [name] about this? He was the one involved.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,487,"jc suspicious ""[what]"""
+Bar_Julio_99858604,,"Tom responds with a measured tone, his gaze briefly meeting yours.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,493,[what]
+Bar_Julio_e011b9e3,t,"I will be talking to [name], but it’s important to get the story from different perspectives first. Everyone’s view matters.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,499,"t friendly ""[what]"""
+Bar_Julio_2a219531,,"Julio nods, seemingly satisfied with the answer, though the shadows of doubt and discomfort linger in his expression, which are quickly washed away by another press of Tom's skilled fingers.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,505,[what]
+Bar_Julio_077a3b36,jc,Oh my God! How are you doing that?,game/tl/portuguese/scene/News/beach/bar_julio.rpy,511,"jc flirt ""[what]"""
+Bar_Julio_03797de5,jc,This feels so good!,game/tl/portuguese/scene/News/beach/bar_julio.rpy,517,"jc friendly ""[what]"""
+Bar_Julio_28d0291b,,Tom loses the laces of his pants and slowly drops them without stopping to massage Julio.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,523,[what]
+Bar_Julio_77449936,,You follow his lead.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,529,[what]
+Bar_Julio_f8290324,,You keep filming as Tom loses the laces of his pants and slowly drops them without stopping to massage Julio.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,535,[what]
+Bar_Julio_0d1edef1,,"If he noticed, he did not say anything. His eyes are still closed with a tranquilized expression on his face.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,541,[what]
+Bar_Julio_e20bdbbb,jc,"There are... rumors about the headmaster, not just regarding [name].",game/tl/portuguese/scene/News/beach/bar_julio.rpy,547,"jc sad ""[what]"""
+Bar_Julio_7f8e24da,jc,But I don’t want to spread gossip.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,553,"jc tough ""[what]"""
+Bar_Julio_c41f4549,,"As the interview nears its end, Tom shifts the focus to a more personal aspect of Julio's life, lightening the mood after the intense previous discussion.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,559,[what]
+Bar_Julio_b75393db,t,"Julio, aside from wrestling, what are your goals while you're here in the States?",game/tl/portuguese/scene/News/beach/bar_julio.rpy,565,"t flirt ""[what]"""
+Bar_Julio_a1faef16,,You watch in fascination as he slowly maneuvers his hip in position - without Julio even noticing it.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,571,[what]
+Bar_Julio_c224fcea,,You watch (and film) in fascination as he slowly maneuvers his hip in position - without Julio even noticing it.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,577,[what]
+Bar_Julio_10fae7fd,,You follow his lead as he rubs his love-stick against Julio's foot.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,583,[what]
+Bar_Julio_4b3877c3,,He starts to rub his love stick against Julio's foot.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,589,[what]
+Bar_Julio_a02ffe25,jc,What ... are you doing?,game/tl/portuguese/scene/News/beach/bar_julio.rpy,595,"jc surprised ""[what]"""
+Bar_Julio_b75393db_1,t,"Julio, aside from wrestling, what are your goals while you're here in the States?",game/tl/portuguese/scene/News/beach/bar_julio.rpy,601,"t flirt ""[what]"""
+Bar_Julio_b1491a22,,Tom continues the interview as if nothing else was going on.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,607,[what]
+Bar_Julio_7fcbc072,,Julio looked deeply confused but answered the question.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,613,[what]
+Bar_Julio_48898f5c,jc,"Well, I want to experience as much as I can.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,619,"jc desire ""[what]"""
+Bar_Julio_492c18e2,,His hand wandered to his crotch.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,625,[what]
+Bar_Julio_4225764c,jc,"Different cultures, new people.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,631,"jc ""[what]"""
+Bar_Julio_3b4cbda4,,You can tell he is just as confused as tempted by the suddenly very different situation.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,637,[what]
+Bar_Julio_bbee3015,jc,"I'm studying international relations, so this is a great opportunity.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,643,"jc ""[what]"""
+Bar_Julio_7d7c5c4b,t,It is always good to have new experiences!,game/tl/portuguese/scene/News/beach/bar_julio.rpy,649,"t desire ""[what]"""
+Bar_Julio_a7e849e5,,Tom stated while he continued to rub Julio's foot.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,655,[what]
+Bar_Julio_9e3aa112,t,What are some of your interests outside of wrestling and studies?,game/tl/portuguese/scene/News/beach/bar_julio.rpy,661,"t ""[what]"""
+Bar_Julio_c74f0275,,"Tom gets up, and your tongue slowly glides over Julio's erection, which is visible through the thin fabric.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,667,[what]
+Bar_Julio_8bfb6851,jc,Uhhh...,game/tl/portuguese/scene/News/beach/bar_julio.rpy,673,"jc ""[what]"""
+Bar_Julio_bfd5827e,t,Your hobbies?,game/tl/portuguese/scene/News/beach/bar_julio.rpy,679,"t flirt ""[what]"""
+Bar_Julio_dbfab7b1,,Tom reminds him of the question while your right hand slowly grabs his butt and the left one plays with his nipple.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,685,[what]
+Bar_Julio_1a841622,jc,My... interests? I...,game/tl/portuguese/scene/News/beach/bar_julio.rpy,691,"jc ""[what]"""
+Bar_Julio_1b41d386,,He has clear problems concentrating while you gently free his glans with your lips.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,697,[what]
+Bar_Julio_6c98d8ab,,His tip greets you wet with precum.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,703,[what]
+Bar_Julio_f96bc3fd,,Tom gets up and places his own feet on Julio's now quite big bulge.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,709,[what]
+Bar_Julio_53635aca,jc,I love photography.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,715,"jc desire ""[what]"""
+Bar_Julio_0b030d96,,Julio moans slightly as Tom gently moves his foot forth and back.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,721,[what]
+Bar_Julio_34d6aa4e,jc,"Capturing moments, you know? It's like freezing a piece of time.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,727,"jc ""[what]"""
+Bar_Julio_98178e4e,jc,"And I enjoy exploring the outdoors, hiking, and visiting new places.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,733,"jc ""[what]"""
+Bar_Julio_2b59a3c1,,Carefully you lick the precum up while Tom's foot pushes Julio's speedo further down.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,739,[what]
+Bar_Julio_5f59968c,t,I have a new place for you to explore.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,745,"t desire ""[what]"""
+Bar_Julio_94daa93a,,Tom states while he slowly pushes his big cock in Julio's mouth.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,751,[what]
+Bar_Julio_2f8adbf1,t,"Oh yes! Take it, boy!",game/tl/portuguese/scene/News/beach/bar_julio.rpy,757,"t happy ""[what]"""
+Bar_Julio_ee5e6db9,,Julio chokes a bit as Tom pushes his giant cock deep into Julio's throat.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,763,[what]
+Bar_Julio_3dc7bb4d,,Tom chuckled.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,769,[what]
+Bar_Julio_4532e7e7,t,Too much for you?,game/tl/portuguese/scene/News/beach/bar_julio.rpy,775,"t flirt ""[what]"""
+Bar_Julio_e47a2cb1,,"Before Julio could answer, he gestured for you to switch positions.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,781,[what]
+Bar_Julio_cea0483f,,"Before Julio could answer, he returned the favor.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,787,[what]
+Bar_Julio_5196b41e,jc,Uhh!,game/tl/portuguese/scene/News/beach/bar_julio.rpy,793,"jc surprised ""[what]"""
+Bar_Julio_8255ff14,,You could tell he was on the edge already when his lips slowly closed around your glans.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,799,[what]
+Bar_Julio_f20e599e,,"As soon as Tom's lips touched Julian's glans, he began to struggle hard.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,805,[what]
+Bar_Julio_86d6112f,jc,Careful!,game/tl/portuguese/scene/News/beach/bar_julio.rpy,811,"jc surprised ""[what]"""
+Bar_Julio_c8f76a30,jc,I ... I'm almost there!,game/tl/portuguese/scene/News/beach/bar_julio.rpy,817,"jc angry ""[what]"""
+Bar_Julio_d2766f87,,Tom watched with fascination when Julian pumped his semen all over his body.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,823,[what]
+Bar_Julio_a0549f85,t,Damn! I was just pulling down your speedo!,game/tl/portuguese/scene/News/beach/bar_julio.rpy,829,"t laugh ""[what]"""
+Bar_Julio_5e87329a,jc,Sorry. I just ... I couldn't hold it any longer.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,835,"jc sad ""[what]"""
+Bar_Julio_62056986,,Tom continued to strip down his swimwear.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,841,[what]
+Bar_Julio_35cfa855,t,"No problem. That was hot, actually.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,847,"t friendly ""[what]"""
+Bar_Julio_af9b5f60,t,I just hope you don't mind...,game/tl/portuguese/scene/News/beach/bar_julio.rpy,853,"t evil ""[what]"""
+Bar_Julio_51b9fe91,,He grabbed Julian's legs and pushed them upwards.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,859,[what]
+Bar_Julio_461740fe,jc,What?!,game/tl/portuguese/scene/News/beach/bar_julio.rpy,865,"jc surprised ""[what]"""
+Bar_Julio_0ec3250a,,Tom bend down and licked Julian's hole.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,871,[what]
+Bar_Julio_f583b3b1,,"Since Tom intended to proceed, you also force your cock back into Julian's mouth.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,877,[what]
+Bar_Julio_f0f2a610,jc,Mmmh!,game/tl/portuguese/scene/News/beach/bar_julio.rpy,883,"jc surprised ""[what]"""
+Bar_Julio_f3705a01,jc,Ohh... oh my... that ... feels ... AMAZING!,game/tl/portuguese/scene/News/beach/bar_julio.rpy,889,"jc desire ""[what]"""
+Bar_Julio_6cd69c25,,"After a short while, Tom got up and slowly pushed his love stick into Julio's now wet entrance.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,895,[what]
+Bar_Julio_e3ccbeb2,jc,Hmmpf!,game/tl/portuguese/scene/News/beach/bar_julio.rpy,901,"jc surprised ""[what]"""
+Bar_Julio_8ae2460b,,"He couldn't talk with your dick still in his mouth, but you can see Julio's cock already growing bigger again.",game/tl/portuguese/scene/News/beach/bar_julio.rpy,907,[what]
+Bar_Julio_d92c5897,c,I... I can't hold it much longer!,game/tl/portuguese/scene/News/beach/bar_julio.rpy,913,"c angry ""[what]"""
+Bar_Julio_40b142aa,jc,Give it to me!,game/tl/portuguese/scene/News/beach/bar_julio.rpy,919,"jc evil ""[what]"""
+Bar_Julio_454ccb52,,He opened his mouth and was ready to be showered with your sperm.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,925,[what]
+Bar_Julio_2e35f9ac,c,Oh fuck!,game/tl/portuguese/scene/News/beach/bar_julio.rpy,931,"c surprised ""[what]"""
+Bar_Julio_21c23dfb,t,Oh yes! I'm going to pump you to the top!,game/tl/portuguese/scene/News/beach/bar_julio.rpy,937,"t flirt ""[what]"""
+Bar_Julio_a0d46f45,t,Ahhh!,game/tl/portuguese/scene/News/beach/bar_julio.rpy,943,"t angry ""[what]"""
+Bar_Julio_8e5a79e9,t,I'd say this was a great Interview!,game/tl/portuguese/scene/News/beach/bar_julio.rpy,949,"t happy ""[what]"""
+Bar_Julio_753366ab,t,"I am a lucky man, having you all around here!",game/tl/portuguese/scene/News/beach/bar_julio.rpy,955,"t flirt ""[what]"""
+Bar_Julio_e918ecae,t,It's like winning the jackpot!,game/tl/portuguese/scene/News/beach/bar_julio.rpy,961,"t happy ""[what]"""
+Bar_Julio_13870250,,He paused for a moment as he puffed on his cigarette.,game/tl/portuguese/scene/News/beach/bar_julio.rpy,967,[what]
+Bar_Julio_dc1e0ef6,t,And I am even getting paid for it!,game/tl/portuguese/scene/News/beach/bar_julio.rpy,973,"t happy ""[what]"""
+Bar_Julio_96048e32,t,That's what I call a DREAM JOB!,game/tl/portuguese/scene/News/beach/bar_julio.rpy,979,"t flirt ""[what]"""
+Bar_Jupiter_a4bf930c,jk,Coming soon!,game/tl/portuguese/scene/News/beach/bar_jupiter.rpy,7,"jk sad ""[what]"""
+Bar_Max_abfdbf76,ma,Coming soon!,game/tl/portuguese/scene/News/beach/bar_max.rpy,7,"ma sad ""[what]"""
+Bar_Nathan_678ffb67,na,Coming soon!,game/tl/portuguese/scene/News/beach/bar_nathan.rpy,7,"na sad ""[what]"""
+Bar_Ned_b413c6c9,n,Coming soon!,game/tl/portuguese/scene/News/beach/bar_ned.rpy,7,"n neutral ""[what]"""
+Bar_Ron_91566a6d,r,Coming soon!,game/tl/portuguese/scene/News/beach/bar_ron.rpy,7,"r neutral ""[what]"""
+Bar_Vincent_391ca39a,v,Coming soon!,game/tl/portuguese/scene/News/beach/bar_vincent.rpy,7,"v neutral ""[what]"""

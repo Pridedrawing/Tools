@@ -231,7 +231,8 @@ def _load_dialogue_tab_for_manual(game_dir: Path, selected_lang: str) -> tuple[d
     Looks in the game directory by default, asks user to confirm or provide a path.
     Returns (row_lookup dict, resolved path string).
     """
-    default_path = game_dir / "dialogue.tab"
+    # dialogue.tab is exported to the repo root (parent of game/), not inside game/
+    default_path = game_dir.parent / "dialogue.tab"
 
     print("\n--- Dialogue file for ID lookup ---")
     print(f"⚠  Make sure dialogue.tab was extracted in the correct language: '{selected_lang}'")

@@ -260,7 +260,11 @@ def _load_dialogue_tab_for_manual(game_dir: Path, selected_lang: str) -> tuple[d
         row_lookup = {}
         for row in rows:
             ident = str(row.get("Identifier", "") or "").strip()
-            if ident:
+            if not ident:
+                continue
+            # For multi-line blocks, Ren'Py reuses the same ID for all lines.
+            # Keep the first occurrence — which is the primary line of the block.
+            if ident not in row_lookup:
                 row_lookup[ident] = row
         print(f"  Loaded {len(row_lookup)} entries from: {chosen_path}")
         return row_lookup, str(chosen_path)
@@ -626,6 +630,19 @@ def main() -> int:
     generated = 0
     skipped = 0
     errored = 0
+
+    # Deduplicate: for multi-line translate blocks, Ren'Py reuses the same ID.
+    # Keep only the first occurrence (primary line) per identifier.
+    seen_ids: set[str] = set()
+    deduped_rows = []
+    for row in rows:
+        ident = str(row.get("Identifier", "") or "").strip()
+        if ident and ident not in seen_ids:
+            seen_ids.add(ident)
+            deduped_rows.append(row)
+    if len(deduped_rows) < len(rows):
+        print(f"Note: deduplicated {len(rows) - len(deduped_rows)} duplicate ID rows (multi-line translate blocks).")
+    rows = deduped_rows
 
     print(f"\n=== Processing {len(rows)} rows ===")
     for idx, row in enumerate(rows, start=1):

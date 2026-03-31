@@ -283,14 +283,18 @@ def _run_manual_id_mode(
     all_rows: list[dict],
     provider,
     log,
+    preloaded_lookup: dict | None = None,
 ) -> None:
     """Interactive loop: enter IDs manually, generate, preview, keep or retry."""
 
     voice_dict = game["voices"]
     game_dir = Path(game["savepath"])
 
-    # Load dialogue.tab for ID lookup
-    row_lookup, dialogue_tab_path = _load_dialogue_tab_for_manual(game_dir, selected_lang)
+    # Use pre-loaded lookup if provided (loaded before TTS init), otherwise load now
+    if preloaded_lookup is not None:
+        row_lookup = preloaded_lookup
+    else:
+        row_lookup, _ = _load_dialogue_tab_for_manual(game_dir.parent, selected_lang)
 
     print("\n=== Manual ID Mode ===")
     print("Enter an identifier to (re-)generate a single line.")
@@ -326,12 +330,20 @@ def _run_manual_id_mode(
         print(f"  Dialogue  : {dialogue}")
         print(f"  Output    : {out_path}")
 
-        # Check if file exists
-        if out_path.exists():
+        # Check if file exists — make a backup before overwriting
+        backup_path = out_path.with_suffix(out_path.suffix + ".bak")
+        has_existing = out_path.exists()
+        if has_existing:
             overwrite = input("  File already exists. Overwrite? (y/n) [y]: ").strip().lower()
             if overwrite in {"n", "no"}:
                 print("  Skipped.")
                 continue
+            # Create backup so we can restore on skip
+            try:
+                import shutil
+                shutil.copy2(out_path, backup_path)
+            except Exception:
+                pass
 
         # Generation + retry loop
         while True:
@@ -357,6 +369,11 @@ def _run_manual_id_mode(
                 retry = input("  Try again? (y/n) [n]: ").strip().lower()
                 if retry in {"y", "yes"}:
                     continue
+                # Restore backup if generation failed
+                if has_existing and backup_path.exists():
+                    import shutil
+                    shutil.copy2(backup_path, out_path)
+                    print("  Restored original file.")
                 break
 
             log("generated", raw_id, f"manual mode provider={selected_provider}")
@@ -365,18 +382,27 @@ def _run_manual_id_mode(
 
             keep = input("  Keep this file? (Enter/y=keep / n=regenerate / s=skip): ").strip().lower()
             if keep in {"y", "yes", ""}:
+                # Clean up backup
+                if backup_path.exists():
+                    backup_path.unlink()
                 print("  Kept.")
                 break
             elif keep in {"s", "skip"}:
-                # Remove the file if user doesn't want it
+                # Restore old file if it existed, otherwise remove new one
                 try:
                     out_path.unlink()
                 except Exception:
                     pass
-                print("  Skipped (file removed).")
+                if has_existing and backup_path.exists():
+                    import shutil
+                    shutil.copy2(backup_path, out_path)
+                    backup_path.unlink()
+                    print("  Skipped — original file restored.")
+                else:
+                    print("  Skipped (no previous file to restore).")
                 break
             else:
-                # Remove and regenerate
+                # Regenerate — remove new file, keep backup for potential restore
                 try:
                     out_path.unlink()
                 except Exception:
@@ -599,6 +625,13 @@ def main() -> int:
     mode_raw = input("Select mode [Enter=1]: ").strip()
     manual_mode = mode_raw == "2"
 
+    # For manual mode: ask for dialogue.tab path BEFORE loading the TTS provider
+    manual_row_lookup: dict[str, dict] = {}
+    if manual_mode:
+        manual_row_lookup, _ = _load_dialogue_tab_for_manual(
+            Path(game["savepath"]).parent, selected_lang
+        )
+
     print("Initializing TTS provider... this can take a while for Qwen.")
     try:
         provider = get_provider(selected_provider, config, log)
@@ -606,9 +639,6 @@ def main() -> int:
     except Exception as ex:
         print(f"Error initializing TTS provider '{selected_provider}': {ex}")
         return 2
-
-    # Load all rows for lookup (also used by manual mode)
-    # rows already loaded above — reuse them.
 
     if manual_mode:
         _run_manual_id_mode(
@@ -618,9 +648,10 @@ def main() -> int:
             selected_provider=selected_provider,
             save_dir=save_dir,
             file_ext=file_ext,
-            all_rows=rows,  # used only as fallback for character code lookup
+            all_rows=rows,
             provider=provider,
             log=log,
+            preloaded_lookup=manual_row_lookup,
         )
         provider.cleanup()
         return 0

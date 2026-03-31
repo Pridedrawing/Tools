@@ -225,6 +225,54 @@ def _play_audio(path: Path) -> None:
         print(f"  (Could not play audio: {e})")
 
 
+def _lookup_id_in_rpy(identifier: str, tl_dir: Path, lang: str) -> tuple[str | None, str | None]:
+    """Search game/tl/<lang>/*.rpy for a translate block matching the identifier.
+
+    Returns (character_code, dialogue_text) or (None, None) if not found.
+    The dialogue text is the translated line (not the # comment original).
+    Character code is extracted from the Ren'Py script line (e.g. 't neutral "..."' → 't').
+    """
+    identifier = identifier.strip()
+    pattern = re.compile(
+        r"translate\s+" + re.escape(lang) + r"\s+" + re.escape(identifier) + r"\s*:",
+        re.IGNORECASE,
+    )
+    dialogue_re = re.compile(r'^\s*(?:([\w]+)\s+[\w]+\s+)?"(.+)"\s*$')
+    narrator_re = re.compile(r'^\s*"(.+)"\s*$')
+
+    for rpy_file in tl_dir.rglob("*.rpy"):
+        try:
+            lines = rpy_file.read_text(encoding="utf-8").splitlines()
+        except Exception:
+            continue
+
+        for i, line in enumerate(lines):
+            if pattern.search(line):
+                # Found the block — scan following lines for the translated string
+                for j in range(i + 1, min(i + 6, len(lines))):
+                    next_line = lines[j]
+                    stripped = next_line.strip()
+
+                    # Skip blank lines and comment lines (originals)
+                    if not stripped or stripped.startswith("#"):
+                        continue
+
+                    # Character dialogue: `t neutral "text"` or `t "text"`
+                    char_match = re.match(r'^\s*([\w]+)\s+(?:[\w]+\s+)?"(.+)"\s*$', next_line)
+                    if char_match:
+                        char_code = char_match.group(1)
+                        text = char_match.group(2)
+                        return char_code, text
+
+                    # Narrator line: `"text"`
+                    narr_match = re.match(r'^\s*"(.+)"\s*$', next_line)
+                    if narr_match:
+                        return "", narr_match.group(1)
+
+                    break  # Hit something unexpected, stop
+    return None, None
+
+
 def _run_manual_id_mode(
     game: dict,
     selected_game_name: str,
@@ -238,14 +286,26 @@ def _run_manual_id_mode(
 ) -> None:
     """Interactive loop: enter IDs manually, generate, preview, keep or retry."""
 
-    # Build lookup dict: identifier → row
+    voice_dict = game["voices"]
+    game_dir = Path(game["savepath"])
+
+    # Determine tl directory to scan
+    if selected_lang != game.get("main_lang", ""):
+        tl_dir = game_dir / "tl" / selected_lang
+    else:
+        tl_dir = game_dir  # main language: scan game root
+    
+    if tl_dir.exists():
+        print(f"ID lookup: scanning {tl_dir}")
+    else:
+        print(f"Warning: tl directory not found: {tl_dir}")
+
+    # Fallback: build row lookup from CSV for character code resolution
     row_lookup: dict[str, dict] = {}
     for row in all_rows:
         ident = str(row.get("Identifier", "") or "").strip()
         if ident:
             row_lookup[ident] = row
-
-    voice_dict = game["voices"]
 
     print("\n=== Manual ID Mode ===")
     print("Enter an identifier to (re-)generate a single line.")
@@ -257,21 +317,28 @@ def _run_manual_id_mode(
             print("Exiting manual mode.")
             break
 
-        # Find row
-        row = row_lookup.get(raw_id)
-        if row is None:
-            print(f"  ID '{raw_id}' not found in dialogue file.")
-            continue
+        # Look up text and character code from .rpy files
+        character_code, dialogue = _lookup_id_in_rpy(raw_id, tl_dir, selected_lang)
 
-        character_code = str(row.get("Character", "") or "").strip()
-        dialogue = str(row.get("Dialogue", "") or "").strip()
+        if dialogue is None:
+            # Fallback: try the loaded CSV rows
+            row = row_lookup.get(raw_id)
+            if row:
+                character_code = str(row.get("Character", "") or "").strip()
+                dialogue = str(row.get("Dialogue", "") or "").strip()
+            if not dialogue:
+                print(f"  ID '{raw_id}' not found in .rpy files or dialogue CSV.")
+                continue
+
+        character_code = character_code or ""
+        dialogue = dialogue.strip()
 
         if not dialogue:
-            print(f"  ID '{raw_id}' has no dialogue text. Skipping.")
+            print(f"  ID '{raw_id}' has no dialogue text.")
             continue
 
         if character_code not in voice_dict or voice_dict[character_code] == 0:
-            print(f"  Character code '{character_code}' is not mapped or ignored.")
+            print(f"  Character code '{character_code}' is not mapped or ignored in voices.")
             continue
 
         character_name = voice_dict[character_code]
@@ -566,24 +633,6 @@ def main() -> int:
     # rows already loaded above — reuse them.
 
     if manual_mode:
-        # For manual mode we need ALL dialogue rows, not just the missing ones.
-        # Try to load the full dialogue.tab alongside the missing tab.
-        full_rows = rows  # fallback: use whatever was loaded
-        full_dialogue_candidates = [
-            csv_path.parent.parent / "Language Detection" / "dialogue.tab",
-            csv_path.parent / "dialogue.tab",
-            csv_path.parent.parent / "dialogue.tab",
-        ]
-        for candidate in full_dialogue_candidates:
-            if candidate.exists():
-                try:
-                    with open(candidate, encoding="utf-8") as f:
-                        full_rows = list(csv.DictReader(f, delimiter="\t"))
-                    print(f"Loaded full dialogue for ID lookup: {candidate}")
-                    break
-                except Exception:
-                    pass
-
         _run_manual_id_mode(
             game=game,
             selected_game_name=selected_game_name,
@@ -591,7 +640,7 @@ def main() -> int:
             selected_provider=selected_provider,
             save_dir=save_dir,
             file_ext=file_ext,
-            all_rows=full_rows,
+            all_rows=rows,  # used only as fallback for character code lookup
             provider=provider,
             log=log,
         )

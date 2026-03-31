@@ -239,7 +239,7 @@ def _load_dialogue_tab_for_manual(game_dir: Path, selected_lang: str) -> tuple[d
     print(f"   (In Ren'Py Launcher: 'Extract Dialogue' with that language selected)\n")
 
     if default_path.exists():
-        raw = input(f"Use '{default_path}'? (Enter=yes / type path to override): ").strip()
+        raw = input(f"Press Enter to use this file, or type a different path:\n  > ").strip()
         if not raw:
             chosen_path = default_path
         else:

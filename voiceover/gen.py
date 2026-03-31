@@ -359,7 +359,7 @@ def _run_manual_id_mode(
             print("  Generated. Playing...")
             _play_audio(out_path)
 
-            keep = input("  Keep this file? (y=keep / n=regenerate / s=skip): ").strip().lower()
+            keep = input("  Keep this file? (Enter/y=keep / n=regenerate / s=skip): ").strip().lower()
             if keep in {"y", "yes", ""}:
                 print("  Kept.")
                 break

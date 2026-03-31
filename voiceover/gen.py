@@ -231,15 +231,15 @@ def _load_dialogue_tab_for_manual(game_dir: Path, selected_lang: str) -> tuple[d
     Looks in the game directory by default, asks user to confirm or provide a path.
     Returns (row_lookup dict, resolved path string).
     """
-    # dialogue.tab is exported to the repo root (parent of game/), not inside game/
-    default_path = game_dir.parent / "dialogue.tab"
+    # dialogue.tab is exported to the repo root — callers already pass the repo root
+    default_path = game_dir / "dialogue.tab"
 
     print("\n--- Dialogue file for ID lookup ---")
     print(f"⚠  Make sure dialogue.tab was extracted in the correct language: '{selected_lang}'")
     print(f"   (In Ren'Py Launcher: 'Extract Dialogue' with that language selected)\n")
 
     if default_path.exists():
-        raw = input(f"Press Enter to use this file, or type a different path:\n  > ").strip()
+        raw = input(f"Press Enter to use '{default_path}', or type a different path:\n  > ").strip()
         if not raw:
             chosen_path = default_path
         else:

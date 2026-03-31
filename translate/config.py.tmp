@@ -1,0 +1,47 @@
+# The only languages that support the both the functionality of glossaries and tone adjustments are:
+# German, Spanish, Polish, French, Italian, Dutch
+
+lang_dir = "portuguese"		# Corresponds to 'game/tl/[lang_dir]'
+game_name = "Bound To College"	# Corresponds to the 'game_dict' entry titles
+lang = "pt-br"			# Corresponds to the ISO_639-1 language representation
+
+disable_gloss = 1		# Disables glossary support if not set to 0
+
+# Defines an array of strings to not put through DeepL
+no_tl = { "", "[RelVal]" }
+
+################################################################################
+# Lists of characters acting in a formal fashion
+# The quality of the results may vary depending on the ambigousness of the language in relation to the games' main one
+
+btc_formality = { "h", "m" }
+
+bengel_formality = { }
+
+################################################################################
+
+# Defines the games' dictionary
+# Path should point to where Ren'Py generates 'dialogue.csv'
+
+game_dict = {
+    "Bound To College": {
+        "main_lang": "en",
+        "path": "C:/Users/olli_/Documents/GitHub/BoundToCollege",
+        "formality": btc_formality
+    },
+    "BEngel": {
+        "main_lang": "de",
+        "path": "C:/Users/olli_/Documents/GitHub/B_Engel",
+        "formality": bengel_formality
+    }
+}
+
+################################################################################
+
+filename = "dialogue.csv"
+delimiter = ","
+api_key = "bcf9bc45-3353-4e6a-7394-8923c47ce64e"
+
+with open("glossaries.json", 'r', encoding="utf-8") as file:
+    import json
+    glossaries = json.loads(file.read())

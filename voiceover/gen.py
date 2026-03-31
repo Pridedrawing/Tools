@@ -324,8 +324,8 @@ def _run_manual_id_mode(
 
         # Check if file exists
         if out_path.exists():
-            overwrite = input("  File already exists. Overwrite? (y/n) [n]: ").strip().lower()
-            if overwrite not in {"y", "yes"}:
+            overwrite = input("  File already exists. Overwrite? (y/n) [y]: ").strip().lower()
+            if overwrite in {"n", "no"}:
                 print("  Skipped.")
                 continue
 

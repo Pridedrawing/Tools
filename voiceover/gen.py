@@ -5,7 +5,9 @@ import csv
 from datetime import datetime
 import importlib
 import os
+import platform
 import re
+import subprocess
 from pathlib import Path
 import sys
 
@@ -203,6 +205,139 @@ def _suggest_games_for_character_code(character_code: str, current_game: str) ->
         if isinstance(voices, dict) and code in voices:
             matches.append(game_name)
     return matches
+
+
+def _play_audio(path: Path) -> None:
+    """Play an audio file using the system default player (cross-platform)."""
+    try:
+        if platform.system() == "Windows":
+            os.startfile(str(path))
+        elif platform.system() == "Darwin":
+            subprocess.run(["afplay", str(path)], check=True)
+        else:
+            # Linux: try common players
+            for player in ["mpg123", "aplay", "paplay", "ffplay"]:
+                if subprocess.run(["which", player], capture_output=True).returncode == 0:
+                    subprocess.run([player, str(path)], check=True)
+                    return
+            print(f"  (No audio player found. File saved at: {path})")
+    except Exception as e:
+        print(f"  (Could not play audio: {e})")
+
+
+def _run_manual_id_mode(
+    game: dict,
+    selected_game_name: str,
+    selected_lang: str,
+    selected_provider: str,
+    save_dir: Path,
+    file_ext: str,
+    all_rows: list[dict],
+    provider,
+    log,
+) -> None:
+    """Interactive loop: enter IDs manually, generate, preview, keep or retry."""
+
+    # Build lookup dict: identifier → row
+    row_lookup: dict[str, dict] = {}
+    for row in all_rows:
+        ident = str(row.get("Identifier", "") or "").strip()
+        if ident:
+            row_lookup[ident] = row
+
+    voice_dict = game["voices"]
+
+    print("\n=== Manual ID Mode ===")
+    print("Enter an identifier to (re-)generate a single line.")
+    print("Type 'q' or press Enter on an empty line to exit.\n")
+
+    while True:
+        raw_id = input("Identifier (or 'q' to quit): ").strip()
+        if not raw_id or raw_id.lower() == "q":
+            print("Exiting manual mode.")
+            break
+
+        # Find row
+        row = row_lookup.get(raw_id)
+        if row is None:
+            print(f"  ID '{raw_id}' not found in dialogue file.")
+            continue
+
+        character_code = str(row.get("Character", "") or "").strip()
+        dialogue = str(row.get("Dialogue", "") or "").strip()
+
+        if not dialogue:
+            print(f"  ID '{raw_id}' has no dialogue text. Skipping.")
+            continue
+
+        if character_code not in voice_dict or voice_dict[character_code] == 0:
+            print(f"  Character code '{character_code}' is not mapped or ignored.")
+            continue
+
+        character_name = voice_dict[character_code]
+        out_path = save_dir / (raw_id + file_ext)
+
+        print(f"\n  Character : {character_code} → {character_name}")
+        print(f"  Dialogue  : {dialogue}")
+        print(f"  Output    : {out_path}")
+
+        # Check if file exists
+        if out_path.exists():
+            overwrite = input("  File already exists. Overwrite? (y/n) [n]: ").strip().lower()
+            if overwrite not in {"y", "yes"}:
+                print("  Skipped.")
+                continue
+
+        # Generation + retry loop
+        while True:
+            print("  Generating...")
+            extra_context = {
+                "identifier": raw_id,
+                "character_code": character_code,
+                "renpy_script": row.get("Ren'Py Script"),
+                "target_language": selected_lang,
+            }
+
+            success = provider.generate_audio(
+                text=dialogue,
+                game_name=selected_game_name,
+                character_name=character_name,
+                output_path=out_path,
+                extra_context=extra_context,
+            )
+
+            if not success:
+                print("  Generation failed.")
+                log("error", raw_id, "manual mode generation failed")
+                retry = input("  Try again? (y/n) [n]: ").strip().lower()
+                if retry in {"y", "yes"}:
+                    continue
+                break
+
+            log("generated", raw_id, f"manual mode provider={selected_provider}")
+            print("  Generated. Playing...")
+            _play_audio(out_path)
+
+            keep = input("  Keep this file? (y=keep / n=regenerate / s=skip): ").strip().lower()
+            if keep in {"y", "yes", ""}:
+                print("  Kept.")
+                break
+            elif keep in {"s", "skip"}:
+                # Remove the file if user doesn't want it
+                try:
+                    out_path.unlink()
+                except Exception:
+                    pass
+                print("  Skipped (file removed).")
+                break
+            else:
+                # Remove and regenerate
+                try:
+                    out_path.unlink()
+                except Exception:
+                    pass
+                print("  Regenerating...")
+                continue
 
 
 def main() -> int:
@@ -412,6 +547,13 @@ def main() -> int:
     if inchar != "y":
         return 1
 
+    # --- Mode selection ---
+    print("\nHow do you want to generate?")
+    print("  1) Process dialogue file (normal batch mode)")
+    print("  2) Enter IDs manually (single-line mode with playback)")
+    mode_raw = input("Select mode [Enter=1]: ").strip()
+    manual_mode = mode_raw == "2"
+
     print("Initializing TTS provider... this can take a while for Qwen.")
     try:
         provider = get_provider(selected_provider, config, log)
@@ -419,6 +561,42 @@ def main() -> int:
     except Exception as ex:
         print(f"Error initializing TTS provider '{selected_provider}': {ex}")
         return 2
+
+    # Load all rows for lookup (also used by manual mode)
+    # rows already loaded above — reuse them.
+
+    if manual_mode:
+        # For manual mode we need ALL dialogue rows, not just the missing ones.
+        # Try to load the full dialogue.tab alongside the missing tab.
+        full_rows = rows  # fallback: use whatever was loaded
+        full_dialogue_candidates = [
+            csv_path.parent.parent / "Language Detection" / "dialogue.tab",
+            csv_path.parent / "dialogue.tab",
+            csv_path.parent.parent / "dialogue.tab",
+        ]
+        for candidate in full_dialogue_candidates:
+            if candidate.exists():
+                try:
+                    with open(candidate, encoding="utf-8") as f:
+                        full_rows = list(csv.DictReader(f, delimiter="\t"))
+                    print(f"Loaded full dialogue for ID lookup: {candidate}")
+                    break
+                except Exception:
+                    pass
+
+        _run_manual_id_mode(
+            game=game,
+            selected_game_name=selected_game_name,
+            selected_lang=selected_lang,
+            selected_provider=selected_provider,
+            save_dir=save_dir,
+            file_ext=file_ext,
+            all_rows=full_rows,
+            provider=provider,
+            log=log,
+        )
+        provider.cleanup()
+        return 0
 
     log("run_start", detail=f"game={selected_game_name} lang={selected_lang} provider={selected_provider} input={csv_path} out={save_dir}")
 

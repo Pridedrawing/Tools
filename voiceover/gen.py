@@ -225,52 +225,47 @@ def _play_audio(path: Path) -> None:
         print(f"  (Could not play audio: {e})")
 
 
-def _lookup_id_in_rpy(identifier: str, tl_dir: Path, lang: str) -> tuple[str | None, str | None]:
-    """Search game/tl/<lang>/*.rpy for a translate block matching the identifier.
+def _load_dialogue_tab_for_manual(game_dir: Path, selected_lang: str) -> tuple[dict[str, dict], str]:
+    """Find and load dialogue.tab for manual ID lookup.
 
-    Returns (character_code, dialogue_text) or (None, None) if not found.
-    The dialogue text is the translated line (not the # comment original).
-    Character code is extracted from the Ren'Py script line (e.g. 't neutral "..."' → 't').
+    Looks in the game directory by default, asks user to confirm or provide a path.
+    Returns (row_lookup dict, resolved path string).
     """
-    identifier = identifier.strip()
-    pattern = re.compile(
-        r"translate\s+" + re.escape(lang) + r"\s+" + re.escape(identifier) + r"\s*:",
-        re.IGNORECASE,
-    )
-    dialogue_re = re.compile(r'^\s*(?:([\w]+)\s+[\w]+\s+)?"(.+)"\s*$')
-    narrator_re = re.compile(r'^\s*"(.+)"\s*$')
+    default_path = game_dir / "dialogue.tab"
 
-    for rpy_file in tl_dir.rglob("*.rpy"):
-        try:
-            lines = rpy_file.read_text(encoding="utf-8").splitlines()
-        except Exception:
-            continue
+    print("\n--- Dialogue file for ID lookup ---")
+    print(f"⚠  Make sure dialogue.tab was extracted in the correct language: '{selected_lang}'")
+    print(f"   (In Ren'Py Launcher: 'Extract Dialogue' with that language selected)\n")
 
-        for i, line in enumerate(lines):
-            if pattern.search(line):
-                # Found the block — scan following lines for the translated string
-                for j in range(i + 1, min(i + 6, len(lines))):
-                    next_line = lines[j]
-                    stripped = next_line.strip()
+    if default_path.exists():
+        raw = input(f"Use '{default_path}'? (Enter=yes / type path to override): ").strip()
+        if not raw:
+            chosen_path = default_path
+        else:
+            chosen_path = Path(raw)
+    else:
+        print(f"  Not found at default location: {default_path}")
+        raw = input("  Enter path to dialogue.tab: ").strip()
+        chosen_path = Path(raw) if raw else default_path
 
-                    # Skip blank lines and comment lines (originals)
-                    if not stripped or stripped.startswith("#"):
-                        continue
+    if not chosen_path.exists():
+        print(f"  File not found: {chosen_path}")
+        return {}, str(chosen_path)
 
-                    # Character dialogue: `t neutral "text"` or `t "text"`
-                    char_match = re.match(r'^\s*([\w]+)\s+(?:[\w]+\s+)?"(.+)"\s*$', next_line)
-                    if char_match:
-                        char_code = char_match.group(1)
-                        text = char_match.group(2)
-                        return char_code, text
-
-                    # Narrator line: `"text"`
-                    narr_match = re.match(r'^\s*"(.+)"\s*$', next_line)
-                    if narr_match:
-                        return "", narr_match.group(1)
-
-                    break  # Hit something unexpected, stop
-    return None, None
+    delimiter = "\t"
+    try:
+        with open(chosen_path, encoding="utf-8") as f:
+            rows = list(csv.DictReader(f, delimiter=delimiter))
+        row_lookup = {}
+        for row in rows:
+            ident = str(row.get("Identifier", "") or "").strip()
+            if ident:
+                row_lookup[ident] = row
+        print(f"  Loaded {len(row_lookup)} entries from: {chosen_path}")
+        return row_lookup, str(chosen_path)
+    except Exception as e:
+        print(f"  Error reading dialogue.tab: {e}")
+        return {}, str(chosen_path)
 
 
 def _run_manual_id_mode(
@@ -289,23 +284,8 @@ def _run_manual_id_mode(
     voice_dict = game["voices"]
     game_dir = Path(game["savepath"])
 
-    # Determine tl directory to scan
-    if selected_lang != game.get("main_lang", ""):
-        tl_dir = game_dir / "tl" / selected_lang
-    else:
-        tl_dir = game_dir  # main language: scan game root
-    
-    if tl_dir.exists():
-        print(f"ID lookup: scanning {tl_dir}")
-    else:
-        print(f"Warning: tl directory not found: {tl_dir}")
-
-    # Fallback: build row lookup from CSV for character code resolution
-    row_lookup: dict[str, dict] = {}
-    for row in all_rows:
-        ident = str(row.get("Identifier", "") or "").strip()
-        if ident:
-            row_lookup[ident] = row
+    # Load dialogue.tab for ID lookup
+    row_lookup, dialogue_tab_path = _load_dialogue_tab_for_manual(game_dir, selected_lang)
 
     print("\n=== Manual ID Mode ===")
     print("Enter an identifier to (re-)generate a single line.")
@@ -317,21 +297,14 @@ def _run_manual_id_mode(
             print("Exiting manual mode.")
             break
 
-        # Look up text and character code from .rpy files
-        character_code, dialogue = _lookup_id_in_rpy(raw_id, tl_dir, selected_lang)
+        # Look up in dialogue.tab
+        row = row_lookup.get(raw_id)
+        if row is None:
+            print(f"  ID '{raw_id}' not found in dialogue.tab.")
+            continue
 
-        if dialogue is None:
-            # Fallback: try the loaded CSV rows
-            row = row_lookup.get(raw_id)
-            if row:
-                character_code = str(row.get("Character", "") or "").strip()
-                dialogue = str(row.get("Dialogue", "") or "").strip()
-            if not dialogue:
-                print(f"  ID '{raw_id}' not found in .rpy files or dialogue CSV.")
-                continue
-
-        character_code = character_code or ""
-        dialogue = dialogue.strip()
+        character_code = str(row.get("Character", "") or "").strip()
+        dialogue = str(row.get("Dialogue", "") or "").strip()
 
         if not dialogue:
             print(f"  ID '{raw_id}' has no dialogue text.")

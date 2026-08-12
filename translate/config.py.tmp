@@ -40,7 +40,7 @@ game_dict = {
 
 filename = "dialogue.csv"
 delimiter = ","
-api_key = "bcf9bc45-3353-4e6a-7394-8923c47ce64e"
+api_key = "YOUR_DEEPL_API_KEY"
 
 with open("glossaries.json", 'r', encoding="utf-8") as file:
     import json

@@ -313,7 +313,7 @@ def _run_manual_id_mode(
             continue
 
         character_code = str(row.get("Character", "") or "").strip()
-        dialogue = str(row.get("Dialogue", "") or "").strip()
+        dialogue = re.sub(r'\[[^\]]*\]', '', str(row.get("Dialogue", "") or "")).strip()
 
         if not dialogue:
             print(f"  ID '{raw_id}' has no dialogue text.")
@@ -697,7 +697,7 @@ def main() -> int:
             log("skip", identifier, f"unknown character code='{character_code}'{hint}")
             continue
 
-        dialogue = str(row.get("Dialogue", "") or "")
+        dialogue = re.sub(r'\[[^\]]*\]', '', str(row.get("Dialogue", "") or "")).strip()
         if not dialogue:
             skipped += 1
             log("skip", identifier, "empty Dialogue")

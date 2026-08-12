@@ -15,7 +15,7 @@ lang = "English"  # Corresponds to 'game/tl/[lang]/'
 
 # TTS Provider Configuration
 tts_provider = "elevenlabs"  # Options: "elevenlabs" or "qwen"
-qwen_model_path = "Qwen/Qwen3-TTS-12Hz-0.6B-Base"
+qwen_model_path = "Qwen/Qwen3-TTS-12Hz-1.7B-Base"
 
 # WSL2 path (Windows: C:\Users\olli_\Documents\GitHub\Tools\Qwen\voices)
 qwen_voices_dir = "/mnt/c/Users/olli_/Documents/GitHub/Tools/Qwen/voices"

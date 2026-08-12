@@ -233,6 +233,7 @@ def translate_text_safe(text: str):
         source_lang=game["main_lang"],
         target_lang=get_deepl_target_lang(),
         glossary=glossaries[game["main_lang"]].setdefault(lang, None) if disable_gloss != 0 else None,
+        **( {"formality": formality} if formality else {} ),
     ).text
 
     placeholders = [f"⟦PH{i}⟧" for i in range(len(tokens))]
@@ -248,7 +249,54 @@ def translate_text_safe(text: str):
     return result
 
 
-def translate_strings_file(strings_path: str):
+def collect_translated_strings(tl_dir: str) -> set:
+    """Pre-scan all tl .rpy files; return old strings that already have a filled-in new translation."""
+    translated = set()
+    old_re = re.compile(r"^\s*old\s+((\"([^\"\\]|\\.)*\")|('([^'\\]|\\.)*'))\s*(?:#.*)?$")
+    new_re = re.compile(r"^\s*new\s+((\"([^\"\\]|\\.)*\")|('([^'\\]|\\.)*'))\s*(?:#.*)?$")
+    for rpy_path in glob.glob(os.path.join(tl_dir, '**', '*.rpy'), recursive=True):
+        try:
+            with open(rpy_path, encoding='utf-8') as f:
+                lines = f.readlines()
+        except (IOError, UnicodeDecodeError):
+            continue
+        in_strings_block = False
+        pending_old = None
+        for line in lines:
+            any_translate = re.match(r"^\s*translate\s+([^\s]+)\s+([^\s]+)\s*:\s*(?:#.*)?$", line)
+            if any_translate:
+                in_strings_block = (
+                    any_translate.group(2).lower() == "strings"
+                    and any_translate.group(1).lower() == lang_dir.lower()
+                )
+                pending_old = None
+                continue
+            if not in_strings_block:
+                continue
+            stripped = line.strip()
+            if not stripped or stripped.startswith('#'):
+                continue
+            om = old_re.match(line)
+            if om:
+                try:
+                    pending_old = ast.literal_eval(om.group(1))
+                except Exception:
+                    pending_old = om.group(1).strip("\"'")
+                continue
+            if pending_old is not None:
+                nm = new_re.match(line)
+                if nm:
+                    try:
+                        new_val = ast.literal_eval(nm.group(1))
+                    except Exception:
+                        new_val = nm.group(1).strip("\"'")
+                    if new_val and new_val != pending_old:
+                        translated.add(pending_old)
+                    pending_old = None
+    return translated
+
+
+def translate_strings_file(strings_path: str, globally_translated: set = None):
     if not os.path.exists(strings_path):
         print(f"Strings file not found, skipping: {strings_path}")
         return
@@ -326,6 +374,10 @@ def translate_strings_file(strings_path: str):
         if strings_skip_existing and new_index is not None and not existing_new_text:
             continue
 
+        # Skip if this old string is already translated in another tl file (prevents cross-file duplicates)
+        if globally_translated and old_text in globally_translated and not existing_new_text:
+            continue
+
         translated = translate_text_safe(old_text)
 
         new_line = f"{existing_new_indent if new_index is not None else old_indent}new {json.dumps(translated, ensure_ascii=False)}\n"
@@ -346,10 +398,217 @@ def translate_strings_file(strings_path: str):
         print(f"No strings updates needed: {strings_path}")
 
 
+def strip_empty_strings_blocks(tl_dir: str) -> int:
+    """Remove empty translate X strings: blocks from all .rpy files in tl_dir.
+
+    Ren'Py errors on startup when a 'translate X strings:' block exists but
+    contains no old/new pairs (only whitespace or comments). This strips them.
+    Returns the number of files modified.
+    """
+    header_re = re.compile(r'^translate\s+\S+\s+strings\s*:\s*(?:#.*)?$', re.IGNORECASE)
+    old_new_re = re.compile(r'^\s*(old|new)\s+')
+
+    modified_count = 0
+    for rpy_path in glob.glob(os.path.join(tl_dir, '**', '*.rpy'), recursive=True):
+        try:
+            with open(rpy_path, encoding='utf-8') as f:
+                lines = f.readlines()
+        except (IOError, UnicodeDecodeError):
+            continue
+
+        remove = set()
+        i = 0
+        while i < len(lines):
+            if header_re.match(lines[i].strip()):
+                block_start = i
+                j = i + 1
+                has_content = False
+                while j < len(lines):
+                    if lines[j].strip() == '':
+                        j += 1
+                        continue
+                    if not lines[j][0].isspace():
+                        break
+                    if old_new_re.match(lines[j]):
+                        has_content = True
+                    j += 1
+                if not has_content:
+                    end = j - 1
+                    while end > block_start and lines[end].strip() == '':
+                        end -= 1
+                    for idx in range(block_start, end + 1):
+                        remove.add(idx)
+                i = j
+            else:
+                i += 1
+
+        if not remove:
+            continue
+
+        new_lines = [l for idx, l in enumerate(lines) if idx not in remove]
+        cleaned = []
+        blank_run = 0
+        for line in new_lines:
+            if line.strip() == '':
+                blank_run += 1
+                if blank_run <= 2:
+                    cleaned.append(line)
+            else:
+                blank_run = 0
+                cleaned.append(line)
+
+        backup_path = rpy_path + '.bak'
+        if not os.path.exists(backup_path):
+            shutil.copyfile(rpy_path, backup_path)
+        with open(rpy_path, 'w', encoding='utf-8') as f:
+            f.writelines(cleaned)
+        print(f"Removed empty translate strings block(s) from: {rpy_path}")
+        modified_count += 1
+
+    return modified_count
+
+
+def deduplicate_strings_blocks(tl_dir: str) -> int:
+    """Remove earlier duplicate old/new pairs within translate X strings: blocks.
+
+    When the same old string appears more than once for the same language key,
+    keeps the last occurrence (newest block wins) and removes earlier ones.
+    Ren'Py errors on startup when it encounters two old "X" entries for the
+    same language, even across different translate strings: blocks in the same file.
+    Returns the number of files modified.
+    """
+    header_re = re.compile(r'^translate\s+(\S+)\s+strings\s*:\s*(?:#.*)?$', re.IGNORECASE)
+    old_re = re.compile(r'^\s*old\s+((\"([^\"\\]|\\.)*\")|\'([^\'\\]|\\.)*\')\s*(?:#.*)?$')
+
+    modified_count = 0
+
+    for rpy_path in glob.glob(os.path.join(tl_dir, '**', '*.rpy'), recursive=True):
+        try:
+            with open(rpy_path, encoding='utf-8') as f:
+                lines = f.readlines()
+        except (IOError, UnicodeDecodeError):
+            continue
+
+        # Parse all old/new entries with their line ranges and language key.
+        # Each entry = (lang_key_lower, old_text, entry_start_idx, entry_end_idx)
+        # entry_start = first comment line before old (or old line itself if no comment)
+        # entry_end   = new line (or old line if no new line follows)
+        entries = []
+        current_lang = None
+        in_strings_block = False
+        pending_comment_start = None
+
+        i = 0
+        while i < len(lines):
+            line = lines[i]
+            first_char = line[0:1]
+
+            if first_char and not first_char.isspace() and line.strip():
+                m = header_re.match(line.strip())
+                if m:
+                    current_lang = m.group(1)
+                    in_strings_block = True
+                    pending_comment_start = None
+                    i += 1
+                    continue
+                elif not line.strip().startswith('#'):
+                    in_strings_block = False
+                    current_lang = None
+                    pending_comment_start = None
+
+            if not in_strings_block:
+                i += 1
+                continue
+
+            stripped = line.strip()
+            if stripped.startswith('#') and first_char.isspace():
+                if pending_comment_start is None:
+                    pending_comment_start = i
+            elif stripped == '':
+                pending_comment_start = None
+            else:
+                om = old_re.match(line)
+                if om:
+                    entry_start = pending_comment_start if pending_comment_start is not None else i
+                    try:
+                        old_text = ast.literal_eval(om.group(1))
+                    except Exception:
+                        old_text = om.group(1).strip("\"'")
+
+                    # Find the following new line (skip blanks)
+                    entry_end = i
+                    k = i + 1
+                    while k < len(lines):
+                        if lines[k].strip() == '':
+                            k += 1
+                            continue
+                        if re.match(r'^\s*new\s+', lines[k]):
+                            entry_end = k
+                        break
+
+                    entries.append((current_lang, old_text, entry_start, entry_end))
+                    pending_comment_start = None
+
+            i += 1
+
+        # Group by (lang_key, old_text); mark all but the last occurrence for removal.
+        by_key = {}
+        for entry in entries:
+            lang, old_text, start, end = entry
+            key = (lang, old_text)
+            by_key.setdefault(key, []).append(entry)
+
+        remove_indices = set()
+        for key, group in by_key.items():
+            if len(group) <= 1:
+                continue
+            for lang, old_text, start, end in group[:-1]:
+                for idx in range(start, end + 1):
+                    remove_indices.add(idx)
+
+        if not remove_indices:
+            continue
+
+        new_lines = [l for idx, l in enumerate(lines) if idx not in remove_indices]
+
+        # Collapse runs of 3+ blank lines to 2.
+        cleaned = []
+        blank_run = 0
+        for line in new_lines:
+            if line.strip() == '':
+                blank_run += 1
+                if blank_run <= 2:
+                    cleaned.append(line)
+            else:
+                blank_run = 0
+                cleaned.append(line)
+
+        backup_path = rpy_path + '.bak'
+        if not os.path.exists(backup_path):
+            shutil.copyfile(rpy_path, backup_path)
+        with open(rpy_path, 'w', encoding='utf-8') as f:
+            f.writelines(cleaned)
+        print(f"Removed duplicate string entries from: {rpy_path}")
+        modified_count += 1
+
+    return modified_count
+
+
 def translate_strings_in_dir(tl_dir: str):
     if not os.path.isdir(tl_dir):
         print(f"Strings directory not found, skipping: {tl_dir}")
         return
+
+    stripped = strip_empty_strings_blocks(tl_dir)
+    if stripped:
+        print(f"Cleaned up empty translate strings block(s) in {stripped} file(s).")
+
+    deduped = deduplicate_strings_blocks(tl_dir)
+    if deduped:
+        print(f"Removed duplicate string entries in {deduped} file(s).")
+
+    globally_translated = collect_translated_strings(tl_dir)
+    print(f"Found {len(globally_translated)} globally translated strings (cross-file duplicate guard).")
 
     patterns = []
     if strings_filename:
@@ -369,10 +628,209 @@ def translate_strings_in_dir(tl_dir: str):
                 continue
             seen.add(path)
             found_any = True
-            translate_strings_file(path)
+            translate_strings_file(path, globally_translated)
 
     if not found_any:
         print(f"No .rpy translation files found in: {tl_dir}")
+
+
+def load_original_texts(tl_dir: str) -> tuple:
+    """Scan tl .rpy files; return (originals, auto_translated).
+    originals: {identifier: original_english} from Ren'Py-generated blocks with comments.
+    auto_translated: set of identifiers from AUTO TRANSLATION blocks (no comment = already done).
+    """
+    originals = {}
+    auto_translated = set()
+    translate_re = re.compile(r'^\s*translate\s+\S+\s+(\S+)\s*:')
+    comment_re = re.compile(r'^\s*#\s*(?:\w+\s+)*"((?:[^"\\]|\\.)*)"')
+    for rpy_path in glob.glob(os.path.join(tl_dir, '**', '*.rpy'), recursive=True):
+        try:
+            with open(rpy_path, encoding='utf-8') as f:
+                lines = f.readlines()
+        except (IOError, UnicodeDecodeError):
+            continue
+        current_id = None
+        for line in lines:
+            m = translate_re.match(line)
+            if m:
+                current_id = m.group(1)
+                continue
+            if current_id is None:
+                continue
+            stripped = line.strip()
+            if not stripped or stripped.startswith('#'):
+                cm = comment_re.match(line)
+                if cm and current_id not in originals:
+                    raw = cm.group(1)
+                    originals[current_id] = raw.replace('\\"', '"').replace('\\\\', '\\')
+                    current_id = None
+            else:
+                # Content line without preceding comment: AUTO TRANSLATION block
+                if current_id not in originals:
+                    auto_translated.add(current_id)
+                current_id = None
+    return originals, auto_translated
+
+
+def migrate_auto_translations(tl_dir: str) -> int:
+    """One-time migration: move AUTO TRANSLATION block content into original blocks, then remove the sections.
+    Returns the number of files modified."""
+    block_re = re.compile(r'^\s*translate\s+\S+\s+(\S+)\s*:')
+    modified_count = 0
+
+    for rpy_path in glob.glob(os.path.join(tl_dir, '**', '*.rpy'), recursive=True):
+        try:
+            with open(rpy_path, encoding='utf-8') as f:
+                lines = f.readlines()
+        except (IOError, UnicodeDecodeError):
+            continue
+
+        if not any('# AUTO TRANSLATION BEGIN' in line for line in lines):
+            continue
+
+        # Phase 1: collect translations from AUTO TRANSLATION blocks
+        auto_tr = {}
+        in_auto = False
+        cur_id = None
+        for line in lines:
+            if '# AUTO TRANSLATION BEGIN' in line:
+                in_auto = True
+                cur_id = None
+                continue
+            if '# AUTO TRANSLATION END' in line:
+                in_auto = False
+                cur_id = None
+                continue
+            if not in_auto:
+                continue
+            m = block_re.match(line)
+            if m:
+                cur_id = m.group(1)
+                continue
+            if cur_id:
+                stripped = line.strip()
+                if stripped and not stripped.startswith('#'):
+                    auto_tr[cur_id] = stripped
+                    cur_id = None
+
+        if not auto_tr:
+            continue
+
+        # Phase 2: apply translations to original blocks + strip AUTO TRANSLATION sections
+        new_lines = []
+        in_auto_section = False
+        cur_id = None
+        i = 0
+        while i < len(lines):
+            line = lines[i]
+
+            if '# AUTO TRANSLATION BEGIN' in line:
+                in_auto_section = True
+                # Remove trailing blank + preceding ##### line already appended
+                while new_lines and new_lines[-1].strip() == '':
+                    new_lines.pop()
+                if new_lines and set(new_lines[-1].strip()) == {'#'}:
+                    new_lines.pop()
+                while new_lines and new_lines[-1].strip() == '':
+                    new_lines.pop()
+                i += 1
+                continue
+
+            if in_auto_section:
+                if '# AUTO TRANSLATION END' in line:
+                    in_auto_section = False
+                    i += 1
+                    if i < len(lines) and set(lines[i].strip()) == {'#'}:
+                        i += 1
+                else:
+                    i += 1
+                continue
+
+            m = block_re.match(line)
+            if m:
+                cur_id = m.group(1)
+                new_lines.append(line)
+                i += 1
+                continue
+
+            if cur_id and cur_id in auto_tr:
+                stripped = line.strip()
+                if stripped and not stripped.startswith('#'):
+                    indent = re.match(r'^\s*', line).group(0)
+                    new_lines.append(indent + auto_tr[cur_id] + '\n')
+                    cur_id = None
+                    i += 1
+                    continue
+                elif stripped and stripped.startswith('#'):
+                    new_lines.append(line)
+                    i += 1
+                    continue
+            elif cur_id:
+                if line.strip() and not line.strip().startswith('#'):
+                    cur_id = None
+
+            new_lines.append(line)
+            i += 1
+
+        backup_path = rpy_path + ".bak"
+        if not os.path.exists(backup_path):
+            shutil.copyfile(rpy_path, backup_path)
+        with open(rpy_path, 'w', encoding='utf-8') as f:
+            f.writelines(new_lines)
+        print(f"Migrated: {rpy_path}")
+        modified_count += 1
+
+    return modified_count
+
+
+def apply_translations_in_place(tl_path: str, translations: list) -> None:
+    """Update translate blocks in tl_path with new translations.
+    translations: [(identifier, renpy_script, original_dialogue, translated_text), ...]
+    """
+    if not translations:
+        return
+
+    trans_dict = {}
+    for identifier, renpy_script, _orig, text in translations:
+        text_for_rpy = text.replace('"', '\\"')
+        script = renpy_script
+        if script == "[what]":
+            script = '"[what]"'
+        trans_dict[identifier] = script.replace("[what]", text_for_rpy)
+
+    try:
+        with open(tl_path, 'r', encoding='utf-8') as f:
+            lines = f.readlines()
+    except (IOError, UnicodeDecodeError) as e:
+        print(f"Could not read {tl_path}: {e}")
+        return
+
+    block_re = re.compile(r'^\s*translate\s+\S+\s+(\S+)\s*:')
+    cur_id = None
+    modified = False
+
+    for idx, line in enumerate(lines):
+        m = block_re.match(line)
+        if m:
+            cur_id = m.group(1)
+            continue
+        if cur_id:
+            stripped = line.strip()
+            if stripped and not stripped.startswith('#'):
+                if cur_id in trans_dict:
+                    indent = re.match(r'^\s*', line).group(0)
+                    lines[idx] = indent + trans_dict[cur_id] + '\n'
+                    modified = True
+                cur_id = None
+
+    if modified:
+        backup_path = tl_path + ".bak"
+        if not os.path.exists(backup_path):
+            shutil.copyfile(tl_path, backup_path)
+        with open(tl_path, 'w', encoding='utf-8') as f:
+            f.writelines(lines)
+        print(f"Updated {len(trans_dict)} translation(s) in: {tl_path}")
+
 
 print("Game: " + game_name)
 print("Game path: " + gamepath)
@@ -493,11 +951,35 @@ if not skip_dialogue:
         exit(1)
 
 if not skip_dialogue:
+    tl_scan_dir = os.path.join(gamepath, "game", "tl", lang_dir)
+    original_texts = {}
+    auto_translated_ids = set()
+    if os.path.isdir(tl_scan_dir):
+        print(f"Migrating any existing AUTO TRANSLATION blocks to in-place format...")
+        migrated = migrate_auto_translations(tl_scan_dir)
+        if migrated:
+            print(f"Migrated {migrated} file(s). Re-scanning...")
+        print(f"Scanning tl files for already-translated identifiers...")
+        original_texts, auto_translated_ids = load_original_texts(tl_scan_dir)
+        print(f"Found {len(original_texts)} source-text entries, {len(auto_translated_ids)} auto-translated.")
+
+if not skip_dialogue:
     file = open(dialogue_file, encoding='utf-8')
-    reader = csv.DictReader(file, delimiter=delimiter) # Interprets the CSV file as a dictionary
+    sample = file.read(4096)
+    file.seek(0)
+    try:
+        detected_delimiter = csv.Sniffer().sniff(sample, delimiters=",\t").delimiter
+    except csv.Error:
+        detected_delimiter = delimiter
+    reader = csv.DictReader(file, delimiter=detected_delimiter, quotechar="'")
+    # Normalize fieldnames: strip surrounding single quotes and unescape '' → '
+    # (Ren'Py exports "Ren'Py Script" as "'Ren''Py Script'" in some formats)
+    if reader.fieldnames:
+        reader.fieldnames = [f.strip("'").replace("''", "'") for f in reader.fieldnames]
 
     tl_filename = ""
-    first = 1
+    current_tl_path = None
+    pending_translations = []
     row_count = 0
     skipped_count = 0
     translated_count = 0
@@ -511,60 +993,47 @@ if not skip_dialogue:
                 print(f"Processed {row_count} rows... (translated {translated_count}, skipped {skipped_count})")
             continue
 
-        if tl_filename != row["Filename"]:
-            tl_filename = row["Filename"]
-            # Facilitates not-closing unopened files on first pass
-            ################################
-            if first != 1:
-                tl_file.write("\n# AUTO TRANSLATION END\n")
-                for i in range(0, 81):
-                    tl_file.write("#")
-                tl_file.write("\n")
-                print("Closing " + gamepath + tl_filename)
-                tl_file.close()
-            else:
-                first = 0
+        # Skip rows already translated (in-place or via prior auto-translation)
+        if row["Identifier"] in auto_translated_ids:
+            skipped_count += 1
+            continue
+        # Skip rows where tl file comment differs from current dialogue (already translated)
+        original_en = original_texts.get(row["Identifier"])
+        if original_en is not None and row["Dialogue"] != original_en:
+            skipped_count += 1
+            continue
 
-            # Build the target path from scratch, regardless of what the CSV contains.
-            # Strip any leading "game/" and any "tl/<lang>/" to get the bare script-relative path.
+        if not row.get("Filename", "").strip():
+            print(f"Warning: skipping row {row_count} (malformed CSV — empty Filename): {repr(row.get('Dialogue',''))[:60]}")
+            skipped_count += 1
+            continue
+
+        if tl_filename != row["Filename"]:
+            # Flush buffered translations for the previous file
+            if current_tl_path and pending_translations:
+                apply_translations_in_place(current_tl_path, pending_translations)
+                pending_translations = []
+
+            tl_filename = row["Filename"]
             norm_tl_filename = tl_filename.replace("\\", "/")
             norm_tl_filename = re.sub(r"^game/", "", norm_tl_filename)
             norm_tl_filename = re.sub(r"^tl/[^/]+/", "", norm_tl_filename)
-            target_path = os.path.normpath(os.path.join(gamepath, "game", "tl", lang_dir, norm_tl_filename))
-            print("Opening " + target_path)
-            tl_file = open(target_path, "a", encoding='utf-8')
-            tl_file.write("\n")
-            for i in range(0, 81):
-                tl_file.write("#")
-            tl_file.write("\n# AUTO TRANSLATION BEGIN\n\n")
-            ################################
+            current_tl_path = os.path.normpath(os.path.join(gamepath, "game", "tl", lang_dir, norm_tl_filename))
+            print("Processing: " + current_tl_path)
 
         text = translate_text_safe(row["Dialogue"])
         translated_count += 1
 
-        # Python ignores the quotation marks in "[what]"
-        if row["Ren'Py Script"] == "[what]":
-            row["Ren'Py Script"] = "\"[what]\""
-        tl_text = row["Ren'Py Script"].replace("[what]", text)
+        pending_translations.append((row["Identifier"], row["Ren'Py Script"], row["Dialogue"], text))
 
-        print(gamepath + tl_filename + ", " + row["Ren'Py Script"].replace("[what]", row["Dialogue"])+ " -> " + tl_text)
-        # input("Okay?")
-
-        # translate german [id]:
-        #     c "[what]" with vpunch
-        tl_file.write("translate " + lang_dir + " " + row["Identifier"] + ":\n")
-        tl_file.write("    " + tl_text)
-        tl_file.write("\n\n")
+        print(tl_filename + ", " + row["Dialogue"][:60] + " -> " + text[:60])
 
         if row_count % 100 == 0:
             print(f"Processed {row_count} rows... (translated {translated_count}, skipped {skipped_count})")
 
-    if "tl_file" in locals():
-        tl_file.write("\n# AUTO TRANSLATION END\n")
-        for i in range(0, 81):
-            tl_file.write("#")
-        tl_file.write("\n")
-        tl_file.close()
+    # Flush the last file
+    if current_tl_path and pending_translations:
+        apply_translations_in_place(current_tl_path, pending_translations)
 
     print(f"Done. Processed {row_count} rows (translated {translated_count}, skipped {skipped_count}).")
     if row_count == 0:

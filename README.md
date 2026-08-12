@@ -1,6 +1,6 @@
 # Pridedrawing Tools
 
-Translation and voiceover pipeline for B_Engel, BoundToCollege and Gay-Office-Sim.
+Translation and voiceover pipeline for B_Engel, BoundToCollege, Gay-Office-Sim and Heritage.
 
 ---
 

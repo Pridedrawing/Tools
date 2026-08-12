@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\olli_\\\\Documents\\\\GitHub\\\\B_Engel\\\\game\\\\tl\\\\french\" -File | Where-Object { $_.Extension -ne \".rpy\" -and $_.Extension -ne \".rpyc\" } | Select-Object Name, Length)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\olli_\\\\Documents\\\\GitHub\\\\B_Engel\\\\game\\\\tl\\\\french\" -File | ForEach-Object { \"$\\($_.Extension\\) | $\\($_.Name\\)\" })",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\olli_\\\\Documents\\\\GitHub\\\\B_Engel\\\\game\\\\tl\\\\french\" -File | ForEach-Object { $_.Name })",
+      "Bash(python -c ' *)"
+    ]
+  }
+}

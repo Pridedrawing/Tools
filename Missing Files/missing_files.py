@@ -122,6 +122,7 @@ def _pick_base_dir_from_defaults() -> str:
         ("Gay-Office-Simulator", os.path.join(github_root, "Gay-Office-Simulator")),
         # Common alternate folder name
         ("Gay-Office-Sim", os.path.join(github_root, "Gay-Office-Sim")),
+        ("Heritage", os.path.join(github_root, "Heritage")),
     ]
 
     existing = [(name, path) for name, path in candidates if os.path.isdir(path)]

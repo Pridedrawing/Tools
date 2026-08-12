@@ -1,6 +1,6 @@
 # Pridedrawing Tools — Claude Code Context
 
-Translation and voiceover pipeline for B_Engel, BoundToCollege, Gay-Office-Sim.
+Translation and voiceover pipeline for B_Engel, BoundToCollege, Gay-Office-Sim, Heritage.
 
 ## Full Workflow (per language)
 

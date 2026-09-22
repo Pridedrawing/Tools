@@ -140,6 +140,46 @@ Go back to step 2, extract dialogue for the next language, and run through steps
 
 ---
 
+## Proofread corrections back into the main language
+
+The steps above all run main language → translation. The reverse case: a native speaker gets an
+Extract Dialogue export, corrects it in Excel, and the corrections have to reach the `.rpy`
+sources. Tool: **`apply_dialogue_csv.py`**, currently in the B_Engel repo root (not in `Tools/`).
+
+```bat
+python apply_dialogue_csv.py --old dialogue.tab --new corrected.csv           :: preview
+python apply_dialogue_csv.py --old dialogue.tab --new corrected.csv --apply   :: write
+```
+
+Reads `.tab` (tab-separated) and `.csv` (semicolon, Excel). Preserves text tags, escapes and
+inline comments, re-verifies each line's translation identifier before touching it, and writes an
+old → new identifier remap.
+
+**Diff two exports, never an export against the source.** Extract Dialogue is lossy: with *strip
+text tags* it removes `{b}`, `{i}`, `{size}`, `{cps}`, `{image=...}`, `{a=...}` and resolves `\"`,
+`\%` and whitespace runs. Comparing that against raw source reports every stripped tag as a change
+— on BEngel that was 124 phantom "changes" out of 562, which would have deleted markup for no
+editorial gain. Re-export `dialogue.tab` immediately before diffing.
+
+**Run it once per correction set.** Duplicate text under one label carries an `_N` serial;
+correcting the first occurrence removes that serial and the second inherits the bare identifier,
+so a second pass applies the first line's correction to the second line. The script aborts when
+`--old` is newer than the sources (`--force` overrides).
+
+**Expect fallout.** Changed text means changed identifiers, which orphans `auto_voice` files and
+`tl/` blocks in every language — 1,734 audio files for 450 corrected lines on BEngel. Build the
+remap by matching **file + line**, not text: lines whose text never changed can still move via the
+serial shift, and a text diff misses those.
+
+Multi-line strings (a `centered "..."` spanning several source lines) have no single line to patch
+and must be done by hand.
+
+Full background in the wiki: `btc-localization-workflow.md` (the workflow) and
+`renpy-code-reference.md` (how translation identifiers are computed, and the unescaped-quote
+parse trap that this pass uncovered).
+
+---
+
 ## Tools Overview
 
 | Folder | Script | Purpose |
@@ -149,6 +189,7 @@ Go back to step 2, extract dialogue for the next language, and run through steps
 | `voiceover/` | `gen.py` | Generate .mp3/.wav voiceover |
 | `Language Detection/` | `language.py` | Detect language of dialogue lines (DeepL) |
 | `Import_Transl/` | `import_tansl.py` | Import CSV translations → .rpy (Portuguese) |
+| *(B_Engel repo root)* | `apply_dialogue_csv.py` | Proofread corrections → .rpy, main language, tag-preserving |
 | `VNavigator.py` | — | Generate story flow chart (yEd .graphml) |
 
 ---

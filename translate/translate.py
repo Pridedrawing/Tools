@@ -852,6 +852,9 @@ def migrate_auto_translations(tl_dir: str) -> int:
     return modified_count
 
 
+_NON_SAY_RE = re.compile(r'^(voice|play|queue|stop|show|hide|scene|with|pause|window|nvl|\$)\b')
+
+
 def apply_translations_in_place(tl_path: str, translations: list) -> None:
     """Update translate blocks in tl_path with new translations.
     translations: [(identifier, renpy_script, original_dialogue, translated_text), ...]
@@ -877,7 +880,7 @@ def apply_translations_in_place(tl_path: str, translations: list) -> None:
             print(f"Could not read {tl_path}: {e}")
             return
 
-    block_re = re.compile(r'^\s*translate\s+\S+\s+(\S+)\s*:')
+    block_re = re.compile(r'^\s*translate\s+(\S+)\s+(\S+)\s*:')
     cur_id = None
     modified = False
     applied = set()
@@ -885,17 +888,28 @@ def apply_translations_in_place(tl_path: str, translations: list) -> None:
     for idx, line in enumerate(lines):
         m = block_re.match(line)
         if m:
-            cur_id = m.group(1)
+            # Only this language's blocks: Ren'Py keys are case-sensitive, and old
+            # files can hold a dead `translate english` twin of a live
+            # `translate English` block under the same id.
+            cur_id = m.group(2) if m.group(1) == lang_dir and m.group(2) not in applied else None
             continue
         if cur_id:
             stripped = line.strip()
-            if stripped and not stripped.startswith('#'):
-                if cur_id in trans_dict:
-                    indent = re.match(r'^\s*', line).group(0)
-                    lines[idx] = indent + trans_dict[cur_id] + '\n'
-                    modified = True
-                    applied.add(cur_id)
+            if not stripped or stripped.startswith('#'):
+                continue
+            if line[:1] and not line[:1].isspace():
                 cur_id = None
+                continue
+            # A block can hold more than the dialogue line (`voice sustain`,
+            # `nvl clear`); only the dialogue line takes the translation.
+            if _NON_SAY_RE.match(stripped):
+                continue
+            if cur_id in trans_dict:
+                indent = re.match(r'^\s*', line).group(0)
+                lines[idx] = indent + trans_dict[cur_id] + '\n'
+                modified = True
+                applied.add(cur_id)
+            cur_id = None
 
     # Lines without a translate block would otherwise be translated (and paid
     # for) but never written, leaving the source language in the game.

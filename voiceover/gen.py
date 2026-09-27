@@ -66,6 +66,7 @@ _SOURCE_LANG_WORDS = {
 _TL_BLOCK_RE = re.compile(r"^\s*translate\s+(\S+)\s+(\S+)\s*:")
 _TL_COMMENT_RE = re.compile(r'^\s*#\s*(?:[\w.]+\s+)*"((?:[^"\\]|\\.)*)"')
 _TL_SAY_RE = re.compile(r'^\s*(?:[\w.]+\s+)*"((?:[^"\\]|\\.)*)"')
+_TL_NON_SAY_RE = re.compile(r'^(voice|play|queue|stop|show|hide|scene|with|pause|window|nvl|\$)\b')
 
 
 def _load_untranslated_ids(tl_dir: Path, lang: str, main_lang: str) -> dict[str, str]:
@@ -106,6 +107,9 @@ def _load_untranslated_ids(tl_dir: Path, lang: str, main_lang: str) -> dict[str,
                 c = _TL_COMMENT_RE.match(line)
                 if c:
                     src = c.group(1)
+                continue
+            # `voice sustain` / `nvl clear` can precede the dialogue line
+            if _TL_NON_SAY_RE.match(stripped):
                 continue
             s = _TL_SAY_RE.match(line)
             if s:

@@ -22,6 +22,7 @@ import sys
 _BLOCK_RE = re.compile(r'^\s*translate\s+(\S+)\s+(\S+)\s*:')
 _COMMENT_RE = re.compile(r'^\s*#\s*(?:[\w.]+\s+)*"((?:[^"\\]|\\.)*)"')
 _SAY_RE = re.compile(r'^\s*(?:[\w.]+\s+)*"((?:[^"\\]|\\.)*)"')
+_NON_SAY_RE = re.compile(r'^(voice|play|queue|stop|show|hide|scene|with|pause|window|nvl|\$)\b')
 _OLD_RE = re.compile(r'^\s*old\s+"((?:[^"\\]|\\.)*)"')
 _NEW_RE = re.compile(r'^\s*new\s+"((?:[^"\\]|\\.)*)"')
 _AUDIO_RE = re.compile(r'\.(mp3|ogg|opus|wav)$', re.IGNORECASE)
@@ -109,6 +110,9 @@ def scan(tl_dir, lang):
                 c = _COMMENT_RE.match(line)
                 if c:
                     source = c.group(1)
+                continue
+            # `voice sustain` / `nvl clear` can precede the dialogue line
+            if _NON_SAY_RE.match(stripped):
                 continue
             s = _SAY_RE.match(line)
             blocks[cur] = (rel, no, source, s.group(1) if s else None)

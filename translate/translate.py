@@ -218,6 +218,33 @@ def _same_without_tags(exported: str, source: str) -> bool:
     return "{" in source and norm(exported) == norm(source)
 
 
+def restore_token_spacing(masked_source: str, translated: str, tokens: list) -> str:
+    """Undo spaces DeepL adds inside text-tag pairs.
+
+    DeepL pads tokens with spaces ("{size=+25} by {a=..} Name: {/a}"), which
+    shows up as shifted text in the game. Only the inside of a tag pair is
+    corrected: after an opening tag and before a closing tag, where the source
+    had no space. Spacing outside a pair depends on word order and is kept.
+    """
+    for i, token in enumerate(tokens):
+        ph = f"⟦PH{i}⟧"
+        pos = masked_source.find(ph)
+        if pos < 0 or ph not in translated:
+            continue
+        if token.startswith("{/"):
+            before = masked_source[pos - 1] if pos > 0 else ""
+            if not before.isspace():
+                translated = re.sub(r"[ \t]+" + re.escape(ph), ph, translated)
+        elif token.startswith("{") and not token.startswith("{#"):
+            after_pos = pos + len(ph)
+            after = masked_source[after_pos] if after_pos < len(masked_source) else ""
+            if after and not after.isspace() and not after == "⟦":
+                translated = re.sub(re.escape(ph) + r"[ \t]+", ph, translated)
+    if tokens and "  " not in masked_source:
+        translated = re.sub(r"(?<=\S) {2,}(?=\S)", " ", translated)
+    return translated
+
+
 def unmask_placeholders(text: str, tokens):
     for i, token in enumerate(tokens):
         text = text.replace(f"⟦PH{i}⟧", token)
@@ -253,6 +280,7 @@ def translate_text_safe(text: str):
             return "".join(comments) + text
         return text
 
+    translated = restore_token_spacing(masked, translated, tokens)
     result = unmask_placeholders(translated, tokens)
     if comments:
         result = "".join(comments) + result

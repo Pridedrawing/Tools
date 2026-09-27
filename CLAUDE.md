@@ -43,7 +43,7 @@ Translation and voiceover pipeline for B_Engel, BoundToCollege, Gay-Office-Sim, 
 - Replaces the line inside existing blocks; appends a block (with warning) when the id has none
 - Migrates old `# AUTO TRANSLATION` sections into regular blocks; entries without a regular block are kept as their own block (before 2026-09-27 they were deleted — lost 340 pt / 166 es / 182 en lines in BEngel)
 - Empty `""` dialogue (Ren'Py `--empty`) is translated from the block comment
-- The dialogue export strips text tags, the block comment keeps them: rows are compared without tags, and a tagged untranslated line is translated from the comment so `{cps}`/`{size}` survive (before 2026-09-27 such lines were skipped forever — BEngel credits). `[..]`, `{..}` and literal `\n` are masked from DeepL
+- The dialogue export strips text tags, the block comment keeps them: rows are compared without tags, and a tagged untranslated line is translated from the comment so `{cps}`/`{size}` survive (before 2026-09-27 such lines were skipped forever — BEngel credits). `[..]`, `{..}` and literal `\n` are masked from DeepL; `restore_token_spacing()` removes the spaces DeepL adds inside tag pairs (after an opening tag, before a closing tag) where the source has none — spacing outside a pair follows the target word order and is kept
 - dialogue.tab is read with `csv.QUOTE_NONE` (a line starting with `'` used to swallow the rest of the file)
 - Calls `check_tl.report()` at the end
 

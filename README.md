@@ -77,6 +77,17 @@ Selections are saved to `config.py` for next run.
 
 > **Tip:** Use *strings-only mode* to only translate UI strings without re-running all dialogue.
 
+Translations replace the line inside the existing `translate` block. A line without a block gets a new block appended (with a warning), and empty `""` lines are translated from the source text in their comment.
+
+**Check the result (`translate/check_tl.py`):** runs automatically at the end of every `translate.py` run, and on its own for any language folder:
+
+```bat
+cd translate
+python check_tl.py portuguese        :: --all lists every finding instead of 5 per file
+```
+
+It reads the tl files directly and reports lines without a translate block, empty blocks, blocks still identical to the source, and strings with an empty or unchanged `new`. Orphan blocks and blocks under the wrong language key (`translate english` in the `English` folder) are counted for information. `dialogue.tab` only supplies the current identifiers, so re-export it after changing the source.
+
 ---
 
 ### 4. Find missing audio files (`Missing Files/missing_files.py`)
@@ -185,6 +196,7 @@ parse trap that this pass uncovered).
 | Folder | Script | Purpose |
 |--------|--------|---------|
 | `translate/` | `translate.py` | DeepL translation → .rpy files |
+| `translate/` | `check_tl.py` | Report missing, empty and untranslated lines in a tl folder |
 | `Missing Files/` | `missing_files.py` | Find dialogue lines without audio |
 | `voiceover/` | `gen.py` | Generate .mp3/.wav voiceover |
 | `Language Detection/` | `language.py` | Detect language of dialogue lines (DeepL) |

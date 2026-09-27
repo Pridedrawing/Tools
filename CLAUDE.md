@@ -40,6 +40,17 @@ Translation and voiceover pipeline for B_Engel, BoundToCollege, Gay-Office-Sim, 
 - Config: `translate/config.py` — saves game/language selections between runs
 - Supports glossaries (`glossaries.json`) for consistent character names
 - Masks Ren'Py placeholders `[var]` and `{tag}` before translation
+- Replaces the line inside existing blocks; appends a block (with warning) when the id has none
+- Migrates old `# AUTO TRANSLATION` sections into regular blocks; entries without a regular block are kept as their own block (before 2026-09-27 they were deleted — lost 340 pt / 166 es / 182 en lines in BEngel)
+- Empty `""` dialogue (Ren'Py `--empty`) is translated from the block comment
+- Calls `check_tl.report()` at the end
+
+### translate/check_tl.py
+- Args: `[lang_dir] [--all]`; game and default language from `translate/config.py`
+- Reads tl files directly; `dialogue.tab` only supplies the current ids (warns if older than the newest source `.rpy`)
+- Reports: ids without a block, empty blocks, blocks identical to the source, strings with empty/unchanged `new`; info only: short identical lines (names, interjections), orphans, blocks under another language key
+- Ren'Py language keys are case-sensitive: only `translate <lang_dir>` blocks count
+- Exit code 1 when problems are found
 
 ### Missing Files/missing_files.py
 - Args: `[base_dir] [--dialogue path] [--lang English] [--ext .mp3]`

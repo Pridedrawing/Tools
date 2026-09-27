@@ -444,7 +444,14 @@ def main() -> int:
 
     dialogue_path = args.dialogue_path
     if not dialogue_path:
-        dialogue_path = default_dialogue_missing if os.path.exists(default_dialogue_missing) else config.filename
+        if os.path.exists(default_dialogue_missing):
+            dialogue_path = default_dialogue_missing
+            input_source = "auto-detected: Tools/Missing Files/dialogue_missing.tab is present"
+        else:
+            dialogue_path = config.filename
+            input_source = "config.py default (filename)"
+    else:
+        input_source = "--dialogue flag"
     csv_path = Path(dialogue_path) if os.path.isabs(dialogue_path) else (script_dir / dialogue_path)
     if not csv_path.exists():
         print(f"Dialogue file not found: {csv_path}")
@@ -464,25 +471,36 @@ def main() -> int:
             pass
 
     log_path = args.log_path or str(script_dir / "log.txt")
+    log_source = "--log flag" if args.log_path else "default: log.txt next to this script"
     log = _log_factory(log_path)
     setattr(config, "voiceover_log_path", log_path)
 
     selected_game_name = args.game_name or config.game_name
+    game_prompted = False
     if (
         not args.no_select
         and not args.game_name
         and sys.stdin is not None
         and sys.stdin.isatty()
     ):
+        game_prompted = True
         selected_game_name = _prompt_game(selected_game_name)
+    if args.game_name:
+        game_source = "--game flag"
+    elif game_prompted:
+        game_source = "chosen interactively (game menu)"
+    else:
+        game_source = "config.py default (game_name)"
 
     selected_provider = args.provider or getattr(config, "tts_provider", "elevenlabs")
+    provider_prompted = False
     if (
         not args.no_select
         and not args.provider
         and sys.stdin is not None
         and sys.stdin.isatty()
     ):
+        provider_prompted = True
         provider_options = ["elevenlabs", "qwen"]
         default_provider = selected_provider if selected_provider in provider_options else "elevenlabs"
         print("Available TTS providers:")
@@ -507,6 +525,13 @@ def main() -> int:
                 break
             print("Unknown provider. Try again.")
 
+    if args.provider:
+        provider_source = "--provider flag"
+    elif provider_prompted:
+        provider_source = "chosen interactively (provider menu)"
+    else:
+        provider_source = "config.py default (tts_provider)"
+
     if selected_game_name not in config.game_dict:
         print(f"Unknown game '{selected_game_name}'. Available: {', '.join(config.game_dict.keys())}")
         return 2
@@ -524,6 +549,8 @@ def main() -> int:
     available_lang_folders = _list_tl_language_folders(base_game_dir)
 
     selected_lang = args.lang or config.lang
+    lang_inferred = False
+    lang_prompted = False
 
     # If we are using dialogue_missing.tab and user didn't specify --lang,
     # infer the language folder from the Filename column.
@@ -537,12 +564,15 @@ def main() -> int:
                 ).strip()
                 if raw == "" or raw.lower() == "y":
                     selected_lang = inferred_lang
+                    lang_inferred = True
                 elif raw.lower() == "n":
                     pass
                 else:
                     selected_lang = raw
+                    lang_inferred = True
             else:
                 selected_lang = inferred_lang
+                lang_inferred = True
 
     # Expand available language folders with languages found in input file
     if delimiter == "\t" and fieldnames and "Filename" in fieldnames:
@@ -563,12 +593,22 @@ def main() -> int:
         and sys.stdin is not None
         and sys.stdin.isatty()
     ):
+        lang_prompted = True
         selected_lang = _prompt_lang_from_folders(
             selected_lang,
             game["main_lang"],
             available_lang_folders,
             allow_main_audio=True,
         )
+
+    if args.lang:
+        lang_source = "--lang flag"
+    elif lang_prompted:
+        lang_source = "chosen interactively (tl folder menu)"
+    elif lang_inferred:
+        lang_source = "inferred from the input file's Filename column"
+    else:
+        lang_source = "config.py default (lang)"
 
     # If user selected a tl language that doesn't exist, warn (still allow output).
     if selected_lang != game["main_lang"] and available_lang_folders:
@@ -581,6 +621,9 @@ def main() -> int:
     save_dir = base_game_dir
     if selected_lang != game["main_lang"]:
         save_dir = save_dir / "tl" / selected_lang
+        output_source = f"derived: tl language -> game/tl/{selected_lang}/audio/voice"
+    else:
+        output_source = "derived: main language -> game/audio/voice"
     save_dir = save_dir / "audio" / "voice"
     save_dir.mkdir(parents=True, exist_ok=True)
 
@@ -604,26 +647,46 @@ def main() -> int:
     else:
         file_ext = provider_file_ext_map.get(selected_provider, ".mp3")
 
-    print("Game: " + selected_game_name)
-    print("Language: " + selected_lang)
-    print("TTS Provider: " + selected_provider)
-    print("Interpreted file: " + str(csv_path))
-    print("Output folder: " + str(save_dir))
-    print("Log file: " + log_path)
-    print("Example path: " + str(save_dir / f"[Identifier]{file_ext}"))
+    # --- Mode selection ---
+    # Asked before the summary, so the chosen mode is one of the decisions
+    # the user signs off on below.
+    print("\nHow do you want to generate?")
+    print("  1) Process dialogue file (normal batch mode)")
+    print("  2) Enter IDs manually (single-line mode with playback)")
+    mode_raw = input("Select mode [Enter=1]: ").strip()
+    manual_mode = mode_raw == "2"
+
+    # --- Summary of the decisions made, right above the confirmation ---
+    decisions = [
+        ("Game", selected_game_name, game_source),
+        ("TTS provider", selected_provider, provider_source),
+        ("Dialogue input", str(csv_path), input_source),
+        ("Language folder", selected_lang, lang_source),
+        ("Output folder", str(save_dir), output_source),
+        (
+            "Generation mode",
+            "enter IDs manually (single-line mode with playback)"
+            if manual_mode
+            else "process dialogue file (normal batch mode)",
+            "chosen above (mode %s)" % ("2" if manual_mode else "1"),
+        ),
+        ("Log file", log_path, log_source),
+        (
+            "Example path",
+            str(save_dir / f"[Identifier]{file_ext}"),
+            "derived: output folder + provider format",
+        ),
+    ]
+    label_width = max(len(label) for label, _value, _source in decisions)
+    print("\nSummary of the decisions made:")
+    for label, value, source in decisions:
+        print(f"  {label.ljust(label_width)} : {value}  [{source}]")
     print("================================")
     print("\n")
 
     inchar = input("Are all the details correct? (y/n) ")
     if inchar != "y":
         return 1
-
-    # --- Mode selection ---
-    print("\nHow do you want to generate?")
-    print("  1) Process dialogue file (normal batch mode)")
-    print("  2) Enter IDs manually (single-line mode with playback)")
-    mode_raw = input("Select mode [Enter=1]: ").strip()
-    manual_mode = mode_raw == "2"
 
     # For manual mode: ask for dialogue.tab path BEFORE loading the TTS provider
     manual_row_lookup: dict[str, dict] = {}

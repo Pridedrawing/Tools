@@ -371,7 +371,8 @@ def translate_strings_file(strings_path: str, globally_translated: set = None):
         if strings_skip_existing and existing_new_text and existing_new_text != old_text:
             continue
         # If there's an existing `new` statement we can't parse, be conservative and keep it.
-        if strings_skip_existing and new_index is not None and not existing_new_text:
+        # An empty literal (new "") parses fine and still needs a translation.
+        if strings_skip_existing and new_index is not None and not existing_new_text and literal_match is None:
             continue
 
         # Skip if this old string is already translated in another tl file (prevents cross-file duplicates)
@@ -690,6 +691,7 @@ def migrate_auto_translations(tl_dir: str) -> int:
 
         # Phase 1: collect translations from AUTO TRANSLATION blocks
         auto_tr = {}
+        auto_headers = {}
         in_auto = False
         cur_id = None
         for line in lines:
@@ -706,6 +708,7 @@ def migrate_auto_translations(tl_dir: str) -> int:
             m = block_re.match(line)
             if m:
                 cur_id = m.group(1)
+                auto_headers[cur_id] = line.rstrip('\n')
                 continue
             if cur_id:
                 stripped = line.strip()
@@ -715,6 +718,20 @@ def migrate_auto_translations(tl_dir: str) -> int:
 
         if not auto_tr:
             continue
+
+        # Ids that also have a regular block outside the AUTO section. Only those
+        # can take the translation over; the rest must survive as blocks of their own.
+        regular_ids = set()
+        in_auto = False
+        for line in lines:
+            if '# AUTO TRANSLATION BEGIN' in line:
+                in_auto = True
+            elif '# AUTO TRANSLATION END' in line:
+                in_auto = False
+            elif not in_auto:
+                m = block_re.match(line)
+                if m:
+                    regular_ids.add(m.group(1))
 
         # Phase 2: apply translations to original blocks + strip AUTO TRANSLATION sections
         new_lines = []
@@ -772,6 +789,20 @@ def migrate_auto_translations(tl_dir: str) -> int:
             new_lines.append(line)
             i += 1
 
+        # Keep AUTO translations that had no regular block to move into.
+        # Dropping them loses the translation, and Ren'Py will not regenerate
+        # the block because it already counted the line as translated.
+        unmatched = [tid for tid in auto_tr if tid not in regular_ids]
+        if unmatched:
+            while new_lines and new_lines[-1].strip() == '':
+                new_lines.pop()
+            if new_lines and not new_lines[-1].endswith('\n'):
+                new_lines[-1] += '\n'
+            for tid in unmatched:
+                new_lines.append('\n' + auto_headers[tid] + '\n\n')
+                new_lines.append('    ' + auto_tr[tid] + '\n')
+            print(f"Kept {len(unmatched)} AUTO translation(s) without a regular block in: {rpy_path}")
+
         backup_path = rpy_path + ".bak"
         if not os.path.exists(backup_path):
             shutil.copyfile(rpy_path, backup_path)
@@ -791,23 +822,27 @@ def apply_translations_in_place(tl_path: str, translations: list) -> None:
         return
 
     trans_dict = {}
-    for identifier, renpy_script, _orig, text in translations:
-        text_for_rpy = text.replace('"', '\\"')
+    orig_dict = {}
+    for identifier, renpy_script, orig, text in translations:
         script = renpy_script
         if script == "[what]":
             script = '"[what]"'
-        trans_dict[identifier] = script.replace("[what]", text_for_rpy)
+        trans_dict[identifier] = script.replace("[what]", text.replace('"', '\\"'))
+        orig_dict[identifier] = script.replace("[what]", orig.replace('"', '\\"'))
 
-    try:
-        with open(tl_path, 'r', encoding='utf-8') as f:
-            lines = f.readlines()
-    except (IOError, UnicodeDecodeError) as e:
-        print(f"Could not read {tl_path}: {e}")
-        return
+    lines = []
+    if os.path.exists(tl_path):
+        try:
+            with open(tl_path, 'r', encoding='utf-8') as f:
+                lines = f.readlines()
+        except (IOError, UnicodeDecodeError) as e:
+            print(f"Could not read {tl_path}: {e}")
+            return
 
     block_re = re.compile(r'^\s*translate\s+\S+\s+(\S+)\s*:')
     cur_id = None
     modified = False
+    applied = set()
 
     for idx, line in enumerate(lines):
         m = block_re.match(line)
@@ -821,11 +856,28 @@ def apply_translations_in_place(tl_path: str, translations: list) -> None:
                     indent = re.match(r'^\s*', line).group(0)
                     lines[idx] = indent + trans_dict[cur_id] + '\n'
                     modified = True
+                    applied.add(cur_id)
                 cur_id = None
 
+    # Lines without a translate block would otherwise be translated (and paid
+    # for) but never written, leaving the source language in the game.
+    missing = [tid for tid in trans_dict if tid not in applied]
+    if missing:
+        while lines and lines[-1].strip() == '':
+            lines.pop()
+        if lines and not lines[-1].endswith('\n'):
+            lines[-1] += '\n'
+        for tid in missing:
+            lines.append(f"\ntranslate {lang_dir} {tid}:\n\n")
+            lines.append(f"    # {orig_dict[tid]}\n")
+            lines.append(f"    {trans_dict[tid]}\n")
+        modified = True
+        print(f"Warning: no translate block for {len(missing)} line(s), appended new block(s) to: {tl_path}")
+
     if modified:
+        os.makedirs(os.path.dirname(tl_path), exist_ok=True)
         backup_path = tl_path + ".bak"
-        if not os.path.exists(backup_path):
+        if os.path.exists(tl_path) and not os.path.exists(backup_path):
             shutil.copyfile(tl_path, backup_path)
         with open(tl_path, 'w', encoding='utf-8') as f:
             f.writelines(lines)
@@ -971,7 +1023,10 @@ if not skip_dialogue:
         detected_delimiter = csv.Sniffer().sniff(sample, delimiters=",\t").delimiter
     except csv.Error:
         detected_delimiter = delimiter
-    reader = csv.DictReader(file, delimiter=detected_delimiter, quotechar="'")
+    # Ren'Py's dialogue.tab is plain tab-separated text without quoting. Treating
+    # "'" as a quote char made a line starting with an apostrophe swallow the
+    # rest of the file ("field larger than field limit").
+    reader = csv.DictReader(file, delimiter=detected_delimiter, quoting=csv.QUOTE_NONE)
     # Normalize fieldnames: strip surrounding single quotes and unescape '' → '
     # (Ren'Py exports "Ren'Py Script" as "'Ren''Py Script'" in some formats)
     if reader.fieldnames:
@@ -986,6 +1041,10 @@ if not skip_dialogue:
     print("Translating dialogue rows...")
     for row in reader:
         row_count += 1
+        # Ren'Py's --empty leaves new lines as "" in the tl file; translate them
+        # from the source text in the block comment instead of skipping them.
+        if row["Dialogue"] == "" and original_texts.get(row["Identifier"]):
+            row["Dialogue"] = original_texts[row["Identifier"]]
         # DeepL doesn't accept empty requests, translating [RelVal] is redundant
         if row["Dialogue"] in no_tl:
             skipped_count += 1
@@ -1044,3 +1103,6 @@ else:
 if translate_strings:
     tl_dir = os.path.join(gamepath, "game", "tl", lang_dir)
     translate_strings_in_dir(tl_dir)
+
+import check_tl
+check_tl.report(gamepath, lang_dir, dialogue_file)

@@ -21,6 +21,113 @@ config = importlib.import_module(_CONFIG_MODULE_NAME)
 _TL_LANG_RE = re.compile(r"(?:^|/)game/tl/([^/]+)/", flags=re.IGNORECASE)
 
 
+def _speakable(text: str) -> str:
+    """Turn a dialogue export cell into plain text for TTS.
+
+    The export keeps Ren'Py escapes as literal characters: a line break is
+    `\\n` (and `\\\\n` after a round trip through Missing Files), quotes are
+    `\\"`. Left in, the TTS reads them out or stumbles over them.
+    """
+    text = re.sub(r"\[[^\]]*\]", "", text)          # [interpolations]
+    text = re.sub(r"\{[^}]*\}", "", text)           # {text tags}
+    text = re.sub(r"\\+n", "\n", text)               # escaped line breaks
+    text = re.sub(r"\\+([\"'\\])", r"\1", text)      # escaped quotes/backslashes
+    parts = [p.strip() for p in text.split("\n") if p.strip()]
+    out = ""
+    for part in parts:
+        if not out:
+            out = part
+        elif out[-1] in ".,;:!?…-":
+            out += " " + part
+        else:
+            out += ". " + part                     # pause where the line broke
+    out = re.sub(r"\s+([.,;:!?…])", r"\1", out)   # gap left by a removed tag
+    return re.sub(r"\s{2,}", " ", out).strip()
+
+
+# Common words of a game's main language. A tl block that still holds its
+# source text is only treated as "not translated yet" when the text is
+# recognisably in that language, so lines that are legitimately identical in
+# both languages ("Marvin!", "Oh, okay.", "Carpe Diem!") are still voiced.
+_SOURCE_LANG_WORDS = {
+    "German": re.compile(
+        r"\b(und|nicht|ist|ich|du|dich|dir|dein|deine|der|die|das|dem|den|ein|eine|einen|"
+        r"mit|auf|wie|noch|nur|sich|auch|schon|mehr|wieder|zurück|seine|seinen|ihm|ihn|ihr|"
+        r"wird|sind|hat|habe|kann|mir|mich|er|sie|es|wir|war|zu|von|bei|aus|dass|aber|wenn|oder)\b"
+        r"|[äöüß]",
+        flags=re.IGNORECASE,
+    ),
+    "English": re.compile(
+        r"\b(the|and|you|is|are|was|to|of|it|that|this|with|for|not|have|what|my|your|"
+        r"he|she|we|they|me|him|her|do|can|will|be|there|just)\b",
+        flags=re.IGNORECASE,
+    ),
+}
+_TL_BLOCK_RE = re.compile(r"^\s*translate\s+(\S+)\s+(\S+)\s*:")
+_TL_COMMENT_RE = re.compile(r'^\s*#\s*(?:[\w.]+\s+)*"((?:[^"\\]|\\.)*)"')
+_TL_SAY_RE = re.compile(r'^\s*(?:[\w.]+\s+)*"((?:[^"\\]|\\.)*)"')
+
+
+def _load_untranslated_ids(tl_dir: Path, lang: str, main_lang: str) -> dict[str, str]:
+    """Return {identifier: source text} for tl blocks that are not translated yet.
+
+    A dialogue export in the target language falls back to the source text for
+    these lines, so voicing them records the source language with the target
+    voice -- and the file then counts as done, so no later run replaces it.
+    A line counts as untranslated when every block for its identifier (old
+    comment-less AUTO blocks included) equals the source comment, it has more
+    than one word, and it contains common words of the main language.
+    """
+    words_re = _SOURCE_LANG_WORDS.get(main_lang)
+    if words_re is None or not tl_dir.is_dir():
+        return {}
+    entries: dict[str, list[tuple[str, str | None]]] = {}
+    for rpy in tl_dir.rglob("*.rpy"):
+        try:
+            lines = rpy.read_text(encoding="utf-8-sig", errors="replace").splitlines()
+        except Exception:
+            continue
+        cur = None
+        src = None
+        for line in lines:
+            m = _TL_BLOCK_RE.match(line)
+            if m:
+                # Language keys are case-sensitive in Ren'Py: `translate english`
+                # blocks in the English folder are never shown for "English".
+                cur = m.group(2) if m.group(1) == lang and m.group(2) != "strings" else None
+                src = None
+                continue
+            if not cur:
+                continue
+            stripped = line.strip()
+            if not stripped:
+                continue
+            if stripped.startswith("#"):
+                c = _TL_COMMENT_RE.match(line)
+                if c:
+                    src = c.group(1)
+                continue
+            s = _TL_SAY_RE.match(line)
+            if s:
+                entries.setdefault(cur, []).append((s.group(1), src))
+            cur = None
+
+    untranslated: dict[str, str] = {}
+    for ident, blocks in entries.items():
+        sources = {s for _content, s in blocks if s}
+        if not sources:
+            continue
+        source = next(iter(sources))
+        plain = re.sub(r"\{[^}]*\}|\[[^\]]*\]", " ", source)
+        if (
+            all(content in sources for content, _s in blocks)
+            and len(re.findall(r"[^\W\d_]+", plain)) > 1
+            and words_re.search(plain)
+        ):
+            untranslated[ident] = source
+    return untranslated
+
+
 def _prompt_game(default_game_name: str) -> str:
     game_names = list(config.game_dict.keys())
     if default_game_name not in config.game_dict:
@@ -284,8 +391,10 @@ def _run_manual_id_mode(
     provider,
     log,
     preloaded_lookup: dict | None = None,
+    untranslated: dict[str, str] | None = None,
 ) -> None:
     """Interactive loop: enter IDs manually, generate, preview, keep or retry."""
+    untranslated = untranslated or {}
 
     voice_dict = game["voices"]
     game_dir = Path(game["savepath"])
@@ -313,11 +422,17 @@ def _run_manual_id_mode(
             continue
 
         character_code = str(row.get("Character", "") or "").strip()
-        dialogue = re.sub(r'\[[^\]]*\]', '', str(row.get("Dialogue", "") or "")).strip()
+        dialogue = _speakable(str(row.get("Dialogue", "") or ""))
 
         if not dialogue:
             print(f"  ID '{raw_id}' has no dialogue text.")
             continue
+
+        if raw_id in untranslated:
+            print(f"  ⚠  The tl block for '{raw_id}' is not translated yet:")
+            print(f"     {untranslated[raw_id][:100]}")
+            if input("  Generate anyway? (y/n) [n]: ").strip().lower() not in {"y", "yes"}:
+                continue
 
         if character_code not in voice_dict or voice_dict[character_code] == 0:
             print(f"  Character code '{character_code}' is not mapped or ignored in voices.")
@@ -639,6 +754,18 @@ def main() -> int:
     save_dir = save_dir / "audio" / "voice"
     save_dir.mkdir(parents=True, exist_ok=True)
 
+    # Lines whose tl block is still in the main language are not voiced yet.
+    # All of them are kept for manual mode (IDs typed by hand); the batch run and
+    # the summary only count those in the input file, since orphan blocks from
+    # older source versions also look untranslated but are never shown.
+    untranslated_all: dict[str, str] = {}
+    if selected_lang != game["main_lang"]:
+        untranslated_all = _load_untranslated_ids(
+            base_game_dir / "tl" / selected_lang, selected_lang, game["main_lang"]
+        )
+    input_ids = {str(r.get("Identifier", "") or "").strip() for r in rows}
+    untranslated = {k: v for k, v in untranslated_all.items() if k in input_ids}
+
     if selected_provider == "qwen":
         mapped_lang = _map_qwen_language(selected_lang)
         if mapped_lang:
@@ -697,6 +824,13 @@ def main() -> int:
             else "no",
             "chosen above",
         ),
+        (
+            "Not translated yet",
+            f"{len(untranslated)} line(s) in tl/{selected_lang} still in {game['main_lang']} - skipped"
+            if selected_lang != game["main_lang"]
+            else "n/a (main language)",
+            "scanned tl blocks: text identical to the source comment",
+        ),
         ("Log file", log_path, log_source),
         (
             "Example path",
@@ -742,6 +876,7 @@ def main() -> int:
             provider=provider,
             log=log,
             preloaded_lookup=manual_row_lookup,
+            untranslated=untranslated_all,
         )
         provider.cleanup()
         if clean_after:
@@ -753,6 +888,7 @@ def main() -> int:
     generated = 0
     skipped = 0
     errored = 0
+    not_translated = 0
 
     # Deduplicate: for multi-line translate blocks, Ren'Py reuses the same ID.
     # Keep only the first occurrence (primary line) per identifier.
@@ -775,6 +911,12 @@ def main() -> int:
             log("skip", detail="missing Identifier")
             continue
 
+        if identifier in untranslated:
+            skipped += 1
+            not_translated += 1
+            log("skip", identifier, f"tl block not translated yet: {untranslated[identifier][:60]}")
+            continue
+
         character_code = str(row.get("Character", "") or "").strip()
         if character_code in voice_dict:
             character_name = voice_dict[character_code]
@@ -789,7 +931,7 @@ def main() -> int:
             log("skip", identifier, f"unknown character code='{character_code}'{hint}")
             continue
 
-        dialogue = re.sub(r'\[[^\]]*\]', '', str(row.get("Dialogue", "") or "")).strip()
+        dialogue = _speakable(str(row.get("Dialogue", "") or ""))
         if not dialogue:
             skipped += 1
             log("skip", identifier, "empty Dialogue")
@@ -827,7 +969,7 @@ def main() -> int:
     still_missing = []
     for row in rows:
         identifier = str(row.get("Identifier", "") or "").strip()
-        if not identifier:
+        if not identifier or identifier in untranslated:
             continue
         out_path = save_dir / (identifier + file_ext)
         if not out_path.exists():
@@ -837,12 +979,17 @@ def main() -> int:
     print("\nSummary:")
     print(f"Generated: {generated}")
     print(f"Skipped: {skipped}")
+    if not_translated:
+        print(
+            f"  of which not translated yet: {not_translated} "
+            f"(tl/{selected_lang} still in {game['main_lang']}; run translate.py, then generate again)"
+        )
     print(f"Errors: {errored}")
     print(f"Still missing after run: {len(still_missing)}")
     if still_missing:
         print(f"See log: {log_path}")
 
-    log("run_end", detail=f"generated={generated} skipped={skipped} errors={errored} still_missing={len(still_missing)}")
+    log("run_end", detail=f"generated={generated} skipped={skipped} not_translated={not_translated} errors={errored} still_missing={len(still_missing)}")
     
     # Clean up provider resources
     provider.cleanup()

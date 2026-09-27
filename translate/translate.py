@@ -205,7 +205,17 @@ def mask_placeholders(text: str):
 
     masked = re.sub(r"\[[^\]]+\]", repl, text)
     masked = re.sub(r"\{[^}]+\}", repl, masked)
+    # Literal Ren'Py line breaks (backslash + n) as they appear in the source text
+    masked = re.sub(r"\\n", repl, masked)
     return masked, tokens
+
+
+def _same_without_tags(exported: str, source: str) -> bool:
+    """True if the export (tags stripped by Ren'Py) is the tagged source text."""
+    def norm(t: str) -> str:
+        t = re.sub(r"\{[^{}]*\}", "", t)
+        return re.sub(r"\s+", " ", t).strip()
+    return "{" in source and norm(exported) == norm(source)
 
 
 def unmask_placeholders(text: str, tokens):
@@ -1059,8 +1069,15 @@ if not skip_dialogue:
         # Skip rows where tl file comment differs from current dialogue (already translated)
         original_en = original_texts.get(row["Identifier"])
         if original_en is not None and row["Dialogue"] != original_en:
-            skipped_count += 1
-            continue
+            # The dialogue export strips text tags ({size=..}, {cps=..}) while the
+            # comment keeps them, so a tagged line that is still untranslated never
+            # matched and was skipped forever. Compare without tags, and translate
+            # the tagged comment text so the tags survive.
+            if _same_without_tags(row["Dialogue"], original_en):
+                row["Dialogue"] = original_en
+            else:
+                skipped_count += 1
+                continue
 
         if not row.get("Filename", "").strip():
             print(f"Warning: skipping row {row_count} (malformed CSV — empty Filename): {repr(row.get('Dialogue',''))[:60]}")

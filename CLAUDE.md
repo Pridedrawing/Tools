@@ -43,6 +43,8 @@ Translation and voiceover pipeline for B_Engel, BoundToCollege, Gay-Office-Sim, 
 - Replaces the line inside existing blocks; appends a block (with warning) when the id has none
 - Migrates old `# AUTO TRANSLATION` sections into regular blocks; entries without a regular block are kept as their own block (before 2026-09-27 they were deleted — lost 340 pt / 166 es / 182 en lines in BEngel)
 - Empty `""` dialogue (Ren'Py `--empty`) is translated from the block comment
+- The dialogue export strips text tags, the block comment keeps them: rows are compared without tags, and a tagged untranslated line is translated from the comment so `{cps}`/`{size}` survive (before 2026-09-27 such lines were skipped forever — BEngel credits). `[..]`, `{..}` and literal `\n` are masked from DeepL
+- dialogue.tab is read with `csv.QUOTE_NONE` (a line starting with `'` used to swallow the rest of the file)
 - Calls `check_tl.report()` at the end
 
 ### translate/check_tl.py
@@ -66,6 +68,8 @@ Translation and voiceover pipeline for B_Engel, BoundToCollege, Gay-Office-Sim, 
 - `dialogue.tab` is loaded from repo root (parent of `game/`)
 - Duplicate IDs (multi-line translate blocks): uses first occurrence only
 - Config: `voiceover/config.py` or `voiceover/config_11L.py`
+- `_speakable()` cleans the export text before TTS: `[..]` and `{..}` removed, `\n` / `\\n` (doubled in dialogue_missing.tab) become a pause, `\"` unescaped
+- Skips lines whose tl block is still the source text (`_load_untranslated_ids`: every block for the id equals the source comment, >1 word, common words of `main_lang`); otherwise the target voice records the source language and the file then counts as done. Summary shows the count; manual mode warns and asks. Only ids in the input file are counted (orphan blocks look untranslated too)
 - Asks *Delete outdated voicelines of '<game>' after the run?* (default no); if yes, calls `clean_unused.run_clean(game, delete=True, list_limit=10)` after generation, in both modes
 
 ### voiceover/clean_unused.py

@@ -66,6 +66,14 @@ Translation and voiceover pipeline for B_Engel, BoundToCollege, Gay-Office-Sim, 
 - `dialogue.tab` is loaded from repo root (parent of `game/`)
 - Duplicate IDs (multi-line translate blocks): uses first occurrence only
 - Config: `voiceover/config.py` or `voiceover/config_11L.py`
+- Asks *Delete outdated voicelines of '<game>' after the run?* (default no); if yes, calls `clean_unused.run_clean(game, delete=True, list_limit=10)` after generation, in both modes
+
+### voiceover/clean_unused.py
+- Deletes voice files no current line uses; dry run unless `--delete`, confirmation unless `--yes`; `run_clean()` is the callable entry point
+- Scope: only `<game>/audio/voice/` and `<game>/tl/<lang>/audio/voice/`, non-recursive, only `.mp3/.ogg/.wav` + `*.<ext>.bak`
+- Used = stem in a fresh SDK extract (`renpy.exe <project> dialogue None`) or in an active `voice`/`audio/voice/...` reference in any `.rpy` (comments ignored)
+- The extract overwrites `<repo>/dialogue.tab`; an existing one is saved and restored (before 2026-09-27 it was deleted)
+- Safety: no evidence → nothing deleted; a folder with zero matches is refused unless `--force`; deletions logged to `log.txt`
 
 ### voiceover/providers/
 - `elevenlabs_provider.py` — cloud TTS, MP3, voice name: `"GameName: Character"`

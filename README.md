@@ -145,6 +145,19 @@ tts_provider = "elevenlabs"  # or "qwen"
 
 ---
 
+### Remove outdated voicelines (`voiceover/clean_unused.py`)
+
+Voice files whose line no longer exists (text changed, line deleted, files from another game) still ship with the build. The cleaner deletes them.
+
+- **From `run-voiceover.bat`:** answer `y` to *Delete outdated voicelines of '<game>' after the run?* It runs after generation, for the selected game only, lists count and size per folder and asks once more before deleting.
+- **On its own:** `run-clean-unused.bat` (dry run; add `--delete` to remove, `--yes` to skip the confirmation).
+
+**Scope:** only `<game>/audio/voice/` and `<game>/tl/<lang>/audio/voice/`, only `.mp3`/`.ogg`/`.wav` plus leftover `.bak` copies. Other files in those folders are listed, never deleted; sound effects and music live elsewhere and are never touched.
+
+**Evidence:** a fresh Ren'Py dialogue extract (language `None`, identifiers are the same in every language), plus active `voice "audio/voice/…"` references in the scripts. An existing `dialogue.tab` in the repo root is put back afterwards. `--dialogue <file>` uses an existing export instead. Nothing is deleted if the extract fails, and a folder that shares no identifier with the evidence is refused (override: `--force`). Deletions are logged to `log.txt`.
+
+---
+
 ### 6. Repeat for the next language
 
 Go back to step 2, extract dialogue for the next language, and run through steps 3–5 again.
@@ -199,6 +212,7 @@ parse trap that this pass uncovered).
 | `translate/` | `check_tl.py` | Report missing, empty and untranslated lines in a tl folder |
 | `Missing Files/` | `missing_files.py` | Find dialogue lines without audio |
 | `voiceover/` | `gen.py` | Generate .mp3/.wav voiceover |
+| `voiceover/` | `clean_unused.py` | Delete outdated voicelines of one game (also offered by `gen.py`) |
 | `Language Detection/` | `language.py` | Detect language of dialogue lines (DeepL) |
 | `Import_Transl/` | `import_tansl.py` | Import CSV translations → .rpy (Portuguese) |
 | *(B_Engel repo root)* | `apply_dialogue_csv.py` | Proofread corrections → .rpy, main language, tag-preserving |

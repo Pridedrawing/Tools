@@ -119,12 +119,32 @@ def _run_dialogue_extract(renpy_exe: Path, project_root: Path, log) -> Path | No
     """Run the SDK dialogue extract and return a private copy of dialogue.tab.
 
     The SDK writes <project_root>/dialogue.tab. That artefact is copied into a
-    temp file and removed from the project again, so the repo stays clean.
+    temp file; a dialogue.tab that existed before is put back afterwards, and
+    one that did not is removed again, so the repo is left as it was.
     Returns None when the extract produced no usable file.
     """
     artifact = project_root / "dialogue.tab"
     pre_mtime = artifact.stat().st_mtime if artifact.exists() else 0.0
     started = time.time()
+
+    # The extract overwrites <project_root>/dialogue.tab. An existing one is the
+    # user's export (e.g. the target language for translate.py), so keep a copy
+    # and put it back afterwards instead of leaving the repo without it.
+    saved = None
+    if artifact.exists():
+        saved = Path(tempfile.mkdtemp(prefix="voiceover_keep_")) / "dialogue.tab"
+        shutil.copy2(artifact, saved)
+
+    def _restore() -> None:
+        try:
+            if saved is not None:
+                shutil.copy2(saved, artifact)
+            elif artifact.exists():
+                artifact.unlink()
+        except Exception as ex:
+            print(f"Warning: could not restore {artifact}: {ex}")
+            if saved is not None:
+                print(f"  Your previous dialogue.tab is kept at {saved}")
 
     cmd = [str(renpy_exe), str(project_root), "dialogue", "None"]
     print("Running Ren'Py dialogue extract (this compiles the scripts)...")
@@ -140,6 +160,7 @@ def _run_dialogue_extract(renpy_exe: Path, project_root: Path, log) -> Path | No
     except Exception as ex:
         log("clean_extract_failed", detail=f"{ex}")
         print(f"Dialogue extract failed to run: {ex}")
+        _restore()
         return None
 
     if proc.returncode != 0:
@@ -148,21 +169,20 @@ def _run_dialogue_extract(renpy_exe: Path, project_root: Path, log) -> Path | No
         print(f"Dialogue extract exited with code {proc.returncode}:")
         for line in tail:
             print("  " + line)
+        _restore()
         return None
 
     if not artifact.exists() or artifact.stat().st_mtime <= pre_mtime or artifact.stat().st_mtime < started - 5:
         log("clean_extract_failed", detail="dialogue.tab not refreshed")
         print("Dialogue extract ran but dialogue.tab was not (re)written.")
+        _restore()
         return None
 
     tmp = Path(tempfile.mkdtemp(prefix="voiceover_clean_")) / "dialogue.tab"
     try:
         shutil.copy2(artifact, tmp)
     finally:
-        try:
-            artifact.unlink()
-        except Exception:
-            print(f"Warning: could not remove extract artefact {artifact}")
+        _restore()
     return tmp
 
 
@@ -207,6 +227,15 @@ def _scan_active_references(game_dir: Path) -> set[str]:
 
 
 
+def _print_names(items: list[tuple[Path, str]], limit: int | None) -> None:
+    ordered = sorted(items, key=lambda item: item[1])
+    shown = ordered if limit is None else ordered[:limit]
+    for path, _key in shown:
+        print(f"    {path.name}")
+    if len(ordered) > len(shown):
+        print(f"    ... and {len(ordered) - len(shown)} more")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
         description="Report and delete unused/outdated generated voicelines (dry run by default).",
@@ -236,13 +265,42 @@ def main() -> int:
     parser.add_argument("--log", dest="log_path", help="Path to log file (default: Tools/voiceover/log.txt)")
     args = parser.parse_args()
 
-    script_dir = Path(__file__).resolve().parent
-    log_path = args.log_path or str(script_dir / "log.txt")
-    log = _log_factory(log_path)
-
     selected_game_name = args.game_name or config.game_name
     if not args.game_name and sys.stdin is not None and sys.stdin.isatty():
         selected_game_name = _prompt_game(selected_game_name)
+    return run_clean(
+        selected_game_name,
+        delete=args.delete,
+        assume_yes=args.yes,
+        force=args.force,
+        dialogue_path=args.dialogue_path,
+        renpy_exe=args.renpy_exe,
+        log_path=args.log_path,
+    )
+
+
+def run_clean(
+    selected_game_name: str,
+    *,
+    delete: bool = False,
+    assume_yes: bool = False,
+    force: bool = False,
+    dialogue_path: str | None = None,
+    renpy_exe: str | None = None,
+    log_path: str | None = None,
+    list_limit: int | None = None,
+) -> int:
+    """Report (and with delete=True remove) unused voicelines of one game.
+
+    Only that game's audio/voice folder and its tl/<lang>/audio/voice folders
+    are touched. With delete=True the user is still asked to confirm unless
+    assume_yes is set. list_limit caps the file names listed per folder
+    (None = list all). Returns 0 on success, 1 if aborted, 2 on error.
+    """
+    script_dir = Path(__file__).resolve().parent
+    log_path = log_path or str(script_dir / "log.txt")
+    log = _log_factory(log_path)
+
     if selected_game_name not in config.game_dict:
         print(f"Unknown game '{selected_game_name}'. Known: {', '.join(config.game_dict.keys())}")
         return 2
@@ -256,7 +314,7 @@ def main() -> int:
 
     print("Game: " + selected_game_name)
     print("Game dir: " + str(game_dir))
-    print("Mode: " + ("DELETE" if args.delete else "dry run (report only)"))
+    print("Mode: " + ("DELETE" if delete else "dry run (report only)"))
     print("================================")
 
     voice_dirs = _voice_dirs(game_dir)
@@ -264,19 +322,19 @@ def main() -> int:
         print(f"No audio/voice folders found under {game_dir} (or its tl languages). Nothing to do.")
         return 0
 
-    if args.dialogue_path:
-        evidence_path = Path(args.dialogue_path)
+    if dialogue_path:
+        evidence_path = Path(dialogue_path)
         if not evidence_path.exists():
             print(f"Dialogue export not found: {evidence_path}")
             return 2
         print("Evidence: supplied export " + str(evidence_path))
     else:
-        renpy_exe = Path(args.renpy_exe or getattr(config, "renpy_exe", "") or _DEFAULT_RENPY_EXE)
-        if not renpy_exe.exists():
-            print(f"Ren'Py SDK executable not found: {renpy_exe}")
+        renpy_path = Path(renpy_exe or getattr(config, "renpy_exe", "") or _DEFAULT_RENPY_EXE)
+        if not renpy_path.exists():
+            print(f"Ren'Py SDK executable not found: {renpy_path}")
             print("Pass --renpy <path> or set renpy_exe in config.py, or supply --dialogue <export>.")
             return 2
-        evidence_path = _run_dialogue_extract(renpy_exe, project_root, log)
+        evidence_path = _run_dialogue_extract(renpy_path, project_root, log)
         if evidence_path is None:
             print("No evidence available - refusing to delete anything. Supply --dialogue <export> to retry.")
             return 2
@@ -318,7 +376,7 @@ def main() -> int:
                 unused.append((path, key))
 
         overlap = used > 0 or any(key in referenced for _path, key in baks)
-        if not overlap and files and not args.force:
+        if not overlap and files and not force:
             refused_dirs.append(str(voice_dir))
             print(f"\n[{voice_dir}]")
             print(f"  REFUSED: none of its {len(files)} files matches any referenced identifier.")
@@ -339,12 +397,10 @@ def main() -> int:
             print(f"  ignored (foreign extension, never deleted): {len(ignored)} -> {shown}{more}")
         if unused:
             print(f"  unused voicelines ({unused_bytes / 1048576:.1f} MiB):")
-            for path, key in sorted(unused, key=lambda item: item[1]):
-                print(f"    {path.name}")
+            _print_names(unused, list_limit)
         if baks:
             print(f"  leftover .bak copies ({bak_bytes / 1048576:.1f} MiB):")
-            for path, key in sorted(baks, key=lambda item: item[1]):
-                print(f"    {path.name}")
+            _print_names(baks, list_limit)
 
     candidates = total_unused + total_baks
     print("\n================================")
@@ -354,18 +410,18 @@ def main() -> int:
         print(f"Refused folders (see above): {len(refused_dirs)}")
     if not candidates:
         print("Nothing to delete.")
-        log("clean_run", detail=f"game={selected_game_name} unused=0 baks=0 mode={'delete' if args.delete else 'dry'}")
+        log("clean_run", detail=f"game={selected_game_name} unused=0 baks=0 mode={'delete' if delete else 'dry'}")
         return 0
 
     freed = sum(p.stat().st_size for p, _ in candidates)
     print(f"Would free: {freed / 1048576:.1f} MiB")
 
-    if not args.delete:
+    if not delete:
         print("\nDry run - no files deleted. Re-run with --delete to remove them.")
         log("clean_run", detail=f"game={selected_game_name} unused={len(total_unused)} baks={len(total_baks)} mode=dry")
         return 0
 
-    if not args.yes:
+    if not assume_yes:
         answer = input(f"\nDelete {len(candidates)} files ({freed / 1048576:.1f} MiB)? (y/N) ").strip().lower()
         if answer not in {"y", "yes"}:
             print("Aborted - nothing deleted.")

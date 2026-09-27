@@ -411,6 +411,18 @@ def _run_manual_id_mode(
                 continue
 
 
+def _offer_cleanup(game_name: str, log_path: str) -> None:
+    """Remove outdated voicelines of this game only (asks before deleting)."""
+    print("\n=== Outdated voicelines ===")
+    print(f"Checking audio/voice and every tl/<lang>/audio/voice of '{game_name}' against a fresh dialogue extract.")
+    try:
+        import clean_unused
+    except Exception as ex:
+        print(f"Could not load clean_unused.py: {ex}")
+        return
+    clean_unused.run_clean(game_name, delete=True, log_path=log_path, list_limit=10)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(add_help=True)
     parser.add_argument("--game", dest="game_name", help="Game name (must match a key in config.game_dict)")
@@ -656,6 +668,14 @@ def main() -> int:
     mode_raw = input("Select mode [Enter=1]: ").strip()
     manual_mode = mode_raw == "2"
 
+    # --- Cleanup of outdated voicelines ---
+    # Runs after generation and only for the selected game. The file list and
+    # a final confirmation are shown before anything is deleted.
+    clean_raw = input(
+        f"\nDelete outdated voicelines of '{selected_game_name}' after the run? (y/n) [n]: "
+    ).strip().lower()
+    clean_after = clean_raw in {"y", "yes"}
+
     # --- Summary of the decisions made, right above the confirmation ---
     decisions = [
         ("Game", selected_game_name, game_source),
@@ -669,6 +689,13 @@ def main() -> int:
             if manual_mode
             else "process dialogue file (normal batch mode)",
             "chosen above (mode %s)" % ("2" if manual_mode else "1"),
+        ),
+        (
+            "Delete outdated voicelines",
+            "yes - after the run, this game only (confirm again with the file list)"
+            if clean_after
+            else "no",
+            "chosen above",
         ),
         ("Log file", log_path, log_source),
         (
@@ -717,6 +744,8 @@ def main() -> int:
             preloaded_lookup=manual_row_lookup,
         )
         provider.cleanup()
+        if clean_after:
+            _offer_cleanup(selected_game_name, log_path)
         return 0
 
     log("run_start", detail=f"game={selected_game_name} lang={selected_lang} provider={selected_provider} input={csv_path} out={save_dir}")
@@ -817,7 +846,10 @@ def main() -> int:
     
     # Clean up provider resources
     provider.cleanup()
-    
+
+    if clean_after:
+        _offer_cleanup(selected_game_name, log_path)
+
     return 0
 
 
